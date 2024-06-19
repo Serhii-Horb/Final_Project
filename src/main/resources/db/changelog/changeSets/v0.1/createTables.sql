@@ -13,7 +13,6 @@ CREATE TABLE categories (CategoryId INT AUTO_INCREMENT NOT NULL,
                          Name VARCHAR(255) NULL, CONSTRAINT
                              PK_CATEGORIES PRIMARY KEY (CategoryId));
 
-
 -- changeset serhii:create_index_products
 CREATE INDEX foreign_key_products_categories ON products(CategoryId);
 
