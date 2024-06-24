@@ -1,8 +1,9 @@
 package com.example.final_project.mapper;
 
-import com.example.final_project.dto.CartDto;
-import com.example.final_project.dto.UserDto;
+import com.example.final_project.dto.*;
 import com.example.final_project.entity.Cart;
+import com.example.final_project.entity.Category;
+import com.example.final_project.entity.Product;
 import com.example.final_project.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -46,10 +47,12 @@ public class Mappers {
     public Cart convertToCart(CartDto cartDto) {
         return modelMapper.map(cartDto, Cart.class);
     }
+
     public Product convertToProduct(ProductResponseDto productResponseDto) {
         Product product = modelMapper.map(productResponseDto, Product.class);
         return product;
     }
+
     public ProductRequestDto convertToProductRequestDto(Product product) {
         ProductRequestDto productRequestDto = modelMapper.map(product, ProductRequestDto.class);
         return productRequestDto;
