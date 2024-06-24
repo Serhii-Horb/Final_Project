@@ -32,12 +32,12 @@ class CartItemServiceTest {
 
     @BeforeEach
     void setUp() {
-        cartItemEntityExpected1 = new CartItem(1L, new Cart(2L), new Product(5L), 15);
-        cartItemEntityExpected1 = new CartItem(2L, new Cart(3L), new Product(6L), 17);
+        cartItemEntityExpected1 = new CartItem(1L, new Cart(), new Product(), 15);
+        cartItemEntityExpected1 = new CartItem(2L, new Cart(), new Product(), 17);
 
         cartItemDtoExpected1 = CartItemDto.builder()
                 .cartItemId(1L)
-                .cart(new CartDto(2L))
+                .cart(new CartDto())
                 .product(new ProductDto(5L))
                 .quantity(15)
                 .build();

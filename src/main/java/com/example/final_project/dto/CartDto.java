@@ -15,12 +15,6 @@ import lombok.NoArgsConstructor;
 public class CartDto {
     private Long cartId;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class CartDto {
-    private long cartId;
-
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("user")
     private UserDto users;

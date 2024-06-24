@@ -36,27 +36,30 @@ public class Mappers {
     public CartItemDto convertToCartItemDto(CartItem cartItem) {
         CartItemDto cartItemDto = modelMapper.map(cartItem, CartItemDto.class);
         return cartItemDto;
-
+    }
 
     public OrderItem convertIntoOrderItem(OrderItemDto orderItemDto) {
         return modelMapper.map(orderItemDto, OrderItem.class);
     }
+
     public OrderItemDto convertIntoOrderItemDto(OrderItem orderItem) {
         return modelMapper.map(orderItem, OrderItemDto.class);
     }
+
     public Order convertIntoOrder(OrderDto orderDto) {
         return Order.builder()
                 .deliveryAddress(orderDto.getDeliveryAddress())
                 .deliveryMethod(orderDto.getDeliveryMethod())
-                .items(MapperUtil.convertList(orderDto.getItems(),this::convertIntoOrderItem))
+                .items(MapperUtil.convertList(orderDto.getItems(), this::convertIntoOrderItem))
                 .build();
     }
+
     public OrderDto convertIntoOrderDto(Order order) {
         return OrderDto.builder()
                 .orderId(order.getOrderId())
                 .deliveryAddress(order.getDeliveryAddress())
                 .deliveryMethod(order.getDeliveryMethod())
-                .items(MapperUtil.convertList(order.getItems(),this::convertIntoOrderItemDto))
+                .items(MapperUtil.convertList(order.getItems(), this::convertIntoOrderItemDto))
                 .build();
     }
 
