@@ -20,6 +20,21 @@ public class Mappers {
         return usersDto;
     }
 
+    public CategoryDto convertToCategoryDto(Category category) {
+        CategoryDto categoryDto = modelMapper.map(category, CategoryDto.class);
+        return categoryDto;
+    }
+
+    public Category convertToCategory(CategoryDto categoryDto) {
+        Category category = modelMapper.map(categoryDto, Category.class);
+        return category;
+    }
+
+    public ProductResponseDto convertToProductDto(Product product) {
+        ProductResponseDto productResponseDto = modelMapper.map(product, ProductResponseDto.class);
+        return productResponseDto;
+    }
+
     public User convertToUser(UserDto userDto) {
         return modelMapper.map(userDto, User.class);
     }
@@ -30,5 +45,18 @@ public class Mappers {
 
     public Cart convertToCart(CartDto cartDto) {
         return modelMapper.map(cartDto, Cart.class);
+    }
+    public Product convertToProduct(ProductResponseDto productResponseDto) {
+        Product product = modelMapper.map(productResponseDto, Product.class);
+        return product;
+    }
+    public ProductRequestDto convertToProductRequestDto(Product product) {
+        ProductRequestDto productRequestDto = modelMapper.map(product, ProductRequestDto.class);
+        return productRequestDto;
+    }
+
+    public Product convertToProduct(ProductRequestDto productRequestDto) {
+        Product product = modelMapper.map(productRequestDto, Product.class);
+        return product;
     }
 }
