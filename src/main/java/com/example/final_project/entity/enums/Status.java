@@ -6,5 +6,5 @@ public enum Status {
     ON_THE_WAY,
     PENDING_PAYMENT,
     DELIVERED,
-    CANCELLED
+    CANCELLED;
 }
