@@ -8,19 +8,4 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "Cart")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Cart {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cartId;
-
-//    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-//    private Set<CartItems> cartItems = new HashSet<>();
-//
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserId", referencedColumnName = "UserId")
-    private User user;
 }
