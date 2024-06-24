@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CartDto {
-    private Long cartId;
+public class ProductDto {
+    private Long productId;
 }

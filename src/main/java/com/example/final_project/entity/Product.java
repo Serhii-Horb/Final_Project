@@ -5,16 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 @Entity
-@Table(name = "Cart")
+@Table(name = "Product")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Cart {
+public class Product {
     @Id
-    @Column(name = "cartId")
+    @Column(name = "productId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cartId;
+    private Long productId;
 }
