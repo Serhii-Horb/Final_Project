@@ -10,5 +10,7 @@
     <include file="/db/changelog/changeSets/v0.1/createTables.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertCategories.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertProducts.sql"/>
+    <include file="/db/changelog/changeSets/v0.1/insertOrders.sql"/>
+    <include file="/db/changelog/changeSets/v0.1/insertOrderItems.sql"/>
 
 </databaseChangeLog>
