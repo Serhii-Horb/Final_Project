@@ -23,7 +23,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "OrderId")
-    private long orderId;
+    private Long orderId;
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "UserId",nullable = false)
 //    private User user;
