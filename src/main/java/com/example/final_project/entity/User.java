@@ -11,6 +11,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "Users")
 @Getter
@@ -46,13 +49,13 @@ public class User {
     @Column(name = "Role", nullable = false)
     private Role role;
 
-//        @OneToOne(fetch = FetchType.LAZY, mappedBy = "users", cascade = CascadeType.ALL)
-//        private Cart cart;
-//
-//        @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
-//        private Set<Favorites> favorites = new HashSet<>();
-//
-//        @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
-//        private Set<Orders> orders = new HashSet<>();
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
+    private Cart cart;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Favorite> favorites = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Order> orders = new HashSet<>();
 }
 

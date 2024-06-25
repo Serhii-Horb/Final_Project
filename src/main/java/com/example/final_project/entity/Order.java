@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Table(name = "Orders")
 @Entity
@@ -24,15 +22,18 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "OrderId")
     private Long orderId;
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "UserId",nullable = false)
-//    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "UserId", nullable = false)
+    private User user;
+
     private Timestamp createdAt;
     private String deliveryAddress;
     private String contactPhone;
     private String deliveryMethod;
     private Status status;
     private Timestamp updatedAt;
-    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> items = new ArrayList<>();
 }
