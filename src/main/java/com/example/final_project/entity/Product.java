@@ -43,16 +43,16 @@ public class Product {
     @Column(name = "CreatedAt")
     private Timestamp createdAt;
 
-    @Column (name = "UpdatedAt")
+    @Column(name = "UpdatedAt")
     private Timestamp updatedAt;
 
-//    @OneToMany (mappedBy = "product", cascade = CascadeType.ALL)
-//    private Set<CartItem> cartItem = new HashSet<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private Set<CartItem> cartItem = new HashSet<>();
 
-//    @OneToMany (mappedBy =  "product", cascade = CascadeType.ALL)
-//    private Set<OrderItems> orderItems = new HashSet<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private Set<OrderItem> orderItems = new HashSet<>();
 
-//    @OneToMany (mappedBy = "product", cascade = CascadeType.ALL)
-//    private Set<Favorites> favorites = new HashSet<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private Set<Favorite> favorites = new HashSet<>();
 
 }

@@ -16,13 +16,15 @@ public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderItemId;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "orderId",nullable = false)
     private Order order;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "ProductId",nullable = false)
-//    private Product product;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ProductId",nullable = false)
+
+    private Product product;
     private int quantity;
     private BigDecimal priceAtPurchase;
 }

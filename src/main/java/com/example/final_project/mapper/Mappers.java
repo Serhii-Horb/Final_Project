@@ -3,22 +3,13 @@ package com.example.final_project.mapper;
 
 import com.example.final_project.dto.CartDto;
 import com.example.final_project.dto.CartItemDto;
-import com.example.final_project.entity.CartItem;
+import com.example.final_project.entity.*;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import com.example.final_project.config.MapperUtil;
 import com.example.final_project.dto.OrderDto;
 import com.example.final_project.dto.OrderItemDto;
-import com.example.final_project.entity.Order;
-import com.example.final_project.entity.OrderItem;
 import com.example.final_project.dto.*;
-import com.example.final_project.entity.Cart;
-import com.example.final_project.entity.Category;
-import com.example.final_project.entity.Product;
-import com.example.final_project.entity.User;
-import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -109,5 +100,13 @@ public class Mappers {
     public Product convertToProduct(ProductRequestDto productRequestDto) {
         Product product = modelMapper.map(productRequestDto, Product.class);
         return product;
+    }
+
+    public FavoriteDto convertToFavoritesDto(Favorite favorites) {
+        return modelMapper.map(favorites, FavoriteDto.class);
+    }
+
+    public Favorite convertToFavorites(FavoriteDto favoritesDto) {
+        return modelMapper.map(favoritesDto, Favorite.class);
     }
 }
