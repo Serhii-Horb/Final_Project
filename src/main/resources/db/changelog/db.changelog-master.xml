@@ -9,12 +9,12 @@
 
     <include file="/db/changelog/changeSets/v0.1/createTables.sql"/>
     <include file="db/changelog/changeSets/v0.1/insertUsers.sql"/>
-    <include file="db/changelog/changeSets/v0.1/insertCart.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertCategories.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertProducts.sql"/>
+    <include file="db/changelog/changeSets/v0.1/insertFavorites.sql"/>
+    <include file="db/changelog/changeSets/v0.1/insertCart.sql"/>
     <include file="db/changelog/changeSets/v0.1/insertCartItems.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertOrders.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertOrderItems.sql"/>
-
-
+    
 </databaseChangeLog>

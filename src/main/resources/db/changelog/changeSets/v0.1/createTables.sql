@@ -1,147 +1,163 @@
 -- liquibase formatted sql
 
--- changeset serhii:create_table_users
-CREATE TABLE users
+-- changeset Serhii:create_table_users
+CREATE TABLE Users
 (
-    userId       INT AUTO_INCREMENT             NOT NULL,
-    name         VARCHAR(255)                   NULL,
-    email        VARCHAR(255)                   NULL,
-    phoneNumber  VARCHAR(255)                   NULL,
-    passwordHash VARCHAR(255)                   NULL,
-    role         ENUM ('USER', 'ADMINISTRATOR') NULL,
-    CONSTRAINT PK_USERS PRIMARY KEY (userId)
+    UserID       BIGINT AUTO_INCREMENT          NOT NULL,
+    Name         VARCHAR(255)                   NULL,
+    Email        VARCHAR(255)                   NULL,
+    PhoneNumber  VARCHAR(255)                   NULL,
+    PasswordHash VARCHAR(255)                   NULL,
+    Role         ENUM ('USER', 'ADMINISTRATOR') NULL,
+    CONSTRAINT PK_USERS PRIMARY KEY (UserID)
 );
 
-CREATE TABLE cartItems
+-- changeset Daniil:create_table_products
+CREATE TABLE Products
 (
-    CartItemId INT AUTO_INCREMENT NOT NULL,
-    CartId     INT                NULL,
-    ProductId  INT                NULL,
-    Quantity   INT                NULL,
-    CONSTRAINT PK_CART_ITEMS PRIMARY KEY (CartItemId)
+    ProductID     BIGINT AUTO_INCREMENT NOT NULL,
+    Name          VARCHAR(255)          NULL,
+    Description   VARCHAR(255)          NULL,
+    Price         DECIMAL(10, 2)        NULL,
+    CategoryID    BIGINT                NULL,
+    ImageURL      VARCHAR(255)          NULL,
+    DiscountPrice DECIMAL(10, 2)        NULL,
+    CreatedAt     datetime              NULL,
+    UpdatedAt     datetime              NULL,
+    CONSTRAINT PK_PRODUCTS PRIMARY KEY (ProductID)
 );
 
--- changeset serhii:create_table_products
-CREATE TABLE products
+-- changeset Daniil:create_table_categories
+CREATE TABLE Categories
 (
-    CategoryId    INT                NULL,
-    DiscountPrice DECIMAL            NULL,
-    Price         DECIMAL            NULL,
-    ProductId     INT AUTO_INCREMENT NOT NULL,
-    CreatedAt     datetime           NULL,
-    UpdatedAt     datetime           NULL,
-    Quantity      INT                NULL,
-    Description   VARCHAR(255)       NULL,
-    ImageURL      VARCHAR(255)       NULL,
-    Name          VARCHAR(255)       NULL,
-    CONSTRAINT PK_PRODUCTS PRIMARY KEY (ProductId)
+    CategoryID BIGINT AUTO_INCREMENT NOT NULL,
+    Name       VARCHAR(255)          NULL,
+    CONSTRAINT PK_CATEGORIES PRIMARY KEY (CategoryID)
 );
 
--- changeset serhii:create_table_favorites
-CREATE TABLE favorites
+-- changeset Serhii:create_table_cart
+CREATE TABLE Cart
 (
-    favoriteId INT AUTO_INCREMENT NOT NULL,
-    productId  INT                NULL,
-    userId     INT                NULL,
-    CONSTRAINT PK_FAVORITES PRIMARY KEY (favoriteId)
+    CartID BIGINT AUTO_INCREMENT NOT NULL,
+    UserID BIGINT                NULL,
+    CONSTRAINT PK_CART PRIMARY KEY (CartID),
+    UNIQUE (UserID)
 );
 
--- changeset serhii:create_table_categories
-CREATE TABLE categories
+-- changeset Marat:create_table_cartitems
+CREATE TABLE CartItems
 (
-    CategoryId INT AUTO_INCREMENT NOT NULL,
-    Name       VARCHAR(255)       NULL,
-    CONSTRAINT
-        PK_CATEGORIES PRIMARY KEY (CategoryId)
+    CartItemID BIGINT AUTO_INCREMENT NOT NULL,
+    CartID     BIGINT                NULL,
+    ProductID  BIGINT                NULL,
+    Quantity   INT                   NULL,
+    CONSTRAINT PK_CARTITEMS PRIMARY KEY (CartItemID)
 );
 
--- changeset serhii:create_table_cart
-CREATE TABLE cart
+-- changeset Serhii:create_table_favorites
+CREATE TABLE Favorites
 (
-    cartId INT AUTO_INCREMENT NOT NULL,
-    userId INT                NULL,
-    CONSTRAINT PK_CART PRIMARY KEY (cartId),
-    UNIQUE (userId)
+    FavoriteID BIGINT AUTO_INCREMENT NOT NULL,
+    ProductID  BIGINT                NULL,
+    UserID     BIGINT                NULL,
+    CONSTRAINT PK_FAVORITES PRIMARY KEY (FavoriteID)
 );
 
-
-
--- changeset artemii:create_table_orders
-CREATE TABLE orders
+-- changeset Artemii:create_table_orders
+CREATE TABLE Orders
 (
-    OrderId         INT AUTO_INCREMENT                                                             NOT NULL,
-    UserId          INT                                                                            NULL,
-    CreatedAt       datetime                                                                       NULL,
-    DeliveryAddress VARCHAR(255)                                                                   NULL,
-    ContactPhone    VARCHAR(255)                                                                   NULL,
-    DeliveryMethod  VARCHAR(255)                                                                   NULL,
-    Status          ENUM ('ORDERED','PAID','ON_THE_WAY','PENDING_PAYMENT','DELIVERED','CANCELLED') NULL,
-    UpdatedAt       datetime                                                                       NULL,
-    CONSTRAINT PK_ORDERS PRIMARY KEY (OrderId)
+    OrderID         BIGINT AUTO_INCREMENT                                                             NOT NULL,
+    UserID          BIGINT                                                                            NULL,
+    CreatedAt       datetime                                                                          NULL,
+    DeliveryAddress VARCHAR(255)                                                                      NULL,
+    ContactPhone    VARCHAR(255)                                                                      NULL,
+    DeliveryMethod  ENUM ('COURIER_DELIVERY', 'SELF_DELIVERY' ,'DEPARTMENT_DELIVERY')                     NULL,
+    Status          ENUM ('CREATED','CANCEL', 'WAIT_PAYMENT', 'PAID', 'ON_THE_WAY', 'DELIVERED') NULL,
+    UpdatedAt       datetime                                                                          NULL,
+    CONSTRAINT PK_ORDERS PRIMARY KEY (OrderID)
 );
 
--- changeset artemii:create_table_orderitems
-CREATE TABLE orderitems
+-- changeset Artemii:create_table_orderitems
+CREATE TABLE OrderItems
 (
-    OrderItemId     INT AUTO_INCREMENT NOT NULL,
-    OrderId         INT                NULL,
-    ProductId       INT                NULL,
-    Quantity        INT                NULL,
-    PriceAtPurchase DECIMAL            NULL,
-    CONSTRAINT PK_ORDERITEMS PRIMARY KEY (OrderItemId)
+    OrderItemID     BIGINT AUTO_INCREMENT NOT NULL,
+    OrderID         BIGINT                NULL,
+    ProductID       BIGINT                NULL,
+    Quantity        INT                   NULL,
+    PriceAtPurchase DECIMAL(10, 2)        NULL,
+    CONSTRAINT PK_ORDERITEMS PRIMARY KEY (OrderItemID)
 );
 
 
--- changeset serhii:create_foreign_key_products_categories
-ALTER TABLE products
-    ADD CONSTRAINT foreign_key_products_categories FOREIGN KEY (CategoryId)
-        REFERENCES categories (CategoryId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Daniil:create_foreign_key_products_categories
+ALTER TABLE Products
+    ADD CONSTRAINT foreign_key_products_categories FOREIGN KEY (CategoryID) REFERENCES
+        Categories (CategoryID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
-ALTER TABLE cartItems
-    ADD CONSTRAINT foreign_key_cartItems_products FOREIGN KEY (ProductId)
-        REFERENCES products (ProductId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Serhii:create_foreign_key_favorites_users
+ALTER TABLE Favorites
+    ADD CONSTRAINT foreign_key_favorites_users FOREIGN KEY (UserID) REFERENCES
+        Users (UserID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
-ALTER TABLE cartItems
-    ADD CONSTRAINT foreign_key_cartItems_cart FOREIGN KEY (CartId)
-        REFERENCES cart (CartId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Serhii:create_foreign_key_favorites_products
+ALTER TABLE Favorites
+    ADD CONSTRAINT foreign_key_favorites_products FOREIGN KEY (ProductID) REFERENCES
+        Products (ProductID) ON UPDATE CASCADE ON DELETE SET NULL;
 
----- changeset artemii:create_foreign_key_orders_users
-ALTER TABLE orders
-    ADD CONSTRAINT foreign_key_orders_users FOREIGN KEY (UserId)
-        REFERENCES users (UserId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Serhii:create_foreign_key_cart_users
+ALTER TABLE Cart
+    ADD CONSTRAINT foreign_key_cart_users FOREIGN KEY (UserID) REFERENCES
+        Users (UserID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
--- changeset artemii:create_foreign_key_orderitems_orders
-ALTER TABLE orderitems
-    ADD CONSTRAINT foreign_key_orderitems_orders FOREIGN KEY (OrderId)
-        REFERENCES orders (OrderId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Marat:create_foreign_key_cartitems_cart
+ALTER TABLE CartItems
+    ADD CONSTRAINT foreign_key_cartitems_cart FOREIGN KEY (CartID) REFERENCES
+        Cart (CartID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
--- changeset artemii:create_foreign_key_orderitems_products
-ALTER TABLE orderitems
-    ADD CONSTRAINT foreign_key_orderitems_products FOREIGN KEY (ProductId)
-        REFERENCES products (ProductId) ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Marat:create_foreign_key_cartitems_products
+ALTER TABLE CartItems
+    ADD CONSTRAINT foreign_key_cartitems_products FOREIGN KEY (ProductID) REFERENCES
+        Products (ProductID) ON UPDATE CASCADE ON DELETE SET NULL;
 
--- changeset serhii:create_foreign_key_cart_users
-ALTER TABLE cart
-    ADD CONSTRAINT foreign_key_cart_users FOREIGN KEY (UserId) REFERENCES users (UserId)
-        ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Artemii:create_foreign_key_orders_users
+ALTER TABLE Orders
+    ADD CONSTRAINT foreign_key_orders_users FOREIGN KEY (UserID) REFERENCES
+        Users (UserID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
--- changeset serhii:create_foreign_key_favorites_users
-ALTER TABLE favorites
-    ADD CONSTRAINT foreign_key_favorites_users FOREIGN KEY (UserId) REFERENCES users (UserId)
-        ON UPDATE RESTRICT ON DELETE RESTRICT;
+-- changeset Artemii:create_foreign_key_orderitems_orders
+ALTER TABLE OrderItems
+    ADD CONSTRAINT foreign_key_orderitems_orders FOREIGN KEY (OrderID) REFERENCES
+        Orders (OrderID) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
--- changeset serhii:create_index_cart
-CREATE INDEX foreign_key_cart_users ON cart (UserId);
+-- changeset Artemii:create_foreign_key_orderitems_products
+ALTER TABLE OrderItems
+    ADD CONSTRAINT foreign_key_orderitems_products FOREIGN KEY (ProductID) REFERENCES
+        Products (ProductID) ON UPDATE CASCADE ON DELETE SET NULL;
 
--- changeset serhii:create_index_favorites
-CREATE INDEX foreign_key_favorites_users ON favorites(UserId);
 
--- changeset serhii:create_index_orders
-CREATE INDEX foreign_key_orders_users ON orders(UserId);
+-- changeset Daniil:create_index_products_to_categories
+CREATE INDEX foreign_key_products_categories ON Products (CategoryID);
 
--- changeset serhii:create_index_products
-CREATE INDEX foreign_key_products_categories ON products (CategoryId);
+-- changeset Serhii:create_index_favorites_to_users
+CREATE INDEX foreign_key_favorites_users ON Favorites (UserID);
 
-CREATE INDEX foreign_key_cartItems_products ON cartItems (ProductId);
+-- changeset Serhii:create_index_favorites_to_products
+CREATE INDEX foreign_key_favorites_products ON Favorites (ProductID);
 
-CREATE INDEX foreign_key_cartItems_cart ON cartItems (CartId);
+-- changeset Serhii:create_index_cart
+CREATE INDEX foreign_key_cart_users ON Cart (UserID);
+
+-- changeset Marat:create_index_cartitems_to_cart
+CREATE INDEX foreign_key_cartitems_cart ON CartItems (CartID);
+
+-- changeset Marat:create_index_cartitems_to_products
+CREATE INDEX foreign_key_cartitems_products ON CartItems (ProductID);
+
+-- changeset Artemii:create_index_orders
+CREATE INDEX foreign_key_orders_users ON Orders (UserID);
+
+-- changeset Artemii:create_index_orderitems_to_orders
+CREATE INDEX foreign_key_orderitems_orders ON OrderItems (OrderID);
+
+-- changeset Artemii:create_index_orderitems_to_products
+CREATE INDEX foreign_key_orderitems_products ON OrderItems (ProductID);

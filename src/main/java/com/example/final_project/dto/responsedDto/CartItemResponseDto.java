@@ -1,4 +1,4 @@
-package com.example.final_project.dto;
+package com.example.final_project.dto.responsedDto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -11,14 +11,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FavoriteDto {
-    private long favoriteId;
+public class CartItemResponseDto {
+    private Long cartItemId;
+    private Integer quantity;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonProperty("User")
-    private UserDto users;
+    @JsonProperty("cart")
+    private CartResponseDto cartResponseDto;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonProperty("Product")
-    private long  productId;
+    @JsonProperty("cart")
+    private ProductResponseDto productResponseDto;
 }

@@ -1,4 +1,4 @@
-insert into cart (userId)
+insert into Cart (UserId)
 values (1),
        (2),
        (3),

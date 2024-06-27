@@ -1,31 +1,30 @@
 package com.example.final_project.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Entity
 @Table(name = "CartItems")
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class CartItem {
     @Id
-    @Column(name = "cartItemId")
+    @Column(name = "CartItemId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartItemId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cartId")
+    @JoinColumn(name = "CartId")
     private Cart cart;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "productId")
+    @JoinColumn(name = "ProductId")
     private Product product;
 
-    @Column(name = "quantity")
-    private int quantity;
+    @Column(name = "Quantity")
+    private Integer quantity;
 }

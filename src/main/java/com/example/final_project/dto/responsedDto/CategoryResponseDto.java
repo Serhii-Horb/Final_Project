@@ -1,5 +1,4 @@
-package com.example.final_project.dto;
-
+package com.example.final_project.dto.responsedDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CategoryDto {
+public class CategoryResponseDto {
     private long categoryId;
     private String name;
 }

@@ -1,6 +1,5 @@
 package com.example.final_project.service;
 
-import com.example.final_project.dto.CartDto;
 import com.example.final_project.entity.Cart;
 import com.example.final_project.entity.User;
 import com.example.final_project.mapper.Mappers;
@@ -21,25 +20,25 @@ public class CartService {
     private final CartRepository cartRepository;
     private final UserRepository usersRepository;
     private final Mappers mappers;
-
-    @ResponseStatus(HttpStatus.CREATED)
-    public CartDto insertCart(@Valid @RequestBody CartDto cartDto) {
-        if (cartDto.getUsers() == null || cartDto.getUsers().getUserId() == null) {
-            throw new IllegalArgumentException("User ID must be provided in CartDto");
-        }
-
-        Long userId = cartDto.getUsers().getUserId();
-        User user = usersRepository.findById(userId)
-                .orElseThrow(() -> new EntityNotFoundException("User not found with ID: " + userId));
-
-        Cart cart = mappers.convertToCart(cartDto);
-        cart.setUser(user);
-
-        try {
-            Cart savedCart = cartRepository.save(cart);
-            return mappers.convertToCartDto(savedCart);
-        } catch (DataAccessException ex) {
-            throw new RuntimeException("Failed to save cart: " + ex.getMessage(), ex);
-        }
-    }
+//
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public CartDto insertCart(@Valid @RequestBody CartDto cartDto) {
+//        if (cartDto.getUser() == null || cartDto.getUser().getUserId() == null) {
+//            throw new IllegalArgumentException("User ID must be provided in CartDto");
+//        }
+//
+//        Long userId = cartDto.getUser().getUserId();
+//        User user = usersRepository.findById(userId)
+//                .orElseThrow(() -> new EntityNotFoundException("User not found with ID: " + userId));
+//
+//        Cart cart = mappers.convertToCart(cartDto);
+//        cart.setUser(user);
+//
+//        try {
+//            Cart savedCart = cartRepository.save(cart);
+//            return mappers.convertToCartDto(savedCart);
+//        } catch (DataAccessException ex) {
+//            throw new RuntimeException("Failed to save cart: " + ex.getMessage(), ex);
+//        }
+//    }
 }

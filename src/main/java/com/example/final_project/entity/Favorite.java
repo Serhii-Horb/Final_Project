@@ -1,22 +1,21 @@
 package com.example.final_project.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Entity
 @Table(name = "Favorites")
+@Entity
 @Getter
 @Setter
-@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @AllArgsConstructor
+@NoArgsConstructor
 public class Favorite {
     @Id
     @Column(name = "FavoriteId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long favoriteId;
+    private Long favoriteId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "UserId", nullable = false)

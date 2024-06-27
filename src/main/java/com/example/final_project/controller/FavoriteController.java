@@ -1,6 +1,5 @@
 package com.example.final_project.controller;
 
-import com.example.final_project.dto.FavoriteDto;
 import com.example.final_project.service.FavoriteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,11 +14,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping(value = "/favorites")
 public class FavoriteController {
-    private final FavoriteService favoritesService;
-
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<FavoriteDto> getFavorites() {
-        return favoritesService.getFavorites();
-    }
+//    private final FavoriteService favoritesService;
+//
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public List<FavoriteDto> getFavorites() {
+//        return favoritesService.getFavorites();
+//    }
 }
