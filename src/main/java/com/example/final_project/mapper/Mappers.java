@@ -1,15 +1,10 @@
 package com.example.final_project.mapper;
 
-
-import com.example.final_project.dto.CartDto;
-import com.example.final_project.dto.CartItemDto;
+import com.example.final_project.dto.requestDto.*;
+import com.example.final_project.dto.responsedDto.*;
 import com.example.final_project.entity.*;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import com.example.final_project.config.MapperUtil;
-import com.example.final_project.dto.OrderDto;
-import com.example.final_project.dto.OrderItemDto;
-import com.example.final_project.dto.*;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,95 +13,70 @@ public class Mappers {
     private final ModelMapper modelMapper;
 
 
-    public CartItem convertToCartItem(CartItemDto cartItemDto) {
-        CartItem cartItem = modelMapper.map(cartItemDto, CartItem.class);
-        return cartItem;
+    public UserResponseDto convertToUserResponseDto(User user) {
+        UserResponseDto usersResponseDto = modelMapper.map(user, UserResponseDto.class);
+        usersResponseDto.setPassword("******");
+        return usersResponseDto;
     }
 
-
-    public CartItemDto convertToCartItemDto(CartItem cartItem) {
-        CartItemDto cartItemDto = modelMapper.map(cartItem, CartItemDto.class);
-        return cartItemDto;
+    public User convertToUser(UserRequestDto userRequestDto) {
+        return modelMapper.map(userRequestDto, User.class);
     }
 
-    public OrderItem convertIntoOrderItem(OrderItemDto orderItemDto) {
-        return modelMapper.map(orderItemDto, OrderItem.class);
+    public Cart convertToCart(CartRequestDto cartRequestDto) {
+        return modelMapper.map(cartRequestDto, Cart.class);
     }
 
-    public OrderItemDto convertIntoOrderItemDto(OrderItem orderItem) {
-        return modelMapper.map(orderItem, OrderItemDto.class);
+    public CartResponseDto convertToCartResponseDto(Cart cart) {
+        return modelMapper.map(cart, CartResponseDto.class);
     }
 
-    public Order convertIntoOrder(OrderDto orderDto) {
-        return Order.builder()
-                .deliveryAddress(orderDto.getDeliveryAddress())
-                .deliveryMethod(orderDto.getDeliveryMethod())
-                .items(MapperUtil.convertList(orderDto.getItems(), this::convertIntoOrderItem))
-                .build();
+    public FavoriteResponseDto convertToFavoriteResponseDto(Favorite favorites) {
+        return modelMapper.map(favorites, FavoriteResponseDto.class);
     }
 
-    public OrderDto convertIntoOrderDto(Order order) {
-        return OrderDto.builder()
-                .orderId(order.getOrderId())
-                .deliveryAddress(order.getDeliveryAddress())
-                .deliveryMethod(order.getDeliveryMethod())
-                .items(MapperUtil.convertList(order.getItems(), this::convertIntoOrderItemDto))
-                .build();
+    public Favorite convertToFavorite(FavoriteResponseDto favoritesDto) {
+        return modelMapper.map(favoritesDto, Favorite.class);
     }
 
-    public UserDto convertToUserDto(User user) {
-        UserDto usersDto = modelMapper.map(user, UserDto.class);
-        usersDto.setPasswordHash("*******");
-        return usersDto;
+    public Order convertToOrder(OrderRequestDto ordersRequestDto) {
+        return modelMapper.map(ordersRequestDto, Order.class);
     }
 
-    public CategoryDto convertToCategoryDto(Category category) {
-        CategoryDto categoryDto = modelMapper.map(category, CategoryDto.class);
-        return categoryDto;
+    public OrderItemResponseDto convertToOrderItemResponseDto(OrderItem orderItem) {
+        return modelMapper.map(orderItem, OrderItemResponseDto.class);
     }
 
-    public Category convertToCategory(CategoryDto categoryDto) {
-        Category category = modelMapper.map(categoryDto, Category.class);
-        return category;
+    public CartItemResponseDto convertToCartItemResponseDto(CartItem cartItem) {
+        return modelMapper.map(cartItem, CartItemResponseDto.class);
     }
 
-    public ProductResponseDto convertToProductDto(Product product) {
-        ProductResponseDto productResponseDto = modelMapper.map(product, ProductResponseDto.class);
-        return productResponseDto;
+    public CartItem convertToCartItem(CartItemRequestDto cartItemsDto) {
+        return modelMapper.map(cartItemsDto, CartItem.class);
     }
 
-    public User convertToUser(UserDto userDto) {
-        return modelMapper.map(userDto, User.class);
+    public OrderResponseDto convertToOrderResponseDto(Order order) {
+        return modelMapper.map(order, OrderResponseDto.class);
     }
 
-    public CartDto convertToCartDto(Cart cart) {
-        return modelMapper.map(cart, CartDto.class);
-    }
-
-    public Cart convertToCart(CartDto cartDto) {
-        return modelMapper.map(cartDto, Cart.class);
-    }
-
-    public Product convertToProduct(ProductResponseDto productResponseDto) {
-        Product product = modelMapper.map(productResponseDto, Product.class);
-        return product;
-    }
-
-    public ProductRequestDto convertToProductRequestDto(Product product) {
-        ProductRequestDto productRequestDto = modelMapper.map(product, ProductRequestDto.class);
-        return productRequestDto;
+    public OrderItem convertToOrderItem(OrderItemRequestDto orderItemRequestDto) {
+        return modelMapper.map(orderItemRequestDto, OrderItem.class);
     }
 
     public Product convertToProduct(ProductRequestDto productRequestDto) {
-        Product product = modelMapper.map(productRequestDto, Product.class);
-        return product;
+        return modelMapper.map(productRequestDto, Product.class);
     }
 
-    public FavoriteDto convertToFavoritesDto(Favorite favorites) {
-        return modelMapper.map(favorites, FavoriteDto.class);
+    public ProductResponseDto convertToProductResponseDto(Product product) {
+        modelMapper.typeMap(Product.class, ProductResponseDto.class);
+        return modelMapper.map(product, ProductResponseDto.class);
     }
 
-    public Favorite convertToFavorites(FavoriteDto favoritesDto) {
-        return modelMapper.map(favoritesDto, Favorite.class);
+    public CategoryResponseDto convertToCategoryResponseDto(Category category) {
+        return modelMapper.map(category, CategoryResponseDto.class);
+    }
+
+    public Category convertToCategory(CategoryRequestDto categoryRequestDto) {
+        return modelMapper.map(categoryRequestDto, Category.class);
     }
 }

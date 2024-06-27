@@ -1,20 +1,20 @@
 package com.example.final_project.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Table(name = "Categories")
 @Entity
-@Table (name = "Categories")
-@Data
-@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
 @AllArgsConstructor
-public  class Category {
+@NoArgsConstructor
+public class Category {
     @Id
     @Column(name = "CategoryId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
