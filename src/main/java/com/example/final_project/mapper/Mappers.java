@@ -19,7 +19,7 @@ public class Mappers {
         return usersResponseDto;
     }
 
-    public User convertToUser(UserRequestDto userRequestDto) {
+    public User convertToUser(UserRegisterRequestDto userRequestDto) {
         return modelMapper.map(userRequestDto, User.class);
     }
 
