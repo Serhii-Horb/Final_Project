@@ -1,60 +1,58 @@
 package com.example.final_project.service;
 
-import com.example.final_project.config.MapperUtil;
+import com.example.final_project.dto.requestDto.CartItemRequestDto;
+import com.example.final_project.dto.responsedDto.CartItemResponseDto;
+import com.example.final_project.entity.Cart;
 import com.example.final_project.entity.CartItem;
+import com.example.final_project.entity.Product;
+import com.example.final_project.exceptions.BadRequestException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.CartItemRepository;
 import com.example.final_project.repository.CartRepository;
+import com.example.final_project.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class CartItemService {
-    private final CartItemRepository cartItemRepository;
-    private final Mappers mappers;
-    private final CartRepository cartRepository;
+    private static final Logger logger = LoggerFactory.getLogger(CartItemService.class);
 
-//    public List<CartItemDto> getCartItem() {
-//        List<CartItem> cartItemList = cartItemRepository.findAll();
-//        List<CartItemDto> cartItemDtoList = MapperUtil.convertList(cartItemList, mappers::convertToCartItemDto);
-//        return cartItemDtoList;
-//    }
-//
-//    public CartItemDto getCartItemById(Long id) {
-//        Optional<CartItem> cartItem = cartItemRepository.findById(id);
-//        CartItemDto cartItemDto = null;
-//        if (cartItem.isPresent()) {
-//            cartItemDto = mappers.convertToCartItemDto(cartItem.get());
-//        }
-//        return cartItemDto;
-//    }
-//
-//    public CartItemDto insertCartItem(CartItemDto cartItemDto) {
-//        CartItem cartItem = mappers.convertToCartItem(cartItemDto);
-//        cartItem.setCartItemId(null);
-//        CartItem newCartItem = cartItemRepository.save(cartItem);
-//        return mappers.convertToCartItemDto(newCartItem);
-//    }
-//
-//    public CartItemDto updateCartItem(CartItemDto cartItemDto) {
-//        if (cartItemDto.getCartItemId() <= 0) {
-//            return null;
-//        }
-//        Optional<CartItem> cartItemOptional = cartItemRepository.findById(cartItemDto.getCartItemId());
-//        if (cartItemOptional.isEmpty()) {
-//            return null;
-//        }
-//        CartItem cartItem = mappers.convertToCartItem(cartItemDto);
-//        CartItem newCartItem = cartItemRepository.save(cartItem);
-//        return mappers.convertToCartItemDto(newCartItem);
-//    }
-//
-//    public void deleteCartItemById(Long id) {
-//        Optional<CartItem> cartItem = cartItemRepository.findById(id);
-//        cartItem.ifPresent(cartItemRepository::delete);
-//    }
+    private final CartItemRepository cartItemRepository;
+    private final CartRepository cartRepository;
+    private final ProductRepository productRepository;
+
+    private final Mappers mappers;
+
+    public CartItemResponseDto addOrUpdateProductInCart(CartItemRequestDto cartItemRequestDto, Long userId) {
+        Cart cart = cartRepository.findByUser_UserId(userId).orElseThrow(() -> new BadRequestException("Cart not found."));
+        Product product = productRepository.findById(cartItemRequestDto.getProductId()).orElseThrow(
+                () -> new BadRequestException("Product not found."));
+        CartItem cartItem = cartItemRepository.findByCart_CartIdAndProduct_ProductId(cart.getCartId(),
+                product.getProductId()).orElse(null);
+        if (cartItem == null) {
+            cartItem = new CartItem();
+            cartItem.setProduct(product);
+            cartItem.setCart(cart);
+        }
+        cartItem.setQuantity(cartItemRequestDto.getQuantity());
+        try {
+            cartItemRepository.save(cartItem);
+        } catch (Exception exception) {
+            logger.error("Error saving cartItem", exception);
+            throw new BadRequestException("Error saving cartItem");
+        }
+        return mappers.convertToCartItemResponseDto(cartItem);
+    }
+
+    public void deleteProductInCartByUserIdAndProductId(Long productId, Long userId) {
+        Cart cart = cartRepository.findByUser_UserId(userId).orElseThrow(() -> new BadRequestException("Cart not found."));
+        Product product = productRepository.findById(productId).orElseThrow(
+                () -> new BadRequestException("Product not found."));
+        CartItem cartItem = cartItemRepository.findByCart_CartIdAndProduct_ProductId(cart.getCartId(),
+                product.getProductId()).orElseThrow(() -> new BadRequestException("CartItem not found."));
+        cartItemRepository.delete(cartItem);
+    }
 }

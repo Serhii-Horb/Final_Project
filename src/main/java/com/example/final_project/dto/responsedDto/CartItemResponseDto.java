@@ -20,6 +20,6 @@ public class CartItemResponseDto {
     private CartResponseDto cartResponseDto;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonProperty("cart")
+    @JsonProperty("product")
     private ProductResponseDto productResponseDto;
 }
