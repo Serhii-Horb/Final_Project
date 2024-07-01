@@ -1,5 +1,7 @@
 package com.example.final_project.controller;
 
+import com.example.final_project.dto.requestDto.OrderRequestDto;
+import com.example.final_project.dto.responsedDto.OrderResponseDto;
 import com.example.final_project.entity.enums.Status;
 import com.example.final_project.service.OrderService;
 import jakarta.validation.Valid;
@@ -25,5 +27,17 @@ public class OrderController {
 //        Status orderStatusById = orderService.getOrderStatusById(id);
 //        return new ResponseEntity<>(orderStatusById,HttpStatus.OK);
 //    }
+
+    private final OrderService orderService;
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Status> getOrderStatusById(@PathVariable long id) {
+        return new ResponseEntity<>(orderService.getOrderStatusById(id),HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto) {
+        return new ResponseEntity<>(orderService.insertOrder(orderRequestDto),HttpStatus.OK);
+    }
 
 }
