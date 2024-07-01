@@ -4,10 +4,7 @@ import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -35,5 +32,5 @@ public class ProductRequestDto {
     private String imageURL;
 
     @NotBlank(message = "Invalid Category: Empty category")
-    private String category;
+    private Long categoryId;
 }
