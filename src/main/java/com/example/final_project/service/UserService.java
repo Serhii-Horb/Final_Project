@@ -1,6 +1,6 @@
 package com.example.final_project.service;
 
-import com.example.final_project.config.MapperUtil;
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.UserLoginRequestDto;
 import com.example.final_project.dto.requestDto.UserRegisterRequestDto;
 import com.example.final_project.dto.requestDto.UserUpdateRequestDto;
@@ -9,6 +9,7 @@ import com.example.final_project.entity.Cart;
 import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Role;
 import com.example.final_project.exceptions.AuthorizationException;
+import com.example.final_project.exceptions.NoUsersFoundException;
 import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.UserRepository;
@@ -50,7 +51,7 @@ public class UserService {
         try {
             savedUser = userRepository.save(user);
         } catch (Exception exception) {
-         //   logger.error("Error saving user", exception);
+            //   logger.error("Error saving user", exception);
             throw new AuthorizationException("Error saving user");
         }
 
@@ -64,9 +65,9 @@ public class UserService {
             throw new AuthorizationException("User not found");
         }
 
-        User user = userRepository.findByEmailAndPassword (userLoginRequestDto.getEmail(),
-                userLoginRequestDto.getPassword())
-                .orElseThrow(()-> new AuthorizationException("Incorrect password. Please try again"));
+        User user = userRepository.findByEmailAndPassword(userLoginRequestDto.getEmail(),
+                        userLoginRequestDto.getPassword())
+                .orElseThrow(() -> new AuthorizationException("Incorrect password. Please try again"));
 
         return mappers.convertToUserResponseDto(user);
     }
@@ -95,6 +96,9 @@ public class UserService {
 
     public List<UserResponseDto> getAllUsers() {
         List<User> usersList = userRepository.findAll();
+        if (usersList.isEmpty()) {
+            throw new NoUsersFoundException("No users found.");
+        }
         return MapperUtil.convertList(usersList, mappers::convertToUserResponseDto);
     }
 

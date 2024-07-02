@@ -2,10 +2,6 @@ package com.example.final_project.entity;
 
 import com.example.final_project.entity.enums.Role;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.HashSet;
@@ -15,8 +11,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"role", "cart", "favorites", "orders"})
+@EqualsAndHashCode(exclude = {"role", "cart", "favorites", "orders"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
