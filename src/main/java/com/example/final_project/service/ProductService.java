@@ -1,10 +1,11 @@
 package com.example.final_project.service;
 
-import com.example.final_project.config.MapperUtil;
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.ProductRequestDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.entity.Category;
 import com.example.final_project.entity.Product;
+import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.CategoryRepository;
 import com.example.final_project.repository.ProductRepository;
@@ -40,10 +41,8 @@ public class ProductService {
     }
 
     public void deleteProductById(Long id) {
-        Optional<Product> products = productRepository.findById(id);
-        if (products.isPresent()) {
-            productRepository.deleteById(id);
-        }
+      Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
+      productRepository.delete(product);
     }
 
     public void insertProduct(ProductRequestDto productRequestDto) {

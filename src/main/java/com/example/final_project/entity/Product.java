@@ -2,6 +2,8 @@ package com.example.final_project.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
@@ -12,8 +14,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"category", "cartItem", "orderItems", "favorites"})
+@EqualsAndHashCode(exclude = {"category", "cartItem", "orderItems", "favorites"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
@@ -41,9 +43,11 @@ public class Product {
     @Column(name = "DiscountPrice")
     private BigDecimal discountPrice;
 
+    @CreationTimestamp
     @Column(name = "CreatedAt")
     private Timestamp createdAt;
 
+    @UpdateTimestamp
     @Column(name = "UpdatedAt")
     private Timestamp updatedAt;
 
@@ -55,5 +59,4 @@ public class Product {
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private Set<Favorite> favorites = new HashSet<>();
-
 }

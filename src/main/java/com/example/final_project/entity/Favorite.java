@@ -7,8 +7,8 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"user", "product"})
+@EqualsAndHashCode(exclude = {"user", "product"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class Favorite {

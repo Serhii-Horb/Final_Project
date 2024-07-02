@@ -10,8 +10,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"products"})
+@EqualsAndHashCode(exclude = {"products"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class Category {

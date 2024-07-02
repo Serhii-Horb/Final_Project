@@ -7,8 +7,8 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"cart", "product"})
+@EqualsAndHashCode(exclude = {"cart", "product"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class CartItem {
