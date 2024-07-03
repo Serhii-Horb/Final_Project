@@ -1,11 +1,14 @@
 package com.example.final_project.mapper;
 
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.*;
 import com.example.final_project.dto.responsedDto.*;
 import com.example.final_project.entity.*;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor
@@ -40,7 +43,10 @@ public class Mappers {
     }
 
     public Order convertToOrder(OrderRequestDto ordersRequestDto) {
-        return modelMapper.map(ordersRequestDto, Order.class);
+        List<OrderItem> orderItems = MapperUtil.convertList(ordersRequestDto.getOrderItemsList(), this::convertToOrderItem);
+        Order order = modelMapper.map(ordersRequestDto, Order.class);
+        order.setItems(orderItems);
+        return order;
     }
 
     public OrderItemResponseDto convertToOrderItemResponseDto(OrderItem orderItem) {

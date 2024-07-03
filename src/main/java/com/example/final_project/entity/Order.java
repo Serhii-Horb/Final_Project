@@ -1,5 +1,6 @@
 package com.example.final_project.entity;
 
+import com.example.final_project.entity.enums.Delivery;
 import com.example.final_project.entity.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
@@ -44,7 +45,7 @@ public class Order {
     @Column(name = "UpdatedAt")
     private Timestamp updatedAt;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.MERGE)
     private List<OrderItem> items = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
