@@ -9,6 +9,7 @@ import com.example.final_project.entity.Cart;
 import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Role;
 import com.example.final_project.exceptions.AuthorizationException;
+import com.example.final_project.exceptions.BadRequestException;
 import com.example.final_project.exceptions.NoUsersFoundException;
 import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
@@ -33,13 +34,12 @@ public class UserService {
         if (userRepository.existsByEmail(userRequestDto.getEmail()) ||
                 userRepository.existsByPhoneNumber(userRequestDto.getPhoneNumber())) {
             logger.error("User with email {} and phone {} already exists", userRequestDto.getEmail(), userRequestDto.getPhoneNumber());
-            throw new AuthorizationException("User already exists");
+            throw new BadRequestException("User already exists");
         }
 
         // Преобразование DTO в сущность User
         User user = mappers.convertToUser(userRequestDto);
 
-        // Установка значения userId в 0, чтобы Hibernate создавал нового пользователя
         // Установка роли пользователя
         user.setRole(Role.USER);
         Cart cart = new Cart();
@@ -83,9 +83,8 @@ public class UserService {
             savedUser = userRepository.save(user);
         } catch (Exception exception) {
             logger.error("Error saving user", exception);
-            throw new NotFoundInDbException("Error saving user");
+            throw new BadRequestException("Error saving user");
         }
-
         return mappers.convertToUserResponseDto(savedUser);
     }
 
