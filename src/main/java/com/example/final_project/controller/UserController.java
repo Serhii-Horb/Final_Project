@@ -42,25 +42,25 @@ public class UserController {
         return userService.loginUserProfile(userLoginRequestDto);
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "User update.",
             description = "Allows the user to update their data."
     )
     public UserResponseDto updateUserProfile(@RequestBody UserUpdateRequestDto userUpdateRequestDto,
-                                             @PathVariable @Valid @Min(1) Long id) {
-        return userService.updateUserProfile(userUpdateRequestDto, id);
+                                             @PathVariable @Valid @Min(1) Long userId) {
+        return userService.updateUserProfile(userUpdateRequestDto, userId);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "Deletes the user.",
             description = "Allows you to delete a user profile."
     )
-    public void deleteUserProfileById(@PathVariable @Valid @Min(1) Long id) {
-        userService.deleteUserProfileById(id);
+    public void deleteUserProfileById(@PathVariable @Valid @Min(1) Long userId) {
+        userService.deleteUserProfileById(userId);
     }
 
     @GetMapping
@@ -73,13 +73,13 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "Finds the user.",
             description = "Allows you to find one of the registered users by using the id."
     )
-    public UserResponseDto getUserProfileById(@PathVariable @Valid @Min(1) Long id) {
-        return userService.getUserById(id);
+    public UserResponseDto getUserProfileById(@PathVariable @Valid @Min(1) Long userId) {
+        return userService.getUserById(userId);
     }
 }
