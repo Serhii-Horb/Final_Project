@@ -24,12 +24,8 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final Mappers mappers;
-    public Status getOrderStatusById(long id) {
-        Optional<Order> orderOptional = orderRepository.findById(id);
-        if(orderOptional.isPresent()) {
-            return orderOptional.get().getStatus();
-        }
-        throw new NotFoundInDbException("Requested order was not found");
+    public Status getOrderStatusById(Long id) {
+        return orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Requested order was not found")).getStatus();
     }
     public OrderResponseDto insertOrder(OrderRequestDto orderRequestDto, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
