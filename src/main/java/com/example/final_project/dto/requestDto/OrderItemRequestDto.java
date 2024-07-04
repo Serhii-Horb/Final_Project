@@ -1,5 +1,6 @@
 package com.example.final_project.dto.requestDto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,12 +12,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class OrderItemRequestDto {
-    @NotBlank(message = "Invalid Id: Empty Id")
-    @Pattern(regexp = "^[^0]\\d{1,18}$", message = "Invalid Id: not a number")
+    @NotNull(message = "Id is null")
+    @Positive(message = "Id must be positive")
+    @Min(value = 1,message = "Invalid id")
+    @Max(value = 100,message = "Invalid id")
     private Long productId;
 
     @NotNull(message = "Quantity null")
     @Positive(message = "Quantity must be positive")
-    @Size(min = 1, max = 100, message = "Invalid Quantity: Must be of 1 - 100")
+    @Min(value = 1,message = "Invalid quantity")
+    @Max(value = 100,message = "Invalid quantity")
     private Integer quantity;
 }

@@ -11,6 +11,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -20,7 +22,7 @@ import java.util.Set;
 public class OrderRequestDto {
     @JsonProperty("items")
     @NotEmpty(message = "Items list cannot be empty")
-    private Set<@Valid OrderItemRequestDto> orderItemsSet;
+    private List<@Valid OrderItemRequestDto> orderItemsList = new ArrayList<>();
 
     @NotBlank(message = "Invalid address: Empty address")
     @Size(max = 255, message = "The number of characters should not exceed 255")
