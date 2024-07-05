@@ -35,9 +35,11 @@ public class Order {
     @Column(name = "ContactPhone")
     private String contactPhone;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "DeliveryMethod")
-    private String deliveryMethod;
+    private Delivery deliveryMethod;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "Status")
     private Status status;
 

@@ -66,14 +66,14 @@ CREATE TABLE Favorites
 -- changeset Artemii:create_table_orders
 CREATE TABLE Orders
 (
-    OrderID         BIGINT AUTO_INCREMENT                                                             NOT NULL,
-    UserID          BIGINT                                                                            NULL,
-    CreatedAt       datetime                                                                          NULL,
-    DeliveryAddress VARCHAR(255)                                                                      NULL,
-    ContactPhone    VARCHAR(255)                                                                      NULL,
-    DeliveryMethod  ENUM ('COURIER_DELIVERY', 'SELF_DELIVERY' ,'DEPARTMENT_DELIVERY')                     NULL,
+    OrderID         BIGINT AUTO_INCREMENT                                                        NOT NULL,
+    UserID          BIGINT                                                                       NULL,
+    CreatedAt       datetime                                                                     NULL,
+    DeliveryAddress VARCHAR(255)                                                                 NULL,
+    ContactPhone    VARCHAR(255)                                                                 NULL,
+    DeliveryMethod  ENUM ('COURIER_DELIVERY', 'SELF_DELIVERY' ,'DEPARTMENT_DELIVERY')            NULL,
     Status          ENUM ('CREATED','CANCEL', 'WAIT_PAYMENT', 'PAID', 'ON_THE_WAY', 'DELIVERED') NULL,
-    UpdatedAt       datetime                                                                          NULL,
+    UpdatedAt       datetime                                                                     NULL,
     CONSTRAINT PK_ORDERS PRIMARY KEY (OrderID)
 );
 

@@ -1,7 +1,7 @@
 -- liquibase formatted sql
 
 -- changeset serhii:insert_users
-insert into Users (name, email, phoneNumber, passwordHash, role)
+insert into Users (Name, Email, PhoneNumber, PasswordHash, Role)
 values
     ('Alice Smith', 'alice.smith@example.com', '1234567890', 'hashpassword1', 'USER'),
     ('Bob Johnson', 'bob.johnson@example.com', '1234567891', 'hashpassword2', 'ADMINISTRATOR'),

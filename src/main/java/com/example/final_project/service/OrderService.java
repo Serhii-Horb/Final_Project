@@ -25,6 +25,9 @@ public class OrderService {
     private final OrderItemRepository orderItemRepository;
     private final Mappers mappers;
     public Status getOrderStatusById(long id) {
+//        Order order = orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of user."));
+//        return order.getStatus();
+
         Optional<Order> orderOptional = orderRepository.findById(id);
         if(orderOptional.isPresent()) {
             return orderOptional.get().getStatus();

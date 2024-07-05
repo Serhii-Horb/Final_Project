@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
                 title = "Online Shop",
                 description = "Online Shop", version = "1.0.0",
                 contact = @Contact(
-                        name = "Horb Serhii, Daniil Kienko, Artemii Olefirenko, Marat Gafiev",
+                        name = "Horb Serhii, Daniil Kienko, Artemii Olefirenko",
                         email = "Sergey.gorb777@gmail.com",
                         url = "https://api.example.com/v1"
                 )
