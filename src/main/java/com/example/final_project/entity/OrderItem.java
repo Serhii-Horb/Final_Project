@@ -9,8 +9,8 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"order", "product"})
+@EqualsAndHashCode(exclude = {"order", "product"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderItem {

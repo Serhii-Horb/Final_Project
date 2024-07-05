@@ -15,8 +15,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"role", "cart", "favorites", "orders"})
+@EqualsAndHashCode(exclude = {"role", "cart", "favorites", "orders"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
