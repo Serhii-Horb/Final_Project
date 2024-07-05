@@ -46,6 +46,7 @@ public class Mappers {
         List<OrderItem> orderItems = MapperUtil.convertList(ordersRequestDto.getOrderItemsList(), this::convertToOrderItem);
         Order order = modelMapper.map(ordersRequestDto, Order.class);
         order.setItems(orderItems);
+//        orderItems.forEach(orderItem -> orderItem.setOrder(order));
         return order;
     }
 

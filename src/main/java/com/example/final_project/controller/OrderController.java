@@ -25,7 +25,7 @@ public class OrderController {
             summary = "shows the status of the specified order"
     )
     @GetMapping("/{id}")
-    public ResponseEntity<Status> getOrderStatusById(@PathVariable long id) {
+    public ResponseEntity<Status> getOrderStatusById(@PathVariable Long id) {
         return new ResponseEntity<>(orderService.getOrderStatusById(id),HttpStatus.OK);
     }
 
@@ -33,8 +33,8 @@ public class OrderController {
             summary = "creates the order"
     )
     @PostMapping
-    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto, BindingResult bindingResult) {
-        return new ResponseEntity<>(orderService.insertOrder(orderRequestDto,bindingResult),HttpStatus.OK);
+    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto) {
+        return new ResponseEntity<>(orderService.insertOrder(orderRequestDto),HttpStatus.CREATED);
     }
 
     @Operation(
