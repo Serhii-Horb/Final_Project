@@ -33,8 +33,8 @@ public class OrderController {
             summary = "creates the order"
     )
     @PostMapping
-    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto, BindingResult bindingResult) {
-        return new ResponseEntity<>(orderService.insertOrder(orderRequestDto,bindingResult),HttpStatus.CREATED);
+    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto) {
+        return new ResponseEntity<>(orderService.insertOrder(orderRequestDto),HttpStatus.CREATED);
     }
 
     @Operation(
