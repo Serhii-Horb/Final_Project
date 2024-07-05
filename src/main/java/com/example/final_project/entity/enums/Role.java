@@ -1,6 +1,16 @@
 package com.example.final_project.entity.enums;
 
 public enum Role {
-    USER,
-    ADMINISTRATOR
+    USER("User"),
+    ADMINISTRATOR("Administrator");
+
+    private String role;
+
+    Role(String role) {
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
 }
