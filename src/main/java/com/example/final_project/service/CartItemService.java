@@ -49,10 +49,8 @@ public class CartItemService {
 
     public void deleteProductInCartByUserIdAndProductId(Long productId, Long userId) {
         Cart cart = cartRepository.findByUser_UserId(userId).orElseThrow(() -> new BadRequestException("Cart not found."));
-        Product product = productRepository.findById(productId).orElseThrow(
-                () -> new BadRequestException("Product not found."));
         CartItem cartItem = cartItemRepository.findByCart_CartIdAndProduct_ProductId(cart.getCartId(),
-                product.getProductId()).orElseThrow(() -> new BadRequestException("CartItem not found."));
+                productId).orElseThrow(() -> new BadRequestException("CartItem not found."));
         cartItemRepository.delete(cartItem);
     }
 }

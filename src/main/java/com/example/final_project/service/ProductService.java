@@ -1,6 +1,6 @@
 package com.example.final_project.service;
 
-import com.example.final_project.config.MapperUtil;
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.ProductRequestDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.entity.Category;
@@ -34,29 +34,16 @@ public class ProductService {
     }
 
     public ProductResponseDto getProductById(Long id) {
-//        Optional<Product> productsOptional = productRepository.findById(id);
-//        ProductResponseDto productResponseDto = null;
-//        if (productsOptional.isPresent()) {
-//            productResponseDto = productsOptional.map(mappers::convertToProductResponseDto).orElse(null);
-//        } else {
-//            throw new NotFoundInDbException("Id Not Found");
-//        }
-//        return productResponseDto;
         return mappers.convertToProductResponseDto(productRepository.findById(id).orElseThrow(()
                 -> new NotFoundInDbException("Incorrect id of product.")));
     }
 
     public void deleteProductById(Long id) {
-//        Optional<Product> products = productRepository.findById(id);
-//        if (products.isPresent()) {
-//            productRepository.deleteById(id);
-//        } else {
-//            throw new NotFoundInDbException("Id Not Found");
-//        }
-
         Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
         productRepository.delete(product);
 
+      Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
+      productRepository.delete(product);
     }
 
     public void insertProduct(ProductRequestDto productRequestDto) {
@@ -68,7 +55,6 @@ public class ProductService {
             throw new BadRequestException("Bad Request");
         }
     }
-
 
     public void updateProduct(ProductRequestDto productRequestDto, Long id, BindingResult bindingResult) {
 
@@ -88,27 +74,3 @@ public class ProductService {
         productRepository.save(product);
     }
 }
-
-
-//        if (id > 0) {
-//            Optional<Product> productsOptional = productRepository.findById(id);
-//            if (!productsOptional.isPresent()) {
-//                throw new NotFoundInDbException("Id Not Found");
-
-//            } else {
-//                Product product = productsOptional.get();
-//                product.setName(productRequestDto.getName());
-//                product.setDescription(productRequestDto.getDescription());
-//                product.setImageURL(productRequestDto.getImageURL());
-//                product.setPrice(productRequestDto.getPrice());
-////                Category category = categoryRepository.findById(productRequestDto.getCategoryId()).orElseThrow(NoSuchFieldError :: new);
-//                Category category = categoryRepository.findById(productRequestDto.getCategoryId())
-//                        .orElseThrow(() -> new BadRequestException("Bad Request"));
-//                product.setCategory(category);
-//                product.setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
-//                productRepository.save(product);
-//                product.setDiscountPrice(productRequestDto.getDiscountPrice());
-//            }
-//        }
-//    }
-// }

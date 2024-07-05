@@ -1,8 +1,11 @@
 package com.example.final_project.entity;
 
+import com.example.final_project.entity.enums.Delivery;
 import com.example.final_project.entity.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -12,8 +15,8 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"items", "user"})
+@EqualsAndHashCode(exclude = {"items", "user"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
@@ -22,6 +25,7 @@ public class Order {
     @Column(name = "OrderId")
     private Long orderId;
 
+    @CreationTimestamp
     @Column(name = "CreatedAt")
     private Timestamp createdAt;
 
@@ -37,10 +41,11 @@ public class Order {
     @Column(name = "Status")
     private Status status;
 
+    @UpdateTimestamp
     @Column(name = "UpdatedAt")
     private Timestamp updatedAt;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.MERGE)
     private List<OrderItem> items = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)

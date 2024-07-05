@@ -1,6 +1,6 @@
 package com.example.final_project.service;
 
-import com.example.final_project.config.MapperUtil;
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.CategoryRequestDto;
 import com.example.final_project.dto.responsedDto.CategoryResponseDto;
 import com.example.final_project.entity.Category;

@@ -6,8 +6,6 @@ import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
-
 @Table(name = "Cart")
 @Entity
 @Getter

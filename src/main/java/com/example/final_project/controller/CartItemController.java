@@ -1,11 +1,8 @@
 package com.example.final_project.controller;
 
 import com.example.final_project.dto.requestDto.CartItemRequestDto;
-import com.example.final_project.dto.requestDto.UserUpdateRequestDto;
 import com.example.final_project.dto.responsedDto.CartItemResponseDto;
-import com.example.final_project.dto.responsedDto.UserResponseDto;
 import com.example.final_project.service.CartItemService;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
