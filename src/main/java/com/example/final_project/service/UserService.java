@@ -30,82 +30,131 @@ public class UserService {
     private final Mappers mappers;
 
     public UserResponseDto registerUserProfile(UserRegisterRequestDto userRequestDto) {
-        // Проверка на существование пользователя с таким же email или phone
+        logger.info("Starting registration for user with email: {} and phone: {}", userRequestDto.getEmail(),
+                userRequestDto.getPhoneNumber());
         if (userRepository.existsByEmail(userRequestDto.getEmail()) ||
                 userRepository.existsByPhoneNumber(userRequestDto.getPhoneNumber())) {
-            logger.error("User with email {} and phone {} already exists", userRequestDto.getEmail(), userRequestDto.getPhoneNumber());
-            throw new BadRequestException("User already exists");
+            logger.error("User with email {} and phone {} already exists.", userRequestDto.getEmail(),
+                    userRequestDto.getPhoneNumber());
+            throw new BadRequestException("User already exists.");
         }
 
-        // Преобразование DTO в сущность User
         User user = mappers.convertToUser(userRequestDto);
 
-        // Установка роли пользователя
         user.setRole(Role.USER);
         Cart cart = new Cart();
         cart.setUser(user);
         user.setCart(cart);
 
-        // Сохранение пользователя в базе данных
+        logger.info("User object created for email: {} and phone: {}", userRequestDto.getEmail(),
+                userRequestDto.getPhoneNumber());
+
         User savedUser;
         try {
             savedUser = userRepository.save(user);
+            logger.info("User with email: {} successfully saved to the database.", userRequestDto.getEmail());
         } catch (Exception exception) {
-            //   logger.error("Error saving user", exception);
-            throw new AuthorizationException("Error saving user");
+            logger.error("Error saving user in DB.", exception);
+            throw new AuthorizationException("Error saving users.");
         }
 
-        // Преобразование сохраненной сущности User в DTO
         return mappers.convertToUserResponseDto(savedUser);
     }
 
     public UserResponseDto loginUserProfile(UserLoginRequestDto userLoginRequestDto) {
+        logger.info("Attempting login for user with email: {}", userLoginRequestDto.getEmail());
+
         if (!userRepository.existsByEmail(userLoginRequestDto.getEmail())) {
-            logger.error("User with email {} not exists", userLoginRequestDto.getEmail());
-            throw new AuthorizationException("User not found");
+            logger.error("User with email {} does not exist.", userLoginRequestDto.getEmail());
+            throw new AuthorizationException("User not found.");
         }
 
         User user = userRepository.findByEmailAndPassword(userLoginRequestDto.getEmail(),
                         userLoginRequestDto.getPassword())
-                .orElseThrow(() -> new AuthorizationException("Incorrect password. Please try again"));
+                .orElseThrow(() -> {
+                    logger.error("Incorrect password for user with email: {}", userLoginRequestDto.getEmail());
+                    return new AuthorizationException("Incorrect password. Please try again.");
+                });
+
+        logger.info("User with email: {} successfully logged in.", userLoginRequestDto.getEmail());
 
         return mappers.convertToUserResponseDto(user);
     }
 
     public UserResponseDto updateUserProfile(UserUpdateRequestDto userUpdateRequestDto, Long id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id in DB."));
+        logger.info("Attempting to update profile for user with ID: {}", id);
+
+        User user = userRepository.findById(id).orElseThrow(() -> {
+            logUserNotFoundError(id);
+            return new NotFoundInDbException("Incorrect id in DB.");
+        });
+
+        logger.info("Updating user details for user with ID: {}", id);
         user.setName(userUpdateRequestDto.getName());
         user.setPhoneNumber(userUpdateRequestDto.getPhone());
 
-        // Сохранение пользователя в базе данных
         User savedUser;
         try {
+            logger.info("Saving updated user details for user with ID: {}", id);
             savedUser = userRepository.save(user);
         } catch (Exception exception) {
-            logger.error("Error saving user", exception);
-            throw new BadRequestException("Error saving user");
+            logger.error("Error saving user with ID: {}", id, exception);
+            throw new BadRequestException("Error saving user.");
         }
+
+        logger.info("User with ID: {} successfully updated.", id);
         return mappers.convertToUserResponseDto(savedUser);
     }
 
     public void deleteUserProfileById(Long id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of user."));
-        userRepository.delete(user);
+        logger.info("Attempting to delete user profile with ID: {}", id);
+
+        User user = userRepository.findById(id).orElseThrow(() -> {
+            logUserNotFoundError(id);
+            return new NotFoundInDbException("Incorrect id of user.");
+        });
+
+        try {
+            logger.info("Deleting user profile with ID: {}", id);
+            userRepository.delete(user);
+            logger.info("User profile with ID: {} successfully deleted.", id);
+        } catch (Exception exception) {
+            logger.error("Error deleting user profile with ID: {}", id, exception);
+            throw new RuntimeException("Error deleting user profile.");
+        }
     }
 
     public List<UserResponseDto> getAllUsers() {
+        logger.info("Attempting to fetch all users.");
+
         List<User> usersList = userRepository.findAll();
+
         if (usersList.isEmpty()) {
+            logger.info("No users found in the database.");
             throw new NoUsersFoundException("No users found.");
         }
+
+        logger.info("Found {} users.", usersList.size());
+
         return MapperUtil.convertList(usersList, mappers::convertToUserResponseDto);
     }
 
     public UserResponseDto getUserById(Long id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of user."));
+        logger.info("Attempting to fetch user with ID {}.", id);
+
+        User user = userRepository.findById(id).orElseThrow(() -> {
+            logger.info("User with ID {} not found.", id);
+            return new NotFoundInDbException("Incorrect id of user.");
+        });
 
         UserResponseDto userResponseDto = mappers.convertToUserResponseDto(user);
-        logger.info("User with ID {} successfully fetched", id);
+
+        logger.info("User with ID {} successfully fetched.", id);
+
         return userResponseDto;
+    }
+
+    private void logUserNotFoundError(Long id) {
+        logger.error("User with ID {} not found in DB.", id);
     }
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class LoggingAspect {
     private static final Logger log = LoggerFactory.getLogger(LoggingAspect.class);
 
-    @Around("execution(* de.telran.shoponline.controller..*(..)))")
+    @Around("execution(* com.example.final_project.controller..*(..)))")
     public Object mdcServiceController(@NotNull final ProceedingJoinPoint joinPoint) throws Throwable {
         String queryMethod = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();

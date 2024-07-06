@@ -29,7 +29,7 @@
     <!--&lt;!&ndash;        <appender-ref ref="FILE"/>&ndash;&gt;-->
     <!--    </logger>-->
 
-    <logger name="de.telran.shoponline" additivity="false" level="DEBUG">
+    <logger name="com.example.final_project" additivity="false" level="DEBUG">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>
