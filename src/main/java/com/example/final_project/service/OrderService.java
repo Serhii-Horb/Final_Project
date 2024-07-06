@@ -28,15 +28,15 @@ public class OrderService {
     private final ProductRepository productRepository;
     private final Mappers mappers;
 
-    public Status getOrderStatusById(long id) {
+//    public Status getOrderStatusById(long id) {
 //        Order order = orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of user."));
 //        return order.getStatus();
-
-        Optional<Order> orderOptional = orderRepository.findById(id);
-        if(orderOptional.isPresent()) {
-            return orderOptional.get().getStatus();
-        }
-        throw new NotFoundInDbException("Requested order was not found");
+//
+//        Optional<Order> orderOptional = orderRepository.findById(id);
+//        if(orderOptional.isPresent()) {
+//            return orderOptional.get().getStatus();
+//        }
+//        throw new NotFoundInDbException("Requested order was not found");
 
     public Status getOrderStatusById(Long id) {
         return orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Requested order was not found")).getStatus();

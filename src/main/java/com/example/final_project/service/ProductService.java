@@ -41,15 +41,12 @@ public class ProductService {
     public void deleteProductById(Long id) {
         Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
         productRepository.delete(product);
-
-      Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
-      productRepository.delete(product);
     }
 
     public void insertProduct(ProductRequestDto productRequestDto) {
         try {
             Product newProduct = mappers.convertToProduct(productRequestDto);
-            newProduct.setProductId(0L);
+            //newProduct.setProductId(0L);
             Product savedProducts = productRepository.save(newProduct);
         } catch (Exception e) {
             throw new BadRequestException("Bad Request");
