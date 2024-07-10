@@ -1,10 +1,12 @@
 package com.example.final_project.controller;
 
+import com.example.final_project.dto.ProductCountDto;
 import com.example.final_project.dto.requestDto.ProductRequestDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -54,5 +56,13 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public void updateProduct(@RequestBody @Valid ProductRequestDto productsRequestDto, @PathVariable Long id, BindingResult bindingResult) {
         productsService.updateProduct(productsRequestDto, id, bindingResult);
+    }
+
+
+    @Operation(summary = "filter top 10")
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "/top10")
+    public List<ProductCountDto> getTop10Products(@RequestParam(value = "status", required = false) String status) {
+        return productsService.getTop10Products(status);
     }
 }
