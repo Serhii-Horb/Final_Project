@@ -7,6 +7,7 @@
     <changeSet id="0" author="admin">
     </changeSet>
 
+
     <include file="/db/changelog/changeSets/v0.1/createTables.sql"/>
     <include file="db/changelog/changeSets/v0.1/insertUsers.sql"/>
     <include file="/db/changelog/changeSets/v0.1/insertCategories.sql"/>
