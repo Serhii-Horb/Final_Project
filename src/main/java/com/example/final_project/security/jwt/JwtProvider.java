@@ -10,6 +10,13 @@ import io.jsonwebtoken.security.SignatureException;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import com.example.final_project.dto.responsedDto.UserResponseDto;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
+import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -18,11 +25,44 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 
+/**
+ * Component for handling JWT (JSON Web Token) operations.
+ * <p>
+ * This component provides methods for generating, validating, and extracting claims from JWT tokens.
+ * It utilizes two secret keys for signing access tokens and refresh tokens.
+ * </p>
+ *
+ * @Slf4j                 - Lombok annotation for generating a logger field.
+ * @Component             - Indicates that an annotated class is a "component".
+ *                          Such classes are considered as candidates for auto-detection
+ *                          when using annotation-based configuration and classpath scanning.
+ *
+ * @author A-R
+ * @version 1.0
+ * @since 1.0
+ */
+@Slf4j
 @Component
 public class JwtProvider {
+
+    /**
+     * Secret key for signing access tokens.
+     */
     private final SecretKey jwtAccessSecret;
+
+    /**
+     * Secret key for signing refresh tokens.
+     */
     private final SecretKey jwtRefreshSecret;
+
+    /**
+     * Constructor to initialize JwtProvider with secret keys for access and refresh tokens.
+     *
+     * @param jwtAccessSecret  the secret key for signing access tokens.
+     * @param jwtRefreshSecret the secret key for signing refresh tokens.
+     */
 
     public JwtProvider(
             @Value("${jwt.secret.access}") String jwtAccessSecret,
@@ -32,62 +72,120 @@ public class JwtProvider {
         this.jwtRefreshSecret = Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtRefreshSecret));
     }
 
-    public String generateAccessToken(@NotNull UserResponseDto userDto) {
-        final Instant accessTokenExpInstant = LocalDateTime.now().plusMinutes(1).atZone(ZoneId.systemDefault()).toInstant();
-        final Date accessExpiration = Date.from(accessTokenExpInstant);
+    /**
+     * Generates an access token for a user.
+     *
+     * @param userResponseDto the user for whom the access token is generated.
+     * @return the generated access token.
+     */
+    public String generateAccessToken(@NonNull UserResponseDto userResponseDto) {
+        final LocalDateTime now = LocalDateTime.now();
+        final Instant accessExpirationInstant = now.plusMinutes(15).atZone(ZoneId.systemDefault()).toInstant();
+        final Date accessExpiration = Date.from(accessExpirationInstant);
         return Jwts.builder()
-                .setSubject(userDto.getEmail())
+                .setSubject(userResponseDto.getEmail())
                 .setExpiration(accessExpiration)
                 .signWith(jwtAccessSecret)
-                .claim("role",userDto.getRole())
-                .claim("name",userDto.getName())
+                .claim("roles", List.of(userResponseDto.getRole()))
+                .claim("name", userResponseDto.getName())
                 .compact();
     }
-    public String generateRefreshToken(@NotNull UserResponseDto userDto) {
-        final Instant refreshTokenExpInstant = LocalDateTime.now().plusMinutes(10).atZone(ZoneId.systemDefault()).toInstant();
-        final Date refreshExpiration = Date.from(refreshTokenExpInstant);
+
+    /**
+     * Generates a refresh token for a user.
+     *
+     * @param userResponseDto the user for whom the refresh token is generated.
+     * @return the generated refresh token.
+     */
+    public String generateRefreshToken(@NonNull UserResponseDto userResponseDto) {
+        final LocalDateTime now = LocalDateTime.now();
+        final Instant refreshExpirationInstant = now.plusDays(1).atZone(ZoneId.systemDefault()).toInstant();
+        final Date refreshExpiration = Date.from(refreshExpirationInstant);
         return Jwts.builder()
-                .setSubject(userDto.getEmail())
+                .setSubject(userResponseDto.getEmail())
                 .setExpiration(refreshExpiration)
                 .signWith(jwtRefreshSecret)
                 .compact();
     }
-    public boolean validateAccessToken(@NotNull String accessToken) {
-        return validateToken(accessToken,jwtAccessSecret);
-    }
-    public boolean validateRefreshToken(@NotNull String refreshToken) {
-        return validateToken(refreshToken,jwtRefreshSecret);
+
+    /**
+     * Validates an access token.
+     *
+     * @param accessToken the access token to validate.
+     * @return true if the token is valid, false otherwise.
+     */
+    public boolean validateAccessToken(@NonNull String accessToken) {
+        return validateToken(accessToken, jwtAccessSecret);
     }
 
-    private boolean validateToken(String token, @NotNull Key secretKey) {
+    /**
+     * Validates a refresh token.
+     *
+     * @param refreshToken the refresh token to validate.
+     * @return true if the token is valid, false otherwise.
+     */
+    public boolean validateRefreshToken(@NonNull String refreshToken) {
+        return validateToken(refreshToken, jwtRefreshSecret);
+    }
+
+    /**
+     * Validates a token with a specified secret key.
+     *
+     * @param token the token to validate.
+     * @param secret the secret key used for validation.
+     * @return true if the token is valid, false otherwise.
+     */
+    private boolean validateToken(@NonNull String token, @NonNull Key secret) {
         try {
             Jwts.parserBuilder()
-                    .setSigningKey(secretKey)
+                    .setSigningKey(secret)
                     .build()
                     .parseClaimsJws(token);
             return true;
-        } catch (ExpiredJwtException expJwtEx) {
-            throw new AuthorizationException("Token is expired");
-        } catch (UnsupportedJwtException unsJwtEx) {
-            throw new AuthorizationException("Jwt is unsupported");
-        } catch (MalformedJwtException malJwtEx) {
-            throw new AuthorizationException("Jwt is malformed");
-        } catch (SignatureException sigEx) {
-            throw new AuthorizationException("Signature is invalid");
-        } catch (Exception ex) {
-            throw new AuthorizationException("Invalid token");
+        } catch (ExpiredJwtException expEx) {
+            log.error("Token expired", expEx);
+        } catch (UnsupportedJwtException unsEx) {
+            log.error("Unsupported jwt", unsEx);
+        } catch (MalformedJwtException mjEx) {
+            log.error("Malformed jwt", mjEx);
+        } catch (SignatureException sEx) {
+            log.error("Invalid signature", sEx);
+        } catch (Exception e) {
+            log.error("invalid token", e);
         }
-    }
-    public Claims getAccessTokenClaims(@NotNull String accessToken) {
-        return getClaims(accessToken,jwtAccessSecret);
+        return false;
     }
 
-    public Claims getRefreshTokenClaims(@NotNull String refreshToken) {
-        return getClaims(refreshToken,jwtRefreshSecret);
+    /**
+     * Extracts claims from an access token.
+     *
+     * @param token the access token.
+     * @return the claims extracted from the token.
+     */
+    public Claims getAccessClaims(@NonNull String token) {
+        return getClaims(token, jwtAccessSecret);
     }
-    public Claims getClaims(String token,@NotNull Key secretKey) {
+
+    /**
+     * Extracts claims from a refresh token.
+     *
+     * @param token the refresh token.
+     * @return the claims extracted from the token.
+     */
+    public Claims getRefreshClaims(@NonNull String token) {
+        return getClaims(token, jwtRefreshSecret);
+    }
+
+    /**
+     * Extracts claims from a token using a specified secret key.
+     *
+     * @param token the token.
+     * @param secret the secret key used for extracting claims.
+     * @return the claims extracted from the token.
+     */
+    private Claims getClaims(@NonNull String token, @NonNull Key secret) {
         return Jwts.parserBuilder()
-                .setSigningKey(secretKey)
+                .setSigningKey(secret)
                 .build()
                 .parseClaimsJws(token)
                 .getBody();

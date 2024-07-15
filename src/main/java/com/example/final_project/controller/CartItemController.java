@@ -37,5 +37,4 @@ public class CartItemController {
     public void deleteProductInCart(@RequestBody Long product, @PathVariable @Valid @Min(1) Long id) {
         cartItemService.deleteProductInCartByUserIdAndProductId(product, id);
     }
-
 }

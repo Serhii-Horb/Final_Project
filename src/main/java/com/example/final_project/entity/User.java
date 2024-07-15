@@ -32,6 +32,9 @@ public class User {
     @Column(name = "PasswordHash", nullable = false)
     private String passwordHash;
 
+    @Column(name = "RefreshToken")
+    private String refreshToken;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "Role", nullable = false)
     private Role role;
@@ -39,10 +42,10 @@ public class User {
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
     private Cart cart;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Favorite> favorites = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Order> orders = new HashSet<>();
 }
 
