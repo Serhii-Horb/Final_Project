@@ -4,6 +4,13 @@ import com.example.final_project.security.jwt.JwtFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -12,7 +19,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 /**
@@ -42,7 +48,8 @@ public class SecurityConfig {
      * The JWT filter bean for processing JWT tokens.
      */
     private final JwtFilter jwtFilter;
-
+    public static final String USER_ROLE = "USER";
+    public static final String ADMIN_ROLE = "ADMIN";
     /**
      * Configures the security filter chain.
      * <p>
@@ -74,6 +81,7 @@ public class SecurityConfig {
                                          /*",/**"*/
                                 )
                                 .permitAll()
+                                .requestMatchers("orders/**").hasRole(USER_ROLE)
                                 .anyRequest().authenticated()
       //                          .anyRequest().permitAll()
                 ).addFilterAfter(jwtFilter, UsernamePasswordAuthenticationFilter.class).build();
@@ -85,4 +93,3 @@ public class SecurityConfig {
     }
 
 }
-

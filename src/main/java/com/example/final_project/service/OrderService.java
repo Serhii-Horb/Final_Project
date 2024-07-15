@@ -1,9 +1,11 @@
 package com.example.final_project.service;
 
+import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.OrderRequestDto;
 import com.example.final_project.dto.responsedDto.OrderResponseDto;
 import com.example.final_project.entity.Order;
 import com.example.final_project.entity.Product;
+import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Status;
 import com.example.final_project.exceptions.BadRequestException;
 import com.example.final_project.exceptions.NotFoundInDbException;
@@ -11,6 +13,9 @@ import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.OrderItemRepository;
 import com.example.final_project.repository.OrderRepository;
 import com.example.final_project.repository.ProductRepository;
+import com.example.final_project.repository.UserRepository;
+import com.example.final_project.security.service.AuthService;
+import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -26,17 +31,10 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final ProductRepository productRepository;
+    private final UserRepository userRepository;
     private final Mappers mappers;
 
-//    public Status getOrderStatusById(long id) {
-//        Order order = orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of user."));
-//        return order.getStatus();
-//
-//        Optional<Order> orderOptional = orderRepository.findById(id);
-//        if(orderOptional.isPresent()) {
-//            return orderOptional.get().getStatus();
-//        }
-//        throw new NotFoundInDbException("Requested order was not found");
+    private final AuthService authService;
 
     public Status getOrderStatusById(Long id) {
         return orderRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Requested order was not found")).getStatus();
@@ -59,7 +57,17 @@ public class OrderService {
         return mappers.convertToOrderResponseDto(orderRepository.save(order));
     }
 
-    public List<OrderResponseDto> getAllOrders() {
+    public List<OrderResponseDto> getAllOrders(String jwt) {
+        if(authService.getJwtProvider().validateRefreshToken(jwt)) {
+            final Claims claims = authService.getJwtProvider().getRefreshTokenClaims(jwt);
+            final String email = claims.getSubject();
+            final String expectedRefreshToken = authService.getRefreshStorage().get(email);
+            if(expectedRefreshToken != null && jwt.equals(expectedRefreshToken)) {
+                User user = userRepository.findByEmail(email).get();
+                List<OrderResponseDto> orderResponseDtoList = MapperUtil.convertList(user.getOrders().stream().toList(), mappers::convertToOrderResponseDto);
+                return orderResponseDtoList;
+            }
+        }
         return null;
     }
 }

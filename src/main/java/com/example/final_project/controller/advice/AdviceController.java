@@ -35,7 +35,6 @@ public class AdviceController {
                 .body(new ErrorMessage(exception.getMessage()));
     }
 
-
     // === Для обработки ошибок авторизации и обновления 401
     @ExceptionHandler(AuthorizationException.class)
     public ResponseEntity<ErrorMessage> handleException(AuthorizationException exception) {

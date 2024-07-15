@@ -87,4 +87,5 @@ public class AuthController {
         JwtResponse token = authService.createUser(userRegisterRequestDto);
         return ResponseEntity.ok(token);
     }
+
 }

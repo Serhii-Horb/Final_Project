@@ -2,7 +2,6 @@ package com.example.final_project.security.jwt;
 
 import io.jsonwebtoken.Claims;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,5 +44,3 @@ public class JwtUtils {
         return new JwtAuthentication(username, roles);
     }
 }
-
-
