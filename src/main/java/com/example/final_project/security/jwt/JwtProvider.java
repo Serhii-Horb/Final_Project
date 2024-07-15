@@ -2,12 +2,14 @@ package com.example.final_project.security.jwt;
 
 import com.example.final_project.dto.requestDto.UserLoginRequestDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
+import com.example.final_project.exceptions.AuthorizationException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -65,15 +67,15 @@ public class JwtProvider {
                     .parseClaimsJws(token);
             return true;
         } catch (ExpiredJwtException expJwtEx) {
-            throw new RuntimeException("Token is expired");
+            throw new AuthorizationException("Token is expired");
         } catch (UnsupportedJwtException unsJwtEx) {
-            throw new RuntimeException("Jwt is unsupported");
+            throw new AuthorizationException("Jwt is unsupported");
         } catch (MalformedJwtException malJwtEx) {
-            throw new RuntimeException("Jwt is malformed");
+            throw new AuthorizationException("Jwt is malformed");
         } catch (SignatureException sigEx) {
-            throw new RuntimeException("Signature is invalid");
+            throw new AuthorizationException("Signature is invalid");
         } catch (Exception ex) {
-            throw new RuntimeException("Invalid token");
+            throw new AuthorizationException("Invalid token");
         }
     }
     public Claims getAccessTokenClaims(@NotNull String accessToken) {
@@ -83,7 +85,7 @@ public class JwtProvider {
     public Claims getRefreshTokenClaims(@NotNull String refreshToken) {
         return getClaims(refreshToken,jwtRefreshSecret);
     }
-    private Claims getClaims(String token,@NotNull Key secretKey) {
+    public Claims getClaims(String token,@NotNull Key secretKey) {
         return Jwts.parserBuilder()
                 .setSigningKey(secretKey)
                 .build()

@@ -20,12 +20,12 @@ public class JwtFilter extends GenericFilter {
         String token = getTokenFromRequest((HttpServletRequest) servletRequest);
         if(token != null) {
             token = token.replace("\"", "");
-        }
-        if(token != null && jwtProvider.validateAccessToken(token)) {
-            final Claims claims = jwtProvider.getAccessTokenClaims(token);
-            final JwtAuthentication tokenInfo = JwtUtils.generate(claims);
-            tokenInfo.setAuthenticated(true);
-            SecurityContextHolder.getContext().setAuthentication(tokenInfo);
+            if(jwtProvider.validateAccessToken(token)) {
+                final Claims claims = jwtProvider.getAccessTokenClaims(token);
+                final JwtAuthentication tokenInfo = JwtUtils.generate(claims);
+                tokenInfo.setAuthenticated(true);
+                SecurityContextHolder.getContext().setAuthentication(tokenInfo);
+            }
         }
         filterChain.doFilter(servletRequest,servletResponse);
     }

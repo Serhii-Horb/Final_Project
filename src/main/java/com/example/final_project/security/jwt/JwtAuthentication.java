@@ -11,7 +11,6 @@ import java.util.List;
 public class JwtAuthentication implements Authentication {
     private boolean authenticated;
     private String username;
-    private String firstName;
     private SimpleGrantedAuthority role;
 
     public JwtAuthentication(String username,String role) {
@@ -21,11 +20,7 @@ public class JwtAuthentication implements Authentication {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
-
-    public GrantedAuthority getAuthority() {
-        return role;
+        return List.of(role);
     }
 
     @Override
@@ -55,6 +50,6 @@ public class JwtAuthentication implements Authentication {
 
     @Override
     public String getName() {
-        return firstName;
+        return null;
     }
 }

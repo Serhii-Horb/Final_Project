@@ -1,6 +1,7 @@
 package com.example.final_project.security.controller;
 
 import com.example.final_project.dto.requestDto.UserLoginRequestDto;
+import com.example.final_project.security.jwt.JwtRefreshRequest;
 import com.example.final_project.security.jwt.JwtResponse;
 import com.example.final_project.security.service.AuthService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,4 +22,13 @@ public class AuthController {
         final JwtResponse token = authService.login(request);
         return new ResponseEntity<>(token, HttpStatus.OK);
     }
+    @PostMapping("/token")
+    public ResponseEntity<JwtResponse> requestAccessToken(@RequestBody JwtRefreshRequest jwt) {
+        return new ResponseEntity<>(authService.requestAccessToken(jwt.getRefreshToken()),HttpStatus.OK);
+    }
+    @PostMapping("/refresh")
+    public ResponseEntity<JwtResponse> requestRefreshAndAccessToken(@RequestBody JwtRefreshRequest jwt) {
+        return new ResponseEntity<>(authService.requestRefreshAndAccessToken(jwt.getRefreshToken()),HttpStatus.OK);
+    }
+
 }
