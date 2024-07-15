@@ -10,6 +10,7 @@ import com.example.final_project.security.jwt.JwtResponse;
 import com.example.final_project.service.UserService;
 import io.jsonwebtoken.Claims;
 import jakarta.security.auth.message.AuthException;
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @RequiredArgsConstructor
+@Getter
 public class AuthService {
     private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
 

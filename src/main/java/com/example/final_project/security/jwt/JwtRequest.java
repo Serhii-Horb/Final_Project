@@ -30,5 +30,4 @@ public class JwtRequest {
      * The password of the user.
      */
     private String password;
-
 }
