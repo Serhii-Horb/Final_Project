@@ -1,7 +1,5 @@
 package com.example.final_project.controller;
 
-import com.example.final_project.dto.requestDto.UserLoginRequestDto;
-import com.example.final_project.dto.requestDto.UserRegisterRequestDto;
 import com.example.final_project.dto.requestDto.UserUpdateRequestDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
 import com.example.final_project.service.UserService;
@@ -18,29 +16,9 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/users")
-@Tag(name = "User controller.", description = "User registration is carried out using this controller.")
+@Tag(name = "User controller.", description = "Getting a user, deleting or updating a user profile is done using this controller.")
 public class UserController {
     private final UserService userService;
-
-    @PostMapping(value = "/register")
-    @ResponseStatus(HttpStatus.CREATED)
-    @Operation(
-            summary = "User registration.",
-            description = "Allows you to register a new user."
-    )
-    public UserResponseDto registerUserProfile(@RequestBody UserRegisterRequestDto userRequestDto) {
-        return userService.registerUserProfile(userRequestDto);
-    }
-
-    @PostMapping(value = "/login")
-    @ResponseStatus(HttpStatus.OK)
-    @Operation(
-            summary = "User login.",
-            description = "Allows a user to log in by providing email and password."
-    )
-    public UserResponseDto loginUserProfile(@RequestBody UserLoginRequestDto userLoginRequestDto) {
-        return userService.loginUserProfile(userLoginRequestDto);
-    }
 
     @PutMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)

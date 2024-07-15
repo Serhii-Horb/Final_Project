@@ -19,6 +19,4 @@ public class FavoriteResponseDto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("product")
     private ProductResponseDto productResponseDto;
-
-
 }

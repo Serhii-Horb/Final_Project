@@ -4,12 +4,12 @@
 
 INSERT INTO Categories (Name)
 VALUES ('Garden Furniture'),
-       ('Garden Tools'),
-       ('Plants and Seeds'),
+       ('Fertilizer'),
+       ('Protective products and septic tanks'),
        ('Fences and Gates'),
-       ('Irrigation and Water Supply'),
+       ('Planting materia'),
        ('Garden Lighting'),
        ('BBQs and Grills'),
-       ('Lawn Care'),
+       ('Tools and equipment'),
        ('Garden Decor'),
-       ('Greenhouses and Conservatories');
+       ('Pots and planters');

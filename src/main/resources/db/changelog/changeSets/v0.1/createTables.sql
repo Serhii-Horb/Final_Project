@@ -8,6 +8,7 @@ CREATE TABLE Users
     Email        VARCHAR(255)                   NULL,
     PhoneNumber  VARCHAR(255)                   NULL,
     PasswordHash VARCHAR(255)                   NULL,
+    RefreshToken VARCHAR(255)                   NULL,
     Role         ENUM ('USER', 'ADMINISTRATOR') NULL,
     CONSTRAINT PK_USERS PRIMARY KEY (UserID)
 );
