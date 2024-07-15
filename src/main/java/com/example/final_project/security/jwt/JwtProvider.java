@@ -1,24 +1,14 @@
 package com.example.final_project.security.jwt;
 
-import com.example.final_project.dto.requestDto.UserLoginRequestDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
-import com.example.final_project.exceptions.AuthorizationException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
-import com.example.final_project.dto.responsedDto.UserResponseDto;
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
 import javax.crypto.SecretKey;
 import java.security.Key;
 import java.time.Instant;
@@ -34,13 +24,12 @@ import java.util.List;
  * It utilizes two secret keys for signing access tokens and refresh tokens.
  * </p>
  *
- * @Slf4j                 - Lombok annotation for generating a logger field.
- * @Component             - Indicates that an annotated class is a "component".
- *                          Such classes are considered as candidates for auto-detection
- *                          when using annotation-based configuration and classpath scanning.
- *
  * @author A-R
  * @version 1.0
+ * @Slf4j - Lombok annotation for generating a logger field.
+ * @Component - Indicates that an annotated class is a "component".
+ * Such classes are considered as candidates for auto-detection
+ * when using annotation-based configuration and classpath scanning.
  * @since 1.0
  */
 @Slf4j
@@ -131,7 +120,7 @@ public class JwtProvider {
     /**
      * Validates a token with a specified secret key.
      *
-     * @param token the token to validate.
+     * @param token  the token to validate.
      * @param secret the secret key used for validation.
      * @return true if the token is valid, false otherwise.
      */
@@ -179,7 +168,7 @@ public class JwtProvider {
     /**
      * Extracts claims from a token using a specified secret key.
      *
-     * @param token the token.
+     * @param token  the token.
      * @param secret the secret key used for extracting claims.
      * @return the claims extracted from the token.
      */
@@ -190,5 +179,4 @@ public class JwtProvider {
                 .parseClaimsJws(token)
                 .getBody();
     }
-
 }
