@@ -2,6 +2,7 @@ package com.example.final_project.dto.responsedDto;
 
 
 import com.example.final_project.entity.enums.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,9 @@ public class UserResponseDto {
     private String name;
     private String email;
     private String phoneNumber;
-    private String password;
+    @JsonIgnore
+    private String passwordHash;
+    @JsonIgnore
+    private String refreshToken;
     private Role role;
 }

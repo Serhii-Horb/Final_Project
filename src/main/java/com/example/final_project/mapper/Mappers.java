@@ -17,12 +17,14 @@ public class Mappers {
 
 
     public UserResponseDto convertToUserResponseDto(User user) {
-        UserResponseDto usersResponseDto = modelMapper.map(user, UserResponseDto.class);
-        usersResponseDto.setPassword("******");
-        return usersResponseDto;
+        return modelMapper.map(user, UserResponseDto.class);
     }
 
-    public User convertToUser(UserRegisterRequestDto userRequestDto) {
+    public User convertRegisterDTOToUser(UserRegisterRequestDto userRegisterRequestDto) {
+        return modelMapper.map(userRegisterRequestDto, User.class);
+    }
+
+    public User convertResponceDTOToUser(UserResponseDto userRequestDto) {
         return modelMapper.map(userRequestDto, User.class);
     }
 
@@ -46,7 +48,6 @@ public class Mappers {
         List<OrderItem> orderItems = MapperUtil.convertList(ordersRequestDto.getOrderItemsList(), this::convertToOrderItem);
         Order order = modelMapper.map(ordersRequestDto, Order.class);
         order.setItems(orderItems);
-//        orderItems.forEach(orderItem -> orderItem.setOrder(order));
         return order;
     }
 

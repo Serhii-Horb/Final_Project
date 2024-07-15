@@ -7,11 +7,11 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    boolean existsByEmail(String email);
 
-    boolean existsByPhoneNumber(String phoneNumber);
+    Optional<User> getByEmail(String email);
 
-    @Query("SELECT u FROM User u WHERE u.email = :email AND u.passwordHash = :password")
-    Optional<User> findByEmailAndPassword(String email, String password);
+
+//    @Query("SELECT u FROM User u WHERE u.email = :email AND u.passwordHash = :password")
+//    Optional<User> findByEmailAndPassword(String email, String password);
 
 }
