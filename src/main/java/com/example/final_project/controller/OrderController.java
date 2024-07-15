@@ -3,9 +3,7 @@ package com.example.final_project.controller;
 import com.example.final_project.dto.requestDto.OrderRequestDto;
 import com.example.final_project.dto.responsedDto.OrderResponseDto;
 import com.example.final_project.entity.enums.Status;
-import com.example.final_project.security.jwt.JwtRefreshRequest;
-import com.example.final_project.security.jwt.JwtRequest;
-import com.example.final_project.security.service.AuthService;
+import com.example.final_project.security.jwt.JwtRequestRefresh;
 import com.example.final_project.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -13,7 +11,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,8 +42,7 @@ public class OrderController {
             summary = "shows the orders history of a certain customer."
     )
     @GetMapping("/history")
-    public ResponseEntity<List<OrderResponseDto>> getAllOrders(@RequestBody JwtRefreshRequest jwt) {
+    public ResponseEntity<List<OrderResponseDto>> getAllOrders(@RequestBody JwtRequestRefresh jwt) {
         return new ResponseEntity<>(orderService.getAllOrders(jwt.getRefreshToken()),HttpStatus.OK);
     }
-
 }
