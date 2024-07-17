@@ -42,7 +42,7 @@ public class OrderController {
             summary = "shows the orders history of a certain customer."
     )
     @GetMapping("/history")
-    public ResponseEntity<List<OrderResponseDto>> getAllOrders(@RequestBody JwtRequestRefresh jwt) {
-        return new ResponseEntity<>(orderService.getAllOrders(jwt.getRefreshToken()),HttpStatus.OK);
+    public ResponseEntity<List<OrderResponseDto>> getAllOrders() {
+        return new ResponseEntity<>(orderService.getAllOrders(),HttpStatus.OK);
     }
 }

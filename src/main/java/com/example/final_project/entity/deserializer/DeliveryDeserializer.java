@@ -1,4 +1,4 @@
-package com.example.final_project.entity.desirializer;
+package com.example.final_project.entity.deserializer;
 
 import com.example.final_project.entity.enums.Delivery;
 import com.fasterxml.jackson.core.JacksonException;
@@ -19,9 +19,6 @@ public class DeliveryDeserializer extends JsonDeserializer<Delivery> {
             return null;
         }
         String text = node.textValue();
-        if (node == null) {
-            return null;
-        }
         return Delivery.fromText(text);
     }
 }
