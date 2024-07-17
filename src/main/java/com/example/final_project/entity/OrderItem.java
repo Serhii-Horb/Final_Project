@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(exclude = {"order", "product"})
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

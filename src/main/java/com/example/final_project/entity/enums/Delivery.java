@@ -1,8 +1,7 @@
 package com.example.final_project.entity.enums;
 
-import com.example.final_project.entity.desirializer.DeliveryDeserializer;
+import com.example.final_project.entity.deserializer.DeliveryDeserializer;
 import com.example.final_project.exceptions.BadRequestException;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(using = DeliveryDeserializer.class)
@@ -21,7 +20,6 @@ public enum Delivery {
         return delivery_name;
     }
 
-//    @JsonCreator
     public static Delivery fromText(String delivery_name) {
         for (Delivery deliveryMethod : Delivery.values()) {
             if(deliveryMethod.getValue().equals(delivery_name)) {
@@ -31,8 +29,4 @@ public enum Delivery {
         throw new BadRequestException("Invalid delivery method");
     }
 
-//    @Override
-//    public String toString() {
-//        return delivery_name;
-//    }
 }

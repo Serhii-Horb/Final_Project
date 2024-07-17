@@ -2,8 +2,8 @@ package com.example.final_project.entity.enums;
 
 public enum Status {
     CREATED("Created"),
-    CANCEL("Cancel"),
-    WAIT_PAYMENT("Wait payment"),
+    CANCELED("Canceled"),
+    AWAITING_PAYMENT("Awaiting payment"),
     PAID("Paid"),
     ON_THE_WAY("On the way"),
     DELIVERED("Delivered");

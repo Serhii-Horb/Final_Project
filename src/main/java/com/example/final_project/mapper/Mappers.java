@@ -4,8 +4,12 @@ import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.*;
 import com.example.final_project.dto.responsedDto.*;
 import com.example.final_project.entity.*;
+import com.example.final_project.exceptions.BadRequestException;
+import com.example.final_project.exceptions.NotFoundInDbException;
+import com.example.final_project.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -14,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class Mappers {
     private final ModelMapper modelMapper;
-
+    private final ProductRepository productRepository;
 
     public UserResponseDto convertToUserResponseDto(User user) {
         return modelMapper.map(user, UserResponseDto.class);
@@ -48,6 +52,9 @@ public class Mappers {
         List<OrderItem> orderItems = MapperUtil.convertList(ordersRequestDto.getOrderItemsList(), this::convertToOrderItem);
         Order order = modelMapper.map(ordersRequestDto, Order.class);
         order.setItems(orderItems);
+        orderItems.forEach(orderItem -> {
+            orderItem.setOrder(order);
+        });
         return order;
     }
 
@@ -67,8 +74,12 @@ public class Mappers {
         return modelMapper.map(order, OrderResponseDto.class);
     }
 
-    public OrderItem convertToOrderItem(OrderItemRequestDto orderItemRequestDto) {
-        return modelMapper.map(orderItemRequestDto, OrderItem.class);
+    public OrderItem convertToOrderItem(OrderItemRequestDto orderItemRequestDto) {;
+        return OrderItem.builder()
+                .quantity(orderItemRequestDto.getQuantity())
+                .product(productRepository.findById(orderItemRequestDto.getProductId())
+                        .orElseThrow(() -> new BadRequestException("Requested product was not found")))
+                .build();
     }
 
     public Product convertToProduct(ProductRequestDto productRequestDto) {

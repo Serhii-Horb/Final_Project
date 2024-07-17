@@ -73,7 +73,7 @@ CREATE TABLE Orders
     DeliveryAddress VARCHAR(255)                                                                 NULL,
     ContactPhone    VARCHAR(255)                                                                 NULL,
     DeliveryMethod  ENUM ('COURIER_DELIVERY', 'SELF_DELIVERY' ,'DEPARTMENT_DELIVERY')            NULL,
-    Status          ENUM ('CREATED','CANCEL', 'WAIT_PAYMENT', 'PAID', 'ON_THE_WAY', 'DELIVERED') NULL,
+    Status          ENUM ('CREATED','CANCELED', 'AWAITING_PAYMENT', 'PAID', 'ON_THE_WAY', 'DELIVERED') NULL,
     UpdatedAt       datetime                                                                     NULL,
     CONSTRAINT PK_ORDERS PRIMARY KEY (OrderID)
 );
