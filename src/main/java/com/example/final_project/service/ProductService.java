@@ -2,6 +2,7 @@ package com.example.final_project.service;
 
 import com.example.final_project.configuration.MapperUtil;
 //import com.example.final_project.dto.ProductCountDto;
+import com.example.final_project.dto.ProductCountDto;
 import com.example.final_project.dto.requestDto.ProductRequestDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.entity.Category;
@@ -99,18 +100,18 @@ public class ProductService {
         }
     }
 
-//    public List<ProductCountDto> getTop10Products(String status) {
-//        return productRepository.findTop10Products(status).stream()
-//                .map(entry -> {
-//                    String[] stringEntry = entry.split(",");
-//                    return new ProductCountDto(
-//                            Long.parseUnsignedLong(stringEntry[0]),
-//                            stringEntry[1],
-//                            Integer.parseInt(stringEntry[2]),
-//                            BigDecimalParser.parseWithFastParser(stringEntry[3])
-//                    );
-//                })
-//                .collect(Collectors.toList());
-//    }
+    public List<ProductCountDto> getTop10Products(String status) {
+        return productRepository.findTop10Products(status).stream()
+                .map(entry -> {
+                    String[] stringEntry = entry.split(",");
+                    return new ProductCountDto(
+                            Long.parseUnsignedLong(stringEntry[0]),
+                            stringEntry[1],
+                            Integer.parseInt(stringEntry[2]),
+                            BigDecimalParser.parseWithFastParser(stringEntry[3])
+                    );
+                })
+                .collect(Collectors.toList());
+    }
 
 }
