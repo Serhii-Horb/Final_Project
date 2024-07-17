@@ -1,6 +1,6 @@
 package com.example.final_project.controller;
 
-//import com.example.final_project.dto.ProductCountDto;
+import com.example.final_project.dto.ProductCountDto;
 import com.example.final_project.dto.requestDto.ProductRequestDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.service.ProductService;
@@ -59,10 +59,10 @@ public class ProductController {
     }
 
 
-//    @Operation(summary = "filter top 10")
-//    @ResponseStatus(HttpStatus.OK)
-//    @GetMapping(value = "/top10")
-//    public List<ProductCountDto> getTop10Products(@RequestParam(value = "status", required = false) String status) {
-//        return productsService.getTop10Products(status);
-//    }
+    @Operation(summary = "filter top 10")
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "/top10")
+    public List<ProductCountDto> getTop10Products(@RequestParam(value = "status", required = false) String status) {
+        return productsService.getTop10Products(status);
+    }
 }
