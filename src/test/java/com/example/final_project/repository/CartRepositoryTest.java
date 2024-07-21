@@ -1,49 +1,56 @@
-//package com.example.final_project.repository;
-//
-//import com.example.final_project.entity.Cart;
-//import com.example.final_project.entity.User;
-//import org.junit.jupiter.api.AfterEach;
-//import org.junit.jupiter.api.Assertions;
-//import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Test;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-//import org.springframework.test.context.ActiveProfiles;
-//
-//import java.util.HashSet;
-//import java.util.Optional;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//@DataJpaTest
-//@ActiveProfiles(profiles = {"dev"})
-//class CartRepositoryTest {
-//    private static final long CART_TEST_ID = 1;
-//    private static final long USER_TEST_ID = 1;
-//    private static final User testUser = new User();
-//    private static Cart testNewCart;
-//
-//    @Autowired
-//    private CartRepository cartRepository;
-//
-//    @BeforeEach
-//    void setUp() {
-//        testUser.setName("Test");
-//        testNewCart = new Cart();
-//        testNewCart.setCartItems(new HashSet<>());
-//        testNewCart.setUser(new User());
-//    }
-//
-//    @Test
-//    void testInsertCart() {
-//        Cart returnCart = cartRepository.save(testNewCart);
-//        Assertions.assertNotNull(returnCart);
-//        Assertions.assertTrue(returnCart.getCartId() > 0);
-//
-//        Optional<Cart> findCart = cartRepository.findById(returnCart.getCartId());
-//        Assertions.assertTrue(findCart.isPresent());
-//        Assertions.assertEquals(testNewCart.getCartId(), findCart.get().getCartId());
-//
-//        Assertions.assertEquals(testNewCart, findCart.get());
-//    }
-//}
+package com.example.final_project.repository;
+
+import com.example.final_project.entity.Cart;
+import com.example.final_project.entity.User;
+import com.example.final_project.entity.enums.Role;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@DataJpaTest
+class CartRepositoryTest {
+
+    @Autowired
+    private CartRepository cartRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    private User user;
+    private Cart cart;
+
+    @BeforeEach
+    void setUp() {
+        user = new User();
+        user.setEmail("testuser@example.com");
+        user.setPasswordHash("testPassword");
+        user.setRole(Role.USER);
+
+        userRepository.save(user);
+
+        cart = new Cart();
+        cart.setUser(user);
+
+        cartRepository.save(cart);
+    }
+
+    @Test
+    void testFindByUser_UserId_CartExists() {
+        Optional<Cart> foundCart = cartRepository.findByUser_UserId(user.getUserId());
+
+        assertTrue(foundCart.isPresent(), "Cart should be found for existing userId.");
+        assertEquals(cart.getCartId(), foundCart.get().getCartId(), "Found cart should have the same ID as the saved cart.");
+    }
+
+    @Test
+    void testFindByUser_UserId_CartDoesNotExist() {
+        Optional<Cart> foundCart = cartRepository.findByUser_UserId(999L); // Using an ID that does not exist
+
+        assertFalse(foundCart.isPresent(), "Cart should not be found for non-existent userId.");
+    }
+}

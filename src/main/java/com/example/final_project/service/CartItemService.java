@@ -26,9 +26,8 @@ public class CartItemService {
     private final Mappers mappers;
 
     public CartItemResponseDto addOrUpdateProductInCart(CartItemRequestDto cartItemRequestDto, Long userId) {
-        logger.info("Starting addOrUpdateProductInCart for userId: {} with productId: {}", userId,
+        logInfo("Starting addOrUpdateProductInCart for userId: {} with productId: {}", userId,
                 cartItemRequestDto.getProductId());
-
         Cart cart = cartRepository.findByUser_UserId(userId).orElseThrow(() ->
                 logAndThrow("Cart not found for userId: {}", userId));
         logFoundObject(cart, "Found cart");
@@ -41,21 +40,21 @@ public class CartItemService {
                 product.getProductId()).orElse(null);
 
         if (cartItem == null) {
-            logger.info("CartItem not found, creating new one.");
+            logInfo("CartItem not found, creating new one.");
             cartItem = new CartItem();
             cartItem.setProduct(product);
             cartItem.setCart(cart);
         } else {
-            logger.info("CartItem found, updating quantity.");
+            logInfo("CartItem found, updating quantity.");
         }
 
         cartItem.setQuantity(cartItemRequestDto.getQuantity());
 
         try {
             cartItemRepository.save(cartItem);
-            logger.info("CartItem saved successfully: {}", cartItem);
+            logInfo("CartItem saved successfully: {}", cartItem);
         } catch (Exception exception) {
-            logger.error("Error saving cartItem", exception);
+            logError("Error saving cartItem", exception);
             throw new BadRequestException("Error saving cartItem");
         }
 
@@ -63,9 +62,8 @@ public class CartItemService {
     }
 
     public void deleteProductInCartByUserIdAndProductId(Long productId, Long userId) {
-        logger.info("Starting deleteProductInCartByUserIdAndProductId for userId: {} with productId: {}",
+        logInfo("Starting deleteProductInCartByUserIdAndProductId for userId: {} with productId: {}",
                 userId, productId);
-
         Cart cart = cartRepository.findByUser_UserId(userId).orElseThrow(() ->
                 logAndThrow("Cart not found for userId: {}", userId));
         logFoundObject(cart, "Found cart");
@@ -75,11 +73,19 @@ public class CartItemService {
                         cart.getCartId(), productId));
         try {
             cartItemRepository.delete(cartItem);
-            logger.info("CartItem deleted successfully: {}", cartItem);
+            logInfo("CartItem deleted successfully: {}", cartItem);
         } catch (Exception exception) {
-            logger.error("Error deleting cartItem", exception);
+            logError("Error deleting cartItem", exception);
             throw new BadRequestException("Error deleting cartItem");
         }
+    }
+
+    private void logInfo(String message, Object... args) {
+        logger.info(message, args);
+    }
+
+    private void logError(String message, Object... args) {
+        logger.error(message, args);
     }
 
     private <T> void logFoundObject(T object, String message) {

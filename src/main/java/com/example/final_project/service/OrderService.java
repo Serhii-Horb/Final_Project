@@ -5,7 +5,6 @@ import com.example.final_project.dto.requestDto.OrderRequestDto;
 import com.example.final_project.dto.responsedDto.OrderResponseDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
 import com.example.final_project.entity.Order;
-import com.example.final_project.entity.Product;
 import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Status;
 import com.example.final_project.exceptions.NotFoundInDbException;
@@ -40,7 +39,7 @@ public class OrderService {
     public OrderResponseDto insertOrder(OrderRequestDto orderRequestDto) {
         Order order = mappers.convertToOrder(orderRequestDto);
         final JwtAuthentication tokenInfo = (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
-        UserResponseDto user = userService.getByEmail((String) tokenInfo.getPrincipal());
+        UserResponseDto user = userService.getByEmail((String) tokenInfo.getPrincipal()); // почему имя а не email?
         order.setUser(mappers.convertResponceDTOToUser(user));
         order.setContactPhone(user.getPhoneNumber());
         order.setStatus(Status.CREATED);

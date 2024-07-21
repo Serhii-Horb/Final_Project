@@ -132,7 +132,6 @@ public class AuthService {
         logError("Authorization failed due to invalid refresh token.");
         throw new AuthorizationException("Invalid refreshToken");
     }
-
     /**
      * Refreshes both access and refresh tokens using a valid refresh token.
      * <p>
@@ -204,27 +203,27 @@ public class AuthService {
         return (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
     }
 
-    public JwtResponse createUser(UserRegisterRequestDto userCredentialsDto) throws AuthorizationException {
-        logInfo("Starting user registration process for email: {}", userCredentialsDto.getEmail());
+    public JwtResponse createUser(UserRegisterRequestDto userRegisterRequestDto) throws AuthorizationException {
+        logInfo("Starting user registration process for email: {}", userRegisterRequestDto.getEmail());
 
         // Register the user profile
-        UserResponseDto userResponseDto = usersService.registerUserProfile(userCredentialsDto);
-        logInfo("User registered successfully with email: {}", userCredentialsDto.getEmail());
+        UserResponseDto userResponseDto = usersService.registerUserProfile(userRegisterRequestDto);
+        logInfo("User registered successfully with email: {}", userRegisterRequestDto.getEmail());
 
         // Generate access token
         final String accessToken = jwtProvider.generateAccessToken(userResponseDto);
-        logInfo("Generated access token for user with email: {}", userCredentialsDto.getEmail());
+        logInfo("Generated access token for user with email: {}", userRegisterRequestDto.getEmail());
 
         // Generate refresh token
         final String refreshToken = jwtProvider.generateRefreshToken(userResponseDto);
-        logInfo("Generated refresh token for user with email: {}", userCredentialsDto.getEmail());
+        logInfo("Generated refresh token for user with email: {}", userRegisterRequestDto.getEmail());
 
         // Set refresh token for the user
         usersService.setRefreshToken(userResponseDto, refreshToken);
-        logInfo("Set refresh token for user with email: {}", userCredentialsDto.getEmail());
+        logInfo("Set refresh token for user with email: {}", userRegisterRequestDto.getEmail());
 
         // Return the JwtResponse with the access and refresh tokens
-        logInfo("User registration and token generation process completed successfully for email: {}", userCredentialsDto.getEmail());
+        logInfo("User registration and token generation process completed successfully for email: {}", userRegisterRequestDto.getEmail());
         return new JwtResponse(accessToken, refreshToken);
     }
 

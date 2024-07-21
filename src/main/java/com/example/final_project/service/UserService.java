@@ -11,13 +11,21 @@ import com.example.final_project.entity.enums.Role;
 import com.example.final_project.exceptions.*;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.UserRepository;
+import com.example.final_project.security.jwt.JwtAuthentication;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+
+import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -27,6 +35,11 @@ public class UserService {
     private final UserRepository userRepository;
     private final Mappers mappers;
     private final PasswordEncoder passwordEncoder;
+
+    @Value("${app.admin.emails}")
+    @Getter
+    @Setter
+    private String adminEmails;
 
     public UserResponseDto registerUserProfile(UserRegisterRequestDto userRegisterRequestDto) {
         logInfo("Starting registration for user with email: {}", userRegisterRequestDto.getEmail());
@@ -38,7 +51,14 @@ public class UserService {
         }
 
         User user = mappers.convertRegisterDTOToUser(userRegisterRequestDto);
+        String[] adminEmailList = adminEmails.split(",");
         user.setRole(Role.USER);
+        for (String adminEmail : adminEmailList) {
+            if (userRegisterRequestDto.getEmail().equals(adminEmail)) {
+                user.setRole(Role.ADMINISTRATOR);
+                break;
+            }
+        }
         user.setPasswordHash(passwordEncoder.encode(userRegisterRequestDto.getPasswordHash()));
         Cart cart = new Cart();
         cart.setUser(user);
@@ -142,10 +162,24 @@ public class UserService {
         }
     }
 
+    // Только для админа
     public List<UserResponseDto> getAllUsers() {
         logInfo("Attempting to fetch all users.");
-
-        List<User> usersList = userRepository.findAll();
+        boolean isAdministrator = false;
+        List<User> usersList;
+        final JwtAuthentication tokenInfo = (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
+        Set<SimpleGrantedAuthority> roles = tokenInfo.getRoles();
+        for (SimpleGrantedAuthority role : roles) {
+            if (role.getAuthority().equals("ROLE_ADMINISTRATOR")) {
+                isAdministrator = true;
+                break;
+            }
+        }
+        if (isAdministrator) {
+            usersList = userRepository.findAll();
+        } else {
+            throw new AuthorizationException("This role does not have data access.");
+        }
 
         if (usersList.isEmpty()) {
             logInfo("No users found in the database.");
