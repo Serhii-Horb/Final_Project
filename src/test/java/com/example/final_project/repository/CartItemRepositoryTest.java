@@ -1,67 +1,67 @@
-//package com.example.final_project.repository;
-//
-//import com.example.final_project.entity.CartItem;
-//import org.junit.jupiter.api.*;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-//
-//import java.util.Optional;
-//
-//@DataJpaTest
-//class CartItemRepositoryTest {
-//    @Autowired
-//    private CartItemRepository cartItemTest;
-//
-//    @Test
-//    @DisplayName("Test for getting singleton from data base")
-//    void testGet() {
-//        CartItem cartItemExpected = new CartItem();
-//        cartItemExpected.setCartItemId(1L);
-//        Optional<CartItem> cartItemActual = cartItemTest.findById(1L);
-//        Assertions.assertTrue(cartItemActual.isPresent());
-//        Assertions.assertEquals(cartItemExpected.getCartItemId(), cartItemActual.get().getCartItemId());
-//        System.out.println(cartItemExpected.getCartItemId());
-//        System.out.println(cartItemActual.get().getCartItemId());
-//    }
-//
-//    @Test
-//    @DisplayName("Test for creating object")
-//    void testInsert() {
-//        CartItem cartItemExpected = new CartItem();
-//        cartItemExpected.setQuantity(17);
-//
-//        CartItem cartItemActual = cartItemTest.save(cartItemExpected);
-//
-//        Assertions.assertNotNull(cartItemActual);
-//        Assertions.assertTrue(cartItemExpected.getCartItemId() > 0);
-//        Assertions.assertEquals(cartItemExpected.getCartItemId(), cartItemActual.getCartItemId());
-//    }
-//
-//    @Test
-//    @DisplayName("Test for a edition of cartItem")
-//    void testEdit() {
-//        Optional<CartItem> cartItemDb = cartItemTest.findById(1L);
-//        Assertions.assertTrue(cartItemDb.isPresent());
-//        System.out.println(cartItemDb.get().getCartItemId());
-//
-//        CartItem cartItemExpected = cartItemDb.get();
-//        cartItemExpected.setCartItemId(3L);
-//        System.out.println(cartItemExpected.getCartItemId());
-//
-//        CartItem cartItemActual = cartItemTest.save(cartItemExpected);
-//        Assertions.assertNotNull(cartItemActual);
-//        Assertions.assertEquals(cartItemExpected.getCartItemId(), cartItemActual.getCartItemId());
-//        System.out.println(cartItemActual.getCartItemId());
-//    }
-//
-//    @Test
-//    @DisplayName("Test of POJO deleting")
-//    void testDelete() {
-//        Optional<CartItem> cartItemDelete = cartItemTest.findById(1L);
-//        Assertions.assertTrue(cartItemDelete.isPresent());
-//
-//        cartItemTest.delete(cartItemDelete.get());
-//        Optional<CartItem> cartItemActual = cartItemTest.findById(1L);
-//        Assertions.assertFalse(cartItemActual.isPresent());
-//    }
-//}
+package com.example.final_project.repository;
+
+import com.example.final_project.entity.Cart;
+import com.example.final_project.entity.CartItem;
+import com.example.final_project.entity.Product;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import java.math.BigDecimal;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+    @DataJpaTest
+    class CartItemRepositoryTest {
+
+        @Autowired
+        private CartItemRepository cartItemRepository;
+
+        @Autowired
+        private CartRepository cartRepository;
+
+        @Autowired
+        private ProductRepository productRepository;
+
+        private Cart cart;
+        private Product product;
+        private CartItem cartItem;
+
+        @BeforeEach
+        void setUp() {
+            cart = new Cart();
+            cartRepository.save(cart);
+
+            product = new Product();
+            product.setName("Test Product");
+            product.setPrice(BigDecimal.valueOf(10.00));
+            productRepository.save(product);
+
+            cartItem = new CartItem();
+            cartItem.setCart(cart);
+            cartItem.setProduct(product);
+            cartItem.setQuantity(5);
+            cartItemRepository.save(cartItem);
+        }
+
+        @Test
+        void testFindByCart_CartIdAndProduct_ProductId_CartItemExists() {
+            Optional<CartItem> foundCartItem = cartItemRepository.findByCart_CartIdAndProduct_ProductId(cart.getCartId(),
+                    product.getProductId());
+
+            assertTrue(foundCartItem.isPresent(), "CartItem should be found for existing cartId and productId.");
+            assertEquals(cartItem.getCartItemId(), foundCartItem.get().getCartItemId(), "Found CartItem should " +
+                    "have the same ID as the saved CartItem.");
+        }
+
+        @Test
+        void testFindByCart_CartIdAndProduct_ProductId_CartItemDoesNotExist() {
+            Optional<CartItem> foundCartItem = cartItemRepository.findByCart_CartIdAndProduct_ProductId(999L,
+                    999L);
+
+            assertFalse(foundCartItem.isPresent(), "CartItem should not be found for non-existent cartId " +
+                    "and productId.");
+        }
+    }

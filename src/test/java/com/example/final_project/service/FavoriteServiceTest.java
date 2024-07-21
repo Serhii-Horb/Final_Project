@@ -30,7 +30,6 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class FavoriteServiceTest {
-
     @Mock
     private FavoriteRepository favoriteRepositoryMock;
 
@@ -53,10 +52,11 @@ class FavoriteServiceTest {
     @BeforeEach
     public void setUp() {
         user = new User(1L,
-                "Smith Alice",
-                "smith.alice@example.com",
+                "Test User",
+                "test.user@example.com",
                 "+1234567777",
-                "hashpassword100",
+                "testpassword100",
+                "",
                 Role.USER,
                 null,
                 null,
@@ -160,5 +160,4 @@ class FavoriteServiceTest {
         verify(favoriteRepositoryMock, times(1)).findByUser_UserIdAndProduct_ProductId(userId, productId);
         verify(favoriteRepositoryMock, times(0)).delete(any(Favorite.class));
     }
-
 }

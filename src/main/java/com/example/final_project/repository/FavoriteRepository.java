@@ -1,6 +1,5 @@
 package com.example.final_project.repository;
 
-import com.example.final_project.entity.CartItem;
 import com.example.final_project.entity.Favorite;
 import org.springframework.data.jpa.repository.JpaRepository;
 
