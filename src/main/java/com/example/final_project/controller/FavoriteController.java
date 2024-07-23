@@ -19,26 +19,46 @@ import java.util.List;
 public class FavoriteController {
     private final FavoriteService favoritesService;
 
+    /**
+     * Endpoint to add a product to the user's list of favorite products.
+     *
+     * @param userId    the ID of the user who is adding the favorite product.
+     * @param productId the ID of the product to be added to favorites.
+     */
     @PostMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "Add favorite.",
             description = "Allows you to add a new favorite product."
     )
-    public void addFavoriteByUserId(@PathVariable @Valid @Min(1) Long userId, @RequestBody @Valid @Min(1) Long productId) {
+    public void addFavoriteByUserId(@PathVariable @Valid @Min(1) Long userId,
+                                    @RequestBody @Valid @Min(1) Long productId) {
         favoritesService.addFavoriteByUserId(userId, productId);
     }
 
+    /**
+     * Endpoint to remove a product from the user's list of favorite products.
+     *
+     * @param userId    the ID of the user who is deleting the favorite product.
+     * @param productId the ID of the product to be removed from favorites.
+     */
     @DeleteMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "Delete favorite.",
             description = "Allows you to delete a favorite product."
     )
-    public void deleteFavoriteByProductId(@PathVariable @Valid @Min(1) Long userId, @RequestBody @Valid @Min(1) Long productId) {
+    public void deleteFavoriteByProductId(@PathVariable @Valid @Min(1) Long userId,
+                                          @RequestBody @Valid @Min(1) Long productId) {
         favoritesService.deleteFavoriteByUserId(userId, productId);
     }
 
+    /**
+     * Endpoint to retrieve all favorite products for a specific user.
+     *
+     * @param userId the ID of the user whose favorite products are being retrieved.
+     * @return a list of favorite products for the specified user.
+     */
     @GetMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(

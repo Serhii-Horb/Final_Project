@@ -12,10 +12,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class CartResponseDto {
-
+    /**
+     * Unique identifier for the cart.
+     *
+     * @see #cartId
+     */
     private Long cartId;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonProperty("user")
+    /**
+     * Details of the associated user.
+     * Included in the response only if the value is not null.
+     *
+     * @see UserResponseDto
+     * @see #userResponseDto
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL) // Includes the user details only if not null in the JSON response.
+    @JsonProperty("user") // Maps the JSON property "user" to this field.
     private UserResponseDto userResponseDto;
 }

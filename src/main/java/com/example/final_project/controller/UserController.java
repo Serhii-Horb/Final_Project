@@ -20,17 +20,29 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
+    /**
+     * Endpoint to update a user's profile.
+     *
+     * @param userUpdateRequestDto DTO containing the data to update the user's profile.
+     * @param userId               the ID of the user whose profile is being updated.
+     * @return a DTO containing the updated user profile.
+     */
     @PutMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
             summary = "User update.",
             description = "Allows the user to update their data."
     )
-    public UserResponseDto updateUserProfile(@RequestBody UserUpdateRequestDto userUpdateRequestDto,
+    public UserResponseDto updateUserProfile(@RequestBody @Valid UserUpdateRequestDto userUpdateRequestDto,
                                              @PathVariable @Valid @Min(1) Long userId) {
         return userService.updateUserProfile(userUpdateRequestDto, userId);
     }
 
+    /**
+     * Endpoint to delete a user profile.
+     *
+     * @param userId the ID of the user whose profile is to be deleted.
+     */
     @DeleteMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(
@@ -41,6 +53,11 @@ public class UserController {
         userService.deleteUserProfileById(userId);
     }
 
+    /**
+     * Endpoint to retrieve all user profiles.
+     *
+     * @return a list of DTOs containing all registered users' profiles.
+     */
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @Operation(
@@ -51,6 +68,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    /**
+     * Endpoint to retrieve a user profile by ID.
+     *
+     * @param userId the ID of the user whose profile is being retrieved.
+     * @return a DTO containing the user's profile.
+     */
     @GetMapping(value = "/{userId}")
     @ResponseStatus(HttpStatus.OK)
     @Operation(

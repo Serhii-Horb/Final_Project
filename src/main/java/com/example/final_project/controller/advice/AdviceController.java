@@ -19,7 +19,13 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class AdviceController {
-    // === Для обработки ошибок DB 404
+    /**
+     * Handles exceptions of type {@link NotFoundInDbException}.
+     * Returns a 404 Not Found status with an error message.
+     *
+     * @param exception the thrown {@link NotFoundInDbException}
+     * @return a {@link ResponseEntity} with status 404 and an {@link ErrorMessage}
+     */
     @ExceptionHandler(NotFoundInDbException.class)
     public ResponseEntity<ErrorMessage> handleException(NotFoundInDbException exception) {
         return ResponseEntity
@@ -27,7 +33,13 @@ public class AdviceController {
                 .body(new ErrorMessage(exception.getMessage()));
     }
 
-    // === Для обработки 400
+    /**
+     * Handles exceptions of type {@link BadRequestException}.
+     * Returns a 400 Bad Request status with an error message.
+     *
+     * @param exception the thrown {@link BadRequestException}
+     * @return a {@link ResponseEntity} with status 400 and an {@link ErrorMessage}
+     */
     @ExceptionHandler(BadRequestException.class)
     public ResponseEntity<ErrorMessage> handleException(BadRequestException exception) {
         return ResponseEntity
@@ -35,7 +47,13 @@ public class AdviceController {
                 .body(new ErrorMessage(exception.getMessage()));
     }
 
-    // === Для обработки ошибок авторизации и обновления 401
+    /**
+     * Handles exceptions of type {@link AuthorizationException}.
+     * Returns a 401 Unauthorized status with an error message.
+     *
+     * @param exception the thrown {@link AuthorizationException}
+     * @return a {@link ResponseEntity} with status 401 and an {@link ErrorMessage}
+     */
     @ExceptionHandler(AuthorizationException.class)
     public ResponseEntity<ErrorMessage> handleException(AuthorizationException exception) {
         return ResponseEntity
@@ -43,12 +61,17 @@ public class AdviceController {
                 .body(new ErrorMessage(exception.getMessage()));
     }
 
-    // === Для обработки ошибок авторизации и обновления 400
+    /**
+     * Handles exceptions of type {@link NoUsersFoundException}.
+     * Returns a 400 Bad Request status with an error message.
+     *
+     * @param exception the thrown {@link NoUsersFoundException}
+     * @return a {@link ResponseEntity} with status 400 and an {@link ErrorMessage}
+     */
     @ExceptionHandler(NoUsersFoundException.class)
     public ResponseEntity<ErrorMessage> handleException(NoUsersFoundException exception) {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(new ErrorMessage(exception.getMessage()));
     }
-
 }
