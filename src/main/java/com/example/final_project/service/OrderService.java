@@ -11,22 +11,15 @@ import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.OrderItemRepository;
 import com.example.final_project.repository.OrderRepository;
-import com.example.final_project.repository.ProductRepository;
-import com.example.final_project.repository.UserRepository;
 import com.example.final_project.security.jwt.JwtAuthentication;
-import com.example.final_project.security.service.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class OrderService {
-
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final UserService userService;
@@ -43,13 +36,9 @@ public class OrderService {
         order.setUser(mappers.convertResponceDTOToUser(user));
         order.setContactPhone(user.getPhoneNumber());
         order.setStatus(Status.CREATED);
-        order.setCreatedAt(Timestamp.valueOf(LocalDateTime.now()));
-        order.setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
         order = orderRepository.save(order);
-        order.getItems().forEach(orderItem -> {
-            orderItemRepository.save(orderItem);
-        });
-        return mappers.convertToOrderResponseDto(orderRepository.save(order));
+        order.getItems().forEach(orderItem -> orderItemRepository.save(orderItem));
+        return mappers.convertToOrderResponseDto(order);
     }
 
     public List<OrderResponseDto> getAllOrders() {
