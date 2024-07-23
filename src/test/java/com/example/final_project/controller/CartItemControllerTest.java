@@ -4,7 +4,8 @@ import com.example.final_project.dto.requestDto.CartItemRequestDto;
 import com.example.final_project.dto.responsedDto.CartItemResponseDto;
 import com.example.final_project.dto.responsedDto.CartResponseDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
-import com.example.final_project.dto.responsedDto.UserResponseDto;
+import com.example.final_project.security.config.SecurityConfig;
+import com.example.final_project.security.jwt.JwtProvider;
 import com.example.final_project.service.CartItemService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -22,6 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CartItemController.class)
+@Import(SecurityConfig.class)
 class CartItemControllerTest {
 
     @Autowired
@@ -35,6 +39,9 @@ class CartItemControllerTest {
     private CartResponseDto cartResponseDto;
     private CartItemResponseDto cartItemResponseDto;
     private ProductResponseDto productResponseDto;
+
+    @MockBean
+    private JwtProvider jwtProvider;
 
     private CartItemRequestDto cartItemRequestDto;
 
@@ -51,8 +58,8 @@ class CartItemControllerTest {
         cartItemResponseDto.setProductResponseDto(productResponseDto);
     }
 
-
     @Test
+    @WithMockUser(username = "testUser", roles = {"USER", "ADMINISTRATOR"})
     void testAddProductInCart() throws Exception {
         Long userId = 1L;
 
@@ -66,6 +73,7 @@ class CartItemControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testUser", roles = {"USER", "ADMINISTRATOR"})
     void testDeleteProductInCart() throws Exception {
         doNothing().when(cartItemServiceMock).deleteProductInCartByUserIdAndProductId(anyLong(), anyLong());
 

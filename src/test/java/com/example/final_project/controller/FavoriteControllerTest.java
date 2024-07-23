@@ -2,6 +2,8 @@ package com.example.final_project.controller;
 
 import com.example.final_project.dto.responsedDto.FavoriteResponseDto;
 import com.example.final_project.dto.responsedDto.ProductResponseDto;
+import com.example.final_project.security.config.SecurityConfig;
+import com.example.final_project.security.jwt.JwtProvider;
 import com.example.final_project.service.FavoriteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.http.MediaType;
 
@@ -26,7 +30,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.List;
 
 @WebMvcTest(FavoriteController.class)
+@Import(SecurityConfig.class)
 class FavoriteControllerTest {
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -37,6 +43,9 @@ class FavoriteControllerTest {
     private FavoriteService favoriteServiceMock;
 
     private FavoriteResponseDto favoriteResponseDto;
+
+    @MockBean
+    private JwtProvider jwtProvider;
 
     @BeforeEach
     void setUp() {
@@ -58,8 +67,8 @@ class FavoriteControllerTest {
                 .build();
     }
 
-
     @Test
+    @WithMockUser(username = "testUser", roles = {"USER", "ADMINISTRATOR"})
     void testAddFavoriteByUserId() throws Exception {
         Long userId = 1L;
         Long productId = 1L;
@@ -74,6 +83,7 @@ class FavoriteControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testUser", roles = {"USER", "ADMINISTRATOR"})
     void testDeleteFavoriteByProductId() throws Exception {
         Long userId = 1L;
         Long productId = 1L;
@@ -88,6 +98,7 @@ class FavoriteControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testUser", roles = {"USER", "ADMINISTRATOR"})
     void testGetAllFavoritesByUserId() throws Exception {
         Long userId = 1L;
 
