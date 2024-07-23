@@ -51,26 +51,26 @@ class UserControllerTest {
     void setUp() {
         userUpdateRequestDto = new UserUpdateRequestDto();
         userUpdateRequestDto.setName("TestUser");
-        userUpdateRequestDto.setPhone("123456789");
+        userUpdateRequestDto.setPhone("+123456789101");
 
         userResponseDto = new UserResponseDto();
         userResponseDto.setUserID(1L);
         userResponseDto.setName("TestUser");
         userResponseDto.setEmail("test@example.com");
-        userResponseDto.setPhoneNumber("123456789");
+        userResponseDto.setPhoneNumber("+123456789101");
 
         UserResponseDto user1 = UserResponseDto.builder()
                 .userID(2L)
                 .name("User1")
                 .email("user1@example.com")
-                .phoneNumber("123456789")
+                .phoneNumber("+123456789101")
                 .build();
 
         UserResponseDto user2 = UserResponseDto.builder()
                 .userID(3L)
                 .name("User2")
                 .email("user2@example.com")
-                .phoneNumber("987654321")
+                .phoneNumber("+987654321101")
                 .build();
 
         userResponseDtoList = Arrays.asList(user1, user2);
