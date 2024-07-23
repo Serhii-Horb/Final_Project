@@ -10,6 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class CategoryResponseDto {
+    /**
+     * Unique identifier for the category.
+     */
     private long categoryId;
+
+    /**
+     * Name of the category.
+     */
     private String name;
 }

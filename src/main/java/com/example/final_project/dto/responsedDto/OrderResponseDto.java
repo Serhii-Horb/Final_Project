@@ -16,14 +16,45 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 public class OrderResponseDto {
+    /**
+     * Unique identifier for the order.
+     */
     private Long orderId;
+
+    /**
+     * Timestamp indicating when the order was created.
+     */
     private Timestamp createdAt;
+
+    /**
+     * Address where the order should be delivered.
+     */
     private String deliveryAddress;
+
+    /**
+     * Contact phone number for the order.
+     */
     private String contactPhone;
+
+    /**
+     * Delivery method for the order.
+     */
     private Delivery deliveryMethod;
+
+    /**
+     * Current status of the order.
+     */
     private Status status;
+
+    /**
+     * Timestamp indicating the last update time of the order.
+     */
     private Timestamp updatedAt;
 
+    /**
+     * User details associated with the order.
+     * This field will be included in the JSON response only if it is not null.
+     */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("user")
     private UserResponseDto userResponseDto;

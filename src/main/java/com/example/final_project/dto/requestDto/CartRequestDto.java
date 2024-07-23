@@ -13,6 +13,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class CartRequestDto {
+    /**
+     * The ID of the user associated with the cart.
+     * Must be a non-blank, positive numeric value, and should not start with zero.
+     *
+     * @see #userId
+     */
     @NotBlank(message = "Invalid Id: Empty Id")
     @Pattern(regexp = "^[^0]\\d{1,18}$", message = "Invalid Id: not a number")
     @JsonProperty("user")

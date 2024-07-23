@@ -11,13 +11,21 @@ import com.example.final_project.entity.enums.Role;
 import com.example.final_project.exceptions.*;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.UserRepository;
+import com.example.final_project.security.jwt.JwtAuthentication;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+
+import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -28,17 +36,37 @@ public class UserService {
     private final Mappers mappers;
     private final PasswordEncoder passwordEncoder;
 
+    @Value("${app.admin.emails}")
+    @Getter
+    @Setter
+    private String adminEmails;
+
+    /**
+     * Registers a new user profile.
+     *
+     * @param userRegisterRequestDto DTO containing registration details.
+     * @return The registered user response DTO.
+     */
     public UserResponseDto registerUserProfile(UserRegisterRequestDto userRegisterRequestDto) {
         logInfo("Starting registration for user with email: {}", userRegisterRequestDto.getEmail());
 
+        // Check if the user already exists.
         User userExisted = userRepository.getByEmail(userRegisterRequestDto.getEmail()).orElse(null);
         if (userExisted != null) {
             logError("User with email {} already exists.", userRegisterRequestDto.getEmail());
             throw new BadRequestException("User already exists.");
         }
 
+        // Convert DTO to User entity and set properties.
         User user = mappers.convertRegisterDTOToUser(userRegisterRequestDto);
+        String[] adminEmailList = adminEmails.split(",");
         user.setRole(Role.USER);
+        for (String adminEmail : adminEmailList) {
+            if (userRegisterRequestDto.getEmail().equals(adminEmail)) {
+                user.setRole(Role.ADMINISTRATOR);
+                break;
+            }
+        }
         user.setPasswordHash(passwordEncoder.encode(userRegisterRequestDto.getPasswordHash()));
         Cart cart = new Cart();
         cart.setUser(user);
@@ -46,6 +74,7 @@ public class UserService {
 
         logInfo("User object created for email: {}", userRegisterRequestDto.getEmail());
 
+        // Save user to the database.
         User savedUser;
         try {
             savedUser = userRepository.save(user);
@@ -57,14 +86,23 @@ public class UserService {
         return mappers.convertToUserResponseDto(savedUser);
     }
 
+    /**
+     * Logs in a user profile.
+     *
+     * @param userLoginRequestDto DTO containing login credentials.
+     * @return The user response DTO.
+     */
     public UserResponseDto loginUserProfile(UserLoginRequestDto userLoginRequestDto) {
         logInfo("Attempting login for user with email: {}", userLoginRequestDto.getEmail());
+
+        // Find user by email.
         User user = userRepository.getByEmail(userLoginRequestDto.getEmail())
                 .orElseThrow(() -> {
                     logError("User with email {} does not exist.", userLoginRequestDto.getEmail());
                     return new AuthorizationException("User not found.");
                 });
 
+        // Check password validity.
         if (!passwordEncoder.matches(userLoginRequestDto.getPassword(), user.getPasswordHash())) {
             logError("Incorrect password for user with email: {}", userLoginRequestDto.getEmail());
             throw new AuthorizationException("Incorrect password. Please try again.");
@@ -74,6 +112,12 @@ public class UserService {
         return mappers.convertToUserResponseDto(user);
     }
 
+    /**
+     * Retrieves a user by email.
+     *
+     * @param email The email of the user to retrieve.
+     * @return The user response DTO.
+     */
     public UserResponseDto getByEmail(String email) {
         logInfo("Get user with email: {}", email);
         User user = userRepository.getByEmail(email)
@@ -85,6 +129,12 @@ public class UserService {
         return mappers.convertToUserResponseDto(user);
     }
 
+    /**
+     * Sets a refresh token for the user.
+     *
+     * @param userResponseDto The user response DTO.
+     * @param refreshToken    The refresh token to set.
+     */
     public void setRefreshToken(UserResponseDto userResponseDto, String refreshToken) {
         logInfo("Set refreshToken to user with email: {}", userResponseDto.getEmail());
         User user = mappers.convertResponceDTOToUser(userResponseDto);
@@ -99,6 +149,13 @@ public class UserService {
         }
     }
 
+    /**
+     * Updates the user profile.
+     *
+     * @param userUpdateRequestDto DTO containing update details.
+     * @param id                   The ID of the user to update.
+     * @return The updated user response DTO.
+     */
     public UserResponseDto updateUserProfile(UserUpdateRequestDto userUpdateRequestDto, Long id) {
         logInfo("Attempting to update profile for user with ID: {}", id);
 
@@ -124,6 +181,11 @@ public class UserService {
         return mappers.convertToUserResponseDto(savedUser);
     }
 
+    /**
+     * Deletes the user profile by ID.
+     *
+     * @param id The ID of the user to delete.
+     */
     public void deleteUserProfileById(Long id) {
         logInfo("Attempting to delete user profile with ID: {}", id);
 
@@ -142,10 +204,28 @@ public class UserService {
         }
     }
 
+    /**
+     * Retrieves all users.
+     *
+     * @return A list of user response DTOs.
+     */
     public List<UserResponseDto> getAllUsers() {
         logInfo("Attempting to fetch all users.");
-
-        List<User> usersList = userRepository.findAll();
+        boolean isAdministrator = false;
+        List<User> usersList;
+        final JwtAuthentication tokenInfo = (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
+        Set<SimpleGrantedAuthority> roles = tokenInfo.getRoles();
+        for (SimpleGrantedAuthority role : roles) {
+            if (role.getAuthority().equals("ROLE_ADMINISTRATOR")) {
+                isAdministrator = true;
+                break;
+            }
+        }
+        if (isAdministrator) {
+            usersList = userRepository.findAll();
+        } else {
+            throw new AuthorizationException("This role does not have data access.");
+        }
 
         if (usersList.isEmpty()) {
             logInfo("No users found in the database.");
@@ -157,6 +237,12 @@ public class UserService {
         return MapperUtil.convertList(usersList, mappers::convertToUserResponseDto);
     }
 
+    /**
+     * Retrieves a user by ID.
+     *
+     * @param id The ID of the user to fetch.
+     * @return The user response DTO.
+     */
     public UserResponseDto getUserById(Long id) {
         logInfo("Attempting to fetch user with ID {}.", id);
 
@@ -172,10 +258,22 @@ public class UserService {
         return userResponseDto;
     }
 
+    /**
+     * Logs an informational message.
+     *
+     * @param message The message to log.
+     * @param args    Arguments for the message.
+     */
     private void logInfo(String message, Object... args) {
         logger.info(message, args);
     }
 
+    /**
+     * Logs an error message.
+     *
+     * @param message The message to log.
+     * @param args    Arguments for the message.
+     */
     private void logError(String message, Object... args) {
         logger.error(message, args);
     }
