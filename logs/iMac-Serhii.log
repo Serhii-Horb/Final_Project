@@ -1,111 +1,885 @@
-2024-07-22 22:43:39.487 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17718 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 22:43:39.493 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 22:43:39.494 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 22:57:56.396 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17858 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 22:57:56.397 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 22:57:56.397 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:02:00.288 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17884 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:02:00.288 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:02:00.289 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:02:02.112 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:02:02.147 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.188 seconds (process running for 2.873)
-2024-07-22 23:03:54.857 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17900 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:03:54.858 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:03:54.858 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:03:56.627 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:03:56.657 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.122 seconds (process running for 2.796)
-2024-07-22 23:04:14.269 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17910 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:04:14.270 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:04:14.271 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:04:16.055 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:04:16.087 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.12 seconds (process running for 2.784)
-2024-07-22 23:04:36.653 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17918 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:04:36.654 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:04:36.655 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:04:38.608 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:04:38.640 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.324 seconds (process running for 2.991)
-2024-07-22 23:05:11.210 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17926 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:05:11.211 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:05:11.211 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:05:13.063 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:05:13.095 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.215 seconds (process running for 2.915)
-2024-07-22 23:05:24.580 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17934 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:05:24.581 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:05:24.581 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:05:35.965 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 17943 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:05:35.965 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:05:35.966 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:05:37.831 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:05:37.863 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.223 seconds (process running for 2.9)
-2024-07-22 23:08:33.211 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 17972 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:08:33.211 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:08:33.212 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:08:35.141 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:08:35.173 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 2.337 seconds (process running for 3.021)
-2024-07-22 23:09:31.568 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 17985 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:09:31.568 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:09:31.569 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:09:33.343 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:09:33.375 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 2.147 seconds (process running for 2.816)
-2024-07-22 23:27:18.926 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18109 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:27:18.927 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:27:18.927 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:29:26.111 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18152 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:29:26.112 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:29:26.113 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:29:27.906 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:29:27.941 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.151 seconds (process running for 2.821)
-2024-07-22 23:31:08.398 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18163 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:31:08.398 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:31:08.399 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:31:10.263 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:31:10.298 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.228 seconds (process running for 2.913)
-2024-07-22 23:33:27.592 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18174 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:33:27.592 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:33:27.593 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:33:29.344 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:33:29.377 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.103 seconds (process running for 2.819)
-2024-07-22 23:35:07.576 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18194 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:35:07.577 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:35:07.577 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:35:09.330 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:35:09.364 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.103 seconds (process running for 2.754)
-2024-07-22 23:35:20.415 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18199 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:35:20.416 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:35:20.416 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:35:22.202 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:35:22.236 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.136 seconds (process running for 2.841)
-2024-07-22 23:37:52.342 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18219 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:37:52.342 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:37:52.343 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:37:54.114 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:37:54.148 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.122 seconds (process running for 2.812)
-2024-07-22 23:41:23.957 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18265 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:41:23.957 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:41:23.958 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:41:25.822 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:41:25.853 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.243 seconds (process running for 2.972)
-2024-07-22 23:45:24.994 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18312 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:45:24.994 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:45:24.995 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:45:26.740 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:45:26.772 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.092 seconds (process running for 2.761)
-2024-07-22 23:47:45.736 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18337 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:47:45.736 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:47:45.737 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:47:47.488 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:47:47.519 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.098 seconds (process running for 2.761)
-2024-07-22 23:48:11.008 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 18347 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:48:11.009 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:48:11.009 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:48:12.800 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:48:12.833 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.15 seconds (process running for 2.815)
-2024-07-22 23:49:25.097 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 18360 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:49:25.098 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:49:25.098 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:49:30.618 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Started FinalProjectApplicationTests in 5.8 seconds (process running for 6.42)
-2024-07-22 23:49:47.367 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 18369 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
-2024-07-22 23:49:47.367 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-07-22 23:49:47.368 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
-2024-07-22 23:49:48.860 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
-2024-07-22 23:49:52.377 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.34 seconds (process running for 5.75)
+2024-07-21 13:15:41.965 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 12750 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 13:15:41.970 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 13:15:41.970 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 13:15:43.507 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 13:15:47.306 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.651 seconds (process running for 6.064)
+2024-07-21 13:17:01.569 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: tolia@gmail.com
+2024-07-21 13:17:01.570 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: tolia@gmail.com
+2024-07-21 13:17:01.671 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: tolia@gmail.com
+2024-07-21 13:17:01.699 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  User with email: tolia@gmail.com successfully saved to the database.
+2024-07-21 13:17:01.702 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: tolia@gmail.com
+2024-07-21 13:17:01.713 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: tolia@gmail.com
+2024-07-21 13:17:01.714 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: tolia@gmail.com
+2024-07-21 13:17:01.714 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: tolia@gmail.com
+2024-07-21 13:17:01.725 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: tolia@gmail.com successfully saved to the database.
+2024-07-21 13:17:01.725 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: tolia@gmail.com
+2024-07-21 13:17:01.725 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: tolia@gmail.com
+2024-07-21 13:17:31.710 | http-nio-8080-exec-2      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllProducts} args=[];
+2024-07-21 13:17:31.725 | http-nio-8080-exec-2      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=getAllProducts}{CONTROLLER_TIME=12} args=[]; RESULT: [RESULT_SIZE=27 [ProductResponseDto(productId=1, name=Garden Shovel, description=Heavy duty garden shovel for digging, price=15.99, discountPrice=13.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_shovel.jpg, categoryResponseDto=null), ProductResponseDto(productId=2, name=Garden Shovel, description=Heavy duty garden shovel for digging, price=15.99, discountPrice=13.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_shovel.jpg, categoryResponseDto=null), ProductResponseDto(productId=3, name=Garden Rake, description=Durable garden rake for cleaning up leaves, price=12.99, discountPrice=10.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_rake.jpg, categoryResponseDto=null), ProductResponseDto(productId=4, name=Watering Can, description=Large capacity watering can for plants, price=9.99, discountPrice=8.49, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/watering_can.jpg, categoryResponseDto=null), ProductResponseDto(productId=5, name=Watering Can, description=Large capacity watering can for plants, price=9.99, discountPrice=8.49, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/watering_can.jpg, categoryResponseDto=null), ProductResponseDto(productId=6, name=Garden Hoe, description=Sturdy garden hoe for weeding, price=11.99, discountPrice=9.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_hoe.jpg, categoryResponseDto=null), ProductResponseDto(productId=7, name=Pruning Shears, description=High quality pruning shears for trimming, price=14.99, discountPrice=12.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/pruning_shears.jpg, categoryResponseDto=null), ProductResponseDto(productId=8, name=Pruning Shears, description=High quality pruning shears for trimming, price=14.99, discountPrice=12.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/pruning_shears.jpg, categoryResponseDto=null), ProductResponseDto(productId=9, name=Lawn Mower, description=Electric lawn mower for cutting grass, price=199.99, discountPrice=179.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/lawn_mower.jpg, categoryResponseDto=null), ProductResponseDto(productId=10, name=Garden Hose, description=Flexible garden hose with spray nozzle, price=25.99, discountPrice=22.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_hose.jpg, categoryResponseDto=null), ProductResponseDto(productId=11, name=Garden Hose, description=Flexible garden hose with spray nozzle, price=25.99, discountPrice=22.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_hose.jpg, categoryResponseDto=null), ProductResponseDto(productId=12, name=Plant Pots, description=Set of 3 ceramic plant pots, price=19.99, discountPrice=17.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/plant_pots.jpg, categoryResponseDto=null), ProductResponseDto(productId=13, name=Outdoor Furniture Set, description=4-piece outdoor furniture set, price=299.99, discountPrice=269.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/outdoor_furniture.jpg, categoryResponseDto=null), ProductResponseDto(productId=14, name=Barbecue Grill, description=Gas barbecue grill with 4 burners, price=399.99, discountPrice=349.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/barbecue_grill.jpg, categoryResponseDto=null), ProductResponseDto(productId=15, name=Garden Gloves, description=Protective garden gloves, price=7.99, discountPrice=6.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_gloves.jpg, categoryResponseDto=null), ProductResponseDto(productId=16, name=Garden Gloves, description=Protective garden gloves, price=7.99, discountPrice=6.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_gloves.jpg, categoryResponseDto=null), ProductResponseDto(productId=17, name=Garden Cart, description=Heavy duty garden cart, price=89.99, discountPrice=79.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_cart.jpg, categoryResponseDto=null), ProductResponseDto(productId=18, name=Fertilizer, description=Organic plant fertilizer, price=15.99, discountPrice=13.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/fertilizer.jpg, categoryResponseDto=null), ProductResponseDto(productId=19, name=Garden Shed, description=Large garden shed for storage, price=499.99, discountPrice=449.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_shed.jpg, categoryResponseDto=null), ProductResponseDto(productId=20, name=Garden Shed, description=Large garden shed for storage, price=499.99, discountPrice=449.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_shed.jpg, categoryResponseDto=null), ProductResponseDto(productId=21, name=Outdoor Lights, description=Solar-powered outdoor lights, price=29.99, discountPrice=25.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/outdoor_lights.jpg, categoryResponseDto=null), ProductResponseDto(productId=22, name=Compost Bin, description=Large compost bin, price=59.99, discountPrice=49.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/compost_bin.jpg, categoryResponseDto=null), ProductResponseDto(productId=23, name=Bird Feeder, description=Decorative bird feeder, price=14.99, discountPrice=12.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/bird_feeder.jpg, categoryResponseDto=null), ProductResponseDto(productId=24, name=Bird Feeder, description=Decorative bird feeder, price=14.99, discountPrice=12.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/bird_feeder.jpg, categoryResponseDto=null), ProductResponseDto(productId=25, name=Garden Statue, description=Decorative garden statue, price=34.99, discountPrice=29.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_statue.jpg, categoryResponseDto=null), ProductResponseDto(productId=26, name=Outdoor Heater, description=Propane outdoor heater, price=149.99, discountPrice=129.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/outdoor_heater.jpg, categoryResponseDto=null), ProductResponseDto(productId=27, name=Patio Umbrella, description=Large patio umbrella, price=89.99, discountPrice=79.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/patio_umbrella.jpg, categoryResponseDto=null)]]
+2024-07-21 13:17:44.503 | http-nio-8080-exec-4      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getProductById} args=[2];
+2024-07-21 13:17:44.509 | http-nio-8080-exec-4      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=getProductById}{CONTROLLER_TIME=6} args=[2]; RESULT: [ProductResponseDto(productId=2, name=Garden Shovel, description=Heavy duty garden shovel for digging, price=15.99, discountPrice=13.99, createdAt=2024-01-01 00:00:00.0, updatedAt=2024-01-01 00:00:00.0, imageURL=images/garden_shovel.jpg, categoryResponseDto=null)]
+2024-07-21 14:10:07.332 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13063 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:10:07.333 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:10:07.333 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:10:08.888 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:10:12.728 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.7 seconds (process running for 6.127)
+2024-07-21 14:11:42.963 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: admin1@example.com
+2024-07-21 14:11:42.964 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: admin1@example.com
+2024-07-21 14:11:43.069 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: admin1@example.com
+2024-07-21 14:11:43.096 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  User with email: admin1@example.com successfully saved to the database.
+2024-07-21 14:11:43.099 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: admin1@example.com
+2024-07-21 14:11:43.109 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: admin1@example.com
+2024-07-21 14:11:43.110 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: admin1@example.com
+2024-07-21 14:11:43.110 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: admin1@example.com
+2024-07-21 14:11:43.121 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: admin1@example.com successfully saved to the database.
+2024-07-21 14:11:43.121 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: admin1@example.com
+2024-07-21 14:11:43.121 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: admin1@example.com
+2024-07-21 14:12:21.387 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: nata@example.com
+2024-07-21 14:12:21.387 | http-nio-8080-exec-9      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: nata@example.com
+2024-07-21 14:12:21.458 | http-nio-8080-exec-9      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: nata@example.com
+2024-07-21 14:12:21.462 | http-nio-8080-exec-9      | INFO  | com.example.final_project.service.UserService                           -  User with email: nata@example.com successfully saved to the database.
+2024-07-21 14:12:21.462 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: nata@example.com
+2024-07-21 14:12:21.463 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: nata@example.com
+2024-07-21 14:12:21.463 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: nata@example.com
+2024-07-21 14:12:21.463 | http-nio-8080-exec-9      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: nata@example.com
+2024-07-21 14:12:21.465 | http-nio-8080-exec-9      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: nata@example.com successfully saved to the database.
+2024-07-21 14:12:21.465 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: nata@example.com
+2024-07-21 14:12:21.465 | http-nio-8080-exec-9      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: nata@example.com
+2024-07-21 14:17:36.301 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13094 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:17:36.301 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:17:36.302 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:17:37.825 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:17:41.650 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.651 seconds (process running for 6.054)
+2024-07-21 14:19:40.265 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: admin1@example.com
+2024-07-21 14:19:40.265 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: admin1@example.com
+2024-07-21 14:19:40.352 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  User with email: admin1@example.com successfully logged in.
+2024-07-21 14:19:40.366 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: admin1@example.com
+2024-07-21 14:19:40.377 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: admin1@example.com
+2024-07-21 14:19:40.377 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: admin1@example.com
+2024-07-21 14:19:40.377 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: admin1@example.com
+2024-07-21 14:19:40.397 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: admin1@example.com successfully saved to the database.
+2024-07-21 14:19:40.398 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: admin1@example.com
+2024-07-21 14:19:40.398 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: admin1@example.com
+2024-07-21 14:43:27.164 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13190 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:43:27.165 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:43:27.165 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:43:28.760 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:43:32.546 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.705 seconds (process running for 6.114)
+2024-07-21 14:44:11.253 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: nata@example.com
+2024-07-21 14:44:11.253 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: nata@example.com
+2024-07-21 14:44:11.343 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  User with email: nata@example.com successfully logged in.
+2024-07-21 14:44:11.362 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: nata@example.com
+2024-07-21 14:44:11.372 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: nata@example.com
+2024-07-21 14:44:11.373 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: nata@example.com
+2024-07-21 14:44:11.373 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: nata@example.com
+2024-07-21 14:44:11.395 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: nata@example.com successfully saved to the database.
+2024-07-21 14:44:11.395 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: nata@example.com
+2024-07-21 14:44:11.395 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: nata@example.com
+2024-07-21 14:44:38.197 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllUsersProfiles} args=[];
+2024-07-21 14:44:38.198 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Attempting to fetch all users.
+2024-07-21 14:44:38.198 | http-nio-8080-exec-6      | ERROR | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_ERROR{CONTROLLER_METHOD=getAllUsersProfiles}{CONTROLLER_TIME=0} args=[];
+com.example.final_project.exceptions.AuthorizationException: This role does not have data access.
+	at com.example.final_project.service.UserService.getAllUsers(UserService.java:177)
+	at com.example.final_project.controller.UserController.getAllUsersProfiles(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.final_project.aspect.LoggingAspect.mdcServiceController(LoggingAspect.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.example.final_project.controller.UserController$$SpringCGLIB$$0.getAllUsersProfiles(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-21 14:44:38.201 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=handleException} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.];
+2024-07-21 14:44:38.201 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=handleException}{CONTROLLER_TIME=0} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.]; RESULT: [<401 UNAUTHORIZED Unauthorized,This role does not have data access.,[]>]
+2024-07-21 14:45:24.126 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: admin1@example.com
+2024-07-21 14:45:24.126 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: admin1@example.com
+2024-07-21 14:45:24.197 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  User with email: admin1@example.com successfully logged in.
+2024-07-21 14:45:24.197 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: admin1@example.com
+2024-07-21 14:45:24.198 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: admin1@example.com
+2024-07-21 14:45:24.198 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: admin1@example.com
+2024-07-21 14:45:24.198 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: admin1@example.com
+2024-07-21 14:45:24.201 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: admin1@example.com successfully saved to the database.
+2024-07-21 14:45:24.201 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: admin1@example.com
+2024-07-21 14:45:24.201 | http-nio-8080-exec-1      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: admin1@example.com
+2024-07-21 14:45:47.497 | http-nio-8080-exec-2      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllUsersProfiles} args=[];
+2024-07-21 14:45:47.497 | http-nio-8080-exec-2      | INFO  | com.example.final_project.service.UserService                           -  Attempting to fetch all users.
+2024-07-21 14:45:47.497 | http-nio-8080-exec-2      | ERROR | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_ERROR{CONTROLLER_METHOD=getAllUsersProfiles}{CONTROLLER_TIME=0} args=[];
+com.example.final_project.exceptions.AuthorizationException: This role does not have data access.
+	at com.example.final_project.service.UserService.getAllUsers(UserService.java:177)
+	at com.example.final_project.controller.UserController.getAllUsersProfiles(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.final_project.aspect.LoggingAspect.mdcServiceController(LoggingAspect.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.example.final_project.controller.UserController$$SpringCGLIB$$0.getAllUsersProfiles(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-21 14:45:47.498 | http-nio-8080-exec-2      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=handleException} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.];
+2024-07-21 14:45:47.498 | http-nio-8080-exec-2      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=handleException}{CONTROLLER_TIME=0} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.]; RESULT: [<401 UNAUTHORIZED Unauthorized,This role does not have data access.,[]>]
+2024-07-21 14:46:41.732 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13204 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:46:41.733 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:46:41.733 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:46:43.377 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:46:47.388 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 6.0 seconds (process running for 6.896)
+2024-07-21 14:46:55.434 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllUsersProfiles} args=[];
+2024-07-21 14:46:55.434 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Attempting to fetch all users.
+2024-07-21 14:48:32.374 | http-nio-8080-exec-1      | ERROR | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_ERROR{CONTROLLER_METHOD=getAllUsersProfiles}{CONTROLLER_TIME=96939} args=[];
+com.example.final_project.exceptions.AuthorizationException: This role does not have data access.
+	at com.example.final_project.service.UserService.getAllUsers(UserService.java:177)
+	at com.example.final_project.controller.UserController.getAllUsersProfiles(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.final_project.aspect.LoggingAspect.mdcServiceController(LoggingAspect.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.example.final_project.controller.UserController$$SpringCGLIB$$0.getAllUsersProfiles(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-21 14:48:32.378 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=handleException} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.];
+2024-07-21 14:48:32.385 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=handleException}{CONTROLLER_TIME=6} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.]; RESULT: [<401 UNAUTHORIZED Unauthorized,This role does not have data access.,[]>]
+2024-07-21 14:48:50.293 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13221 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:48:50.294 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:48:50.294 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:48:51.882 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:48:55.851 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.897 seconds (process running for 6.402)
+2024-07-21 14:49:02.247 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllUsersProfiles} args=[];
+2024-07-21 14:49:02.247 | http-nio-8080-exec-1      | INFO  | com.example.final_project.service.UserService                           -  Attempting to fetch all users.
+2024-07-21 14:49:32.831 | http-nio-8080-exec-1      | ERROR | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_ERROR{CONTROLLER_METHOD=getAllUsersProfiles}{CONTROLLER_TIME=30584} args=[];
+com.example.final_project.exceptions.AuthorizationException: This role does not have data access.
+	at com.example.final_project.service.UserService.getAllUsers(UserService.java:177)
+	at com.example.final_project.controller.UserController.getAllUsersProfiles(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.final_project.aspect.LoggingAspect.mdcServiceController(LoggingAspect.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.example.final_project.controller.UserController$$SpringCGLIB$$0.getAllUsersProfiles(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.example.final_project.security.jwt.JwtFilter.doFilter(JwtFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-21 14:49:32.835 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=handleException} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.];
+2024-07-21 14:49:32.848 | http-nio-8080-exec-1      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=handleException}{CONTROLLER_TIME=13} args=[com.example.final_project.exceptions.AuthorizationException: This role does not have data access.]; RESULT: [<401 UNAUTHORIZED Unauthorized,This role does not have data access.,[]>]
+2024-07-21 14:49:36.593 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 13235 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 14:49:36.594 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 14:49:36.594 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 14:49:38.011 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 14:49:41.740 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.435 seconds (process running for 5.858)
+2024-07-21 14:50:12.046 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: admin1@example.com
+2024-07-21 14:50:12.046 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: admin1@example.com
+2024-07-21 14:50:12.137 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  User with email: admin1@example.com successfully logged in.
+2024-07-21 14:50:12.154 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: admin1@example.com
+2024-07-21 14:50:12.164 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: admin1@example.com
+2024-07-21 14:50:12.165 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: admin1@example.com
+2024-07-21 14:50:12.165 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: admin1@example.com
+2024-07-21 14:50:12.184 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: admin1@example.com successfully saved to the database.
+2024-07-21 14:50:12.184 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: admin1@example.com
+2024-07-21 14:50:12.185 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: admin1@example.com
+2024-07-21 14:50:34.701 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getAllUsersProfiles} args=[];
+2024-07-21 14:50:34.701 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Attempting to fetch all users.
+2024-07-21 14:50:34.735 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Found 64 users.
+2024-07-21 14:50:34.744 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=getAllUsersProfiles}{CONTROLLER_TIME=41} args=[]; RESULT: [RESULT_SIZE=64 [UserResponseDto(userID=1, name=Alice Smith, email=alice.smith@example.com, phoneNumber=1234567890, passwordHash=hashpassword1, refreshToken=null, role=USER), UserResponseDto(userID=2, name=Bob Johnson, email=bob.johnson@example.com, phoneNumber=1234567891, passwordHash=hashpassword2, refreshToken=null, role=ADMINISTRATOR), UserResponseDto(userID=3, name=Charlie Brown, email=charlie.brown@example.com, phoneNumber=1234567892, passwordHash=hashpassword3, refreshToken=null, role=USER), UserResponseDto(userID=4, name=David Wilson, email=david.wilson@example.com, phoneNumber=1234567893, passwordHash=hashpassword4, refreshToken=null, role=USER), UserResponseDto(userID=5, name=Emma Davis, email=emma.davis@example.com, phoneNumber=1234567894, passwordHash=hashpassword5, refreshToken=null, role=USER), UserResponseDto(userID=6, name=Frank Clark, email=frank.clark@example.com, phoneNumber=1234567895, passwordHash=hashpassword6, refreshToken=null, role=ADMINISTRATOR), UserResponseDto(userID=7, name=Grace Hall, email=grace.hall@example.com, phoneNumber=1234567896, passwordHash=hashpassword7, refreshToken=null, role=USER), UserResponseDto(userID=8, name=Henry Lewis, email=henry.lewis@example.com, phoneNumber=1234567897, passwordHash=hashpassword8, refreshToken=null, role=USER), UserResponseDto(userID=9, name=Isabel Young, email=isabel.young@example.com, phoneNumber=1234567898, passwordHash=hashpassword9, refreshToken=null, role=USER), UserResponseDto(userID=10, name=Jack Allen, email=jack.allen@example.com, phoneNumber=1234567899, passwordHash=hashpassword10, refreshToken=null, role=USER), UserResponseDto(userID=11, name=Karen King, email=karen.king@example.com, phoneNumber=1234567800, passwordHash=hashpassword11, refreshToken=null, role=USER), UserResponseDto(userID=12, name=Larry Wright, email=larry.wright@example.com, phoneNumber=1234567801, passwordHash=hashpassword12, refreshToken=null, role=USER), UserResponseDto(userID=13, name=Mona Scott, email=mona.scott@example.com, phoneNumber=1234567802, passwordHash=hashpassword13, refreshToken=null, role=USER), UserResponseDto(userID=14, name=Nina Green, email=nina.green@example.com, phoneNumber=1234567803, passwordHash=hashpassword14, refreshToken=null, role=USER), UserResponseDto(userID=15, name=Oscar Baker, email=oscar.baker@example.com, phoneNumber=1234567804, passwordHash=hashpassword15, refreshToken=null, role=ADMINISTRATOR), UserResponseDto(userID=16, name=Paula Adams, email=paula.adams@example.com, phoneNumber=1234567805, passwordHash=hashpassword16, refreshToken=null, role=USER), UserResponseDto(userID=17, name=Quincy Turner, email=quincy.turner@example.com, phoneNumber=1234567806, passwordHash=hashpassword17, refreshToken=null, role=USER), UserResponseDto(userID=18, name=Rachel Miller, email=rachel.miller@example.com, phoneNumber=1234567807, passwordHash=hashpassword18, refreshToken=null, role=USER), UserResponseDto(userID=19, name=Steve Carter, email=steve.carter@example.com, phoneNumber=1234567808, passwordHash=hashpassword19, refreshToken=null, role=USER), UserResponseDto(userID=20, name=Tina Martinez, email=tina.martinez@example.com, phoneNumber=1234567809, passwordHash=hashpassword20, refreshToken=null, role=USER), UserResponseDto(userID=21, name=John Doe, email=john.doe1@example.com, phoneNumber=+12345678901, passwordHash=hashpassword21, refreshToken=null, role=USER), UserResponseDto(userID=22, name=Jane Smith, email=jane.smith1@example.com, phoneNumber=+12345678902, passwordHash=hashpassword22, refreshToken=null, role=USER), UserResponseDto(userID=23, name=Alice Johnson, email=alice.johnson1@example.com, phoneNumber=+12345678903, passwordHash=hashpassword23, refreshToken=null, role=USER), UserResponseDto(userID=24, name=Bob Brown, email=bob.brown1@example.com, phoneNumber=+12345678904, passwordHash=hashpassword24, refreshToken=null, role=USER), UserResponseDto(userID=25, name=Charlie Black, email=charlie.black1@example.com, phoneNumber=+12345678905, passwordHash=hashpassword25, refreshToken=null, role=USER), UserResponseDto(userID=26, name=Diana White, email=diana.white1@example.com, phoneNumber=+12345678906, passwordHash=hashpassword26, refreshToken=null, role=USER), UserResponseDto(userID=27, name=Evan Green, email=evan.green1@example.com, phoneNumber=+12345678907, passwordHash=hashpassword27, refreshToken=null, role=USER), UserResponseDto(userID=28, name=Fiona Blue, email=fiona.blue1@example.com, phoneNumber=+12345678908, passwordHash=hashpassword28, refreshToken=null, role=USER), UserResponseDto(userID=29, name=George Red, email=george.red1@example.com, phoneNumber=+12345678909, passwordHash=hashpassword29, refreshToken=null, role=USER), UserResponseDto(userID=30, name=Hannah Yellow, email=hannah.yellow1@example.com, phoneNumber=+12345678910, passwordHash=hashpassword30, refreshToken=null, role=USER), UserResponseDto(userID=31, name=Ivy Orange, email=ivy.orange1@example.com, phoneNumber=+12345678911, passwordHash=hashpassword31, refreshToken=null, role=USER), UserResponseDto(userID=32, name=Jack Purple, email=jack.purple1@example.com, phoneNumber=+12345678912, passwordHash=hashpassword32, refreshToken=null, role=USER), UserResponseDto(userID=33, name=Karen Pink, email=karen.pink1@example.com, phoneNumber=+12345678913, passwordHash=hashpassword33, refreshToken=null, role=USER), UserResponseDto(userID=34, name=Liam Grey, email=liam.grey1@example.com, phoneNumber=+12345678914, passwordHash=hashpassword34, refreshToken=null, role=USER), UserResponseDto(userID=35, name=Mia Brown, email=mia.brown1@example.com, phoneNumber=+12345678915, passwordHash=hashpassword35, refreshToken=null, role=USER), UserResponseDto(userID=36, name=Noah Silver, email=noah.silver1@example.com, phoneNumber=+12345678916, passwordHash=hashpassword36, refreshToken=null, role=USER), UserResponseDto(userID=37, name=Olivia Gold, email=olivia.gold1@example.com, phoneNumber=+12345678917, passwordHash=hashpassword37, refreshToken=null, role=USER), UserResponseDto(userID=38, name=Paul Blue, email=paul.blue1@example.com, phoneNumber=+12345678918, passwordHash=hashpassword38, refreshToken=null, role=USER), UserResponseDto(userID=39, name=Quinn Red, email=quinn.red1@example.com, phoneNumber=+12345678919, passwordHash=hashpassword39, refreshToken=null, role=USER), UserResponseDto(userID=40, name=Rachel Green, email=rachel.green1@example.com, phoneNumber=+12345678920, passwordHash=hashpassword40, refreshToken=null, role=USER), UserResponseDto(userID=41, name=Sam Yellow, email=sam.yellow1@example.com, phoneNumber=+12345678921, passwordHash=hashpassword41, refreshToken=null, role=USER), UserResponseDto(userID=42, name=Tina Orange, email=tina.orange1@example.com, phoneNumber=+12345678922, passwordHash=hashpassword42, refreshToken=null, role=USER), UserResponseDto(userID=43, name=Uma Purple, email=uma.purple1@example.com, phoneNumber=+12345678923, passwordHash=hashpassword43, refreshToken=null, role=USER), UserResponseDto(userID=44, name=Vince Pink, email=vince.pink1@example.com, phoneNumber=+12345678924, passwordHash=hashpassword44, refreshToken=null, role=USER), UserResponseDto(userID=45, name=Wendy Grey, email=wendy.grey1@example.com, phoneNumber=+12345678925, passwordHash=hashpassword45, refreshToken=null, role=USER), UserResponseDto(userID=46, name=Xander Brown, email=xander.brown1@example.com, phoneNumber=+12345678926, passwordHash=hashpassword46, refreshToken=null, role=USER), UserResponseDto(userID=47, name=Yara Silver, email=yara.silver1@example.com, phoneNumber=+12345678927, passwordHash=hashpassword47, refreshToken=null, role=USER), UserResponseDto(userID=48, name=Zack Gold, email=zack.gold1@example.com, phoneNumber=+12345678928, passwordHash=hashpassword48, refreshToken=null, role=USER), UserResponseDto(userID=49, name=Abby Blue, email=abby.blue1@example.com, phoneNumber=+12345678929, passwordHash=hashpassword49, refreshToken=null, role=USER), UserResponseDto(userID=50, name=Brad Red, email=brad.red1@example.com, phoneNumber=+12345678930, passwordHash=hashpassword50, refreshToken=null, role=USER), UserResponseDto(userID=51, name=Cara Green, email=cara.green1@example.com, phoneNumber=+12345678931, passwordHash=hashpassword51, refreshToken=null, role=USER), UserResponseDto(userID=52, name=Dave Yellow, email=dave.yellow1@example.com, phoneNumber=+12345678932, passwordHash=hashpassword52, refreshToken=null, role=USER), UserResponseDto(userID=53, name=Elle Orange, email=elle.orange1@example.com, phoneNumber=+12345678933, passwordHash=hashpassword53, refreshToken=null, role=USER), UserResponseDto(userID=54, name=Finn Purple, email=finn.purple1@example.com, phoneNumber=+12345678934, passwordHash=hashpassword54, refreshToken=null, role=USER), UserResponseDto(userID=55, name=Grace Pink, email=grace.pink1@example.com, phoneNumber=+12345678935, passwordHash=hashpassword55, refreshToken=null, role=ADMINISTRATOR), UserResponseDto(userID=56, name=Hank Grey, email=hank.grey1@example.com, phoneNumber=+12345678936, passwordHash=hashpassword56, refreshToken=null, role=USER), UserResponseDto(userID=57, name=Irene Brown, email=irene.brown1@example.com, phoneNumber=+12345678937, passwordHash=hashpassword57, refreshToken=null, role=USER), UserResponseDto(userID=58, name=Jake Silver, email=jake.silver1@example.com, phoneNumber=+12345678938, passwordHash=hashpassword58, refreshToken=null, role=USER), UserResponseDto(userID=59, name=Kara Gold, email=kara.gold1@example.com, phoneNumber=+12345678939, passwordHash=hashpassword59, refreshToken=null, role=USER), UserResponseDto(userID=60, name=Leo Blue, email=leo.blue1@example.com, phoneNumber=+12345678940, passwordHash=hashpassword60, refreshToken=null, role=USER), UserResponseDto(userID=61, name=Valia, email=vali@gmail.com, phoneNumber=+657247734196, passwordHash=$2a$10$3fAhniUdXj8EiaVUjBCH/udaF1Rux2Qd6ZvaP/QTp7YtThuE9ApUe, refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxpQGdtYWlsLmNvbSIsImV4cCI6MTcyMTM3NDg0Mn0.lII1WS75kJDwayegoF8QCp8fTsw8Mt_JSfgHL-7LFL7YkBVeH19kDBHIvOcx6L6f8fv8seii459C-qXhLM3UUw, role=USER), UserResponseDto(userID=62, name=Tolia, email=tolia@gmail.com, phoneNumber=+140572299650, passwordHash=$2a$10$Dm.UJrgoqm7K3hra6KP.ueGmgx8J9el2yGkeXRcaXWeyYOBbKlthq, refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0b2xpYUBnbWFpbC5jb20iLCJleHAiOjE3MjE2NDcwMjF9.fjdmge28Xm5pThKmEBMkDEMs6AOF-ul0LcXiz9ogzC4PmXs9KFkXXpGz2sItvcZkyUU_jYSczubb4AXCZCK7Sg, role=USER), UserResponseDto(userID=63, name=Serhii, email=admin1@example.com, phoneNumber=+241846672322, passwordHash=$2a$10$hZQBPfu057TYGUVXw8UY/utX2XQaTNZsxVggu65PDtuQvqeOe.8mW, refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjFAZXhhbXBsZS5jb20iLCJleHAiOjE3MjE2NTI2MTJ9.dWp_tfPAPxASJpzpnEvDpHxfiAwFixmXfJQXSZofeYvkEROUT7ZgewxpBP5JDYTBAhpnfaz4WtMJ8H7X-9NdjA, role=ADMINISTRATOR), UserResponseDto(userID=64, name=Nata, email=nata@example.com, phoneNumber=+241846672333, passwordHash=$2a$10$GkzvN6Y.Da8xotin/LSDQOcE3gQireFz6hclwMS36dm3cwkk3zwLS, refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuYXRhQGV4YW1wbGUuY29tIiwiZXhwIjoxNzIxNjUyMjUxfQ.Pu_z6lhgLgOafIr41Vqg2wWf_ui-018lW0aX4hLDZGSrLqmNpHqfkZO-zNgFCMiK1o5VVcpaIilPZPjg4Tv10g, role=USER)]]
+2024-07-21 15:37:07.607 | main                      | INFO  | com.example.final_project.service.UserServiceTest                       -  Starting UserServiceTest using Java 22.0.1 with PID 13561 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 15:37:07.608 | main                      | DEBUG | com.example.final_project.service.UserServiceTest                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 15:37:07.608 | main                      | INFO  | com.example.final_project.service.UserServiceTest                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 15:37:13.281 | main                      | INFO  | com.example.final_project.service.UserServiceTest                       -  Started UserServiceTest in 6.129 seconds (process running for 6.814)
+2024-07-21 15:37:14.026 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-21 15:37:14.063 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-21 15:37:14.064 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-21 15:37:14.079 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-21 15:37:14.080 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-21 15:37:14.092 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-21 15:37:14.093 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-21 15:37:14.114 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-21 15:37:14.114 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-21 15:37:14.126 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-21 15:37:14.136 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-21 15:37:14.136 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-21 15:44:16.793 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 13605 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 15:44:16.794 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 15:44:16.794 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 15:44:23.137 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 15:44:23.195 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 6.716 seconds (process running for 7.413)
+2024-07-21 15:50:13.843 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 13626 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 15:50:13.844 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 15:50:13.845 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 15:50:20.130 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 15:50:20.187 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 6.653 seconds (process running for 7.284)
+2024-07-21 15:54:10.421 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 13649 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 15:54:10.423 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 15:54:10.423 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 15:54:16.853 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 15:54:16.908 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 6.809 seconds (process running for 7.454)
+2024-07-21 15:54:28.822 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 13667 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 15:54:28.823 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 15:54:28.823 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 15:54:35.706 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 15:54:35.763 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 7.254 seconds (process running for 7.974)
+2024-07-21 16:01:02.972 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 13698 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 16:01:02.973 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 16:01:02.973 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 16:01:09.480 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-21 16:01:09.541 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 6.929 seconds (process running for 7.588)
+2024-07-21 16:01:43.146 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 13714 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-21 16:01:43.147 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-21 16:01:43.148 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
+2024-07-21 16:01:48.739 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Started FinalProjectApplicationTests in 5.895 seconds (process running for 6.542)
+2024-07-23 08:45:24.160 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 19905 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 08:45:24.162 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 08:45:24.162 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 08:45:26.114 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 08:45:26.146 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.33 seconds (process running for 3.045)
+2024-07-23 08:50:10.799 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 19929 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 08:50:10.799 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 08:50:10.800 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 08:50:12.639 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 08:50:12.671 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.192 seconds (process running for 2.91)
+2024-07-23 08:56:19.202 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 19971 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 08:56:19.202 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 08:56:19.203 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 08:56:21.016 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 08:56:21.049 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.174 seconds (process running for 2.871)
+2024-07-23 09:03:21.190 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 20010 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:03:21.190 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:03:21.191 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:03:23.479 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:03:23.527 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.753 seconds (process running for 3.744)
+2024-07-23 09:03:29.787 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 20021 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:03:29.788 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:03:29.788 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:03:31.914 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:03:31.957 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 2.543 seconds (process running for 3.427)
+2024-07-23 09:03:38.643 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 20029 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:03:38.643 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:03:38.644 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:03:40.697 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:03:40.741 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 2.474 seconds (process running for 3.34)
+2024-07-23 09:10:12.429 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 20192 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:10:12.429 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:10:12.430 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:10:14.151 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:10:18.753 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 6.656 seconds (process running for 7.2)
+2024-07-23 09:15:01.619 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: admin1@example.com
+2024-07-23 09:15:01.619 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: admin1@example.com
+2024-07-23 09:15:01.729 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  User with email: admin1@example.com successfully logged in.
+2024-07-23 09:15:01.748 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: admin1@example.com
+2024-07-23 09:15:01.760 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: admin1@example.com
+2024-07-23 09:15:01.761 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: admin1@example.com
+2024-07-23 09:15:01.761 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: admin1@example.com
+2024-07-23 09:15:01.803 | http-nio-8080-exec-6      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: admin1@example.com successfully saved to the database.
+2024-07-23 09:15:01.803 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: admin1@example.com
+2024-07-23 09:15:01.803 | http-nio-8080-exec-6      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: admin1@example.com
+2024-07-23 09:16:52.527 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 20282 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:16:52.527 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:16:52.528 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:16:54.350 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:16:58.829 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 6.761 seconds (process running for 7.334)
+2024-07-23 09:17:50.504 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: nata@example.com
+2024-07-23 09:17:50.504 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: nata@example.com
+2024-07-23 09:17:50.625 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  User with email: nata@example.com successfully logged in.
+2024-07-23 09:17:50.641 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: nata@example.com
+2024-07-23 09:17:50.654 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: nata@example.com
+2024-07-23 09:17:50.655 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: nata@example.com
+2024-07-23 09:17:50.655 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  Set refreshToken to user with email: nata@example.com
+2024-07-23 09:17:50.696 | http-nio-8080-exec-5      | INFO  | com.example.final_project.service.UserService                           -  RefreshToken for User with email: nata@example.com successfully saved to the database.
+2024-07-23 09:17:50.696 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: nata@example.com
+2024-07-23 09:17:50.696 | http-nio-8080-exec-5      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: nata@example.com
+2024-07-23 09:18:13.525 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_IN{CONTROLLER_METHOD=getOrderStatusById} args=[1];
+2024-07-23 09:18:13.537 | http-nio-8080-exec-6      | INFO  | com.example.final_project.aspect.LoggingAspect                          - CONTROLLER_OUT{CONTROLLER_METHOD=getOrderStatusById}{CONTROLLER_TIME=11} args=[1]; RESULT: [<200 OK OK,CANCELED,[]>]
+2024-07-23 09:24:02.306 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 20315 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:24:02.306 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:24:02.307 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:24:09.993 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:24:10.057 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 8.173 seconds (process running for 9.008)
+2024-07-23 09:25:55.739 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 20351 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:25:55.740 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:25:55.740 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:25:57.361 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-23 09:26:01.704 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 6.346 seconds (process running for 6.817)
+2024-07-23 09:27:31.250 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Starting OrderRepositoryTest using Java 22.0.1 with PID 20368 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-23 09:27:31.250 | main                      | DEBUG | com.example.final_project.repository.OrderRepositoryTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-23 09:27:31.251 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-23 09:27:34.730 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Started OrderRepositoryTest in 3.853 seconds (process running for 4.688)

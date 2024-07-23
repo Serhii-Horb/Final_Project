@@ -32,12 +32,12 @@ public class OrderService {
     public OrderResponseDto insertOrder(OrderRequestDto orderRequestDto) {
         Order order = mappers.convertToOrder(orderRequestDto);
         final JwtAuthentication tokenInfo = (JwtAuthentication) SecurityContextHolder.getContext().getAuthentication();
-        UserResponseDto user = userService.getByEmail((String) tokenInfo.getPrincipal()); // почему имя а не email?
+        UserResponseDto user = userService.getByEmail((String) tokenInfo.getPrincipal());
         order.setUser(mappers.convertResponceDTOToUser(user));
         order.setContactPhone(user.getPhoneNumber());
         order.setStatus(Status.CREATED);
         order = orderRepository.save(order);
-        order.getItems().forEach(orderItem -> orderItemRepository.save(orderItem));
+        orderItemRepository.saveAll(order.getItems());
         return mappers.convertToOrderResponseDto(order);
     }
 

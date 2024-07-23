@@ -60,14 +60,14 @@ class UserControllerTest {
         userResponseDto.setPhoneNumber("123456789");
 
         UserResponseDto user1 = UserResponseDto.builder()
-                .userID(1L)
+                .userID(2L)
                 .name("User1")
                 .email("user1@example.com")
                 .phoneNumber("123456789")
                 .build();
 
         UserResponseDto user2 = UserResponseDto.builder()
-                .userID(2L)
+                .userID(3L)
                 .name("User2")
                 .email("user2@example.com")
                 .phoneNumber("987654321")
