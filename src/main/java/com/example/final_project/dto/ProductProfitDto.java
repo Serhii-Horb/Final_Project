@@ -1,6 +1,5 @@
 package com.example.final_project.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +10,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductCountDto {
-    private Long productId;
-    private String name;
-    private String status;
-    private Integer count;
+public class ProductProfitDto {
+    private String period;
     private BigDecimal sum;
 }
