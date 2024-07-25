@@ -34,35 +34,23 @@ public class CategoryService {
     }
 
     public void deleteCategoryById(Long id) {
-//        Optional<Category> category = categoryRepository.findById(id);
-//        if (category.isPresent()) {
-//            categoryRepository.deleteById(id);
-//        } else {
-//            throw new NotFoundInDbException("Id Not Found");
-//        }
-
-
-            Category category = categoryRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
-            categoryRepository.delete(category);
-
-
+        Category category = categoryRepository.findById(id).orElseThrow(() -> new NotFoundInDbException("Incorrect id of product."));
+        categoryRepository.delete(category);
     }
 
-    public CategoryResponseDto insertCategory(CategoryRequestDto categoryDto) {
-
-//        Category newCategory = mappers.convertToCategory(categoryDto);
-//        newCategory.setCategoryId(0L);
-//        Category savedCategory = categoryRepository.save(newCategory);
-//        return mappers.convertToCategoryResponseDto(savedCategory);
-        try {
-            Category newCategory = mappers.convertToCategory(categoryDto);
-            newCategory.setCategoryId(0L);
-            Category savedCategory = categoryRepository.save(newCategory);
-            return mappers.convertToCategoryResponseDto(savedCategory);
-        } catch (Exception e) {
-            throw new BadRequestException("Bad Request");
-        }
+public CategoryResponseDto insertCategory(CategoryRequestDto categoryDto) {
+    if (categoryDto == null || categoryDto.getName() == null || categoryDto.getName().isEmpty()) {
+        throw new BadRequestException("Category name cannot be null or empty");
     }
+    try {
+        Category newCategory = mappers.convertToCategory(categoryDto);
+        Category savedCategory = categoryRepository.save(newCategory);
+        return mappers.convertToCategoryResponseDto(savedCategory);
+    } catch (Exception e) {
+        throw new BadRequestException("Failed to insert category: " + e.getMessage());
+    }
+}
+
 
     public CategoryResponseDto updateCategory(CategoryResponseDto categoryDto) {
         if (categoryDto.getCategoryId() <= 0) {
@@ -82,7 +70,5 @@ public class CategoryService {
         } catch (Exception e) {
             throw new BadRequestException("Bad Request");
         }
-
-
     }
 }
