@@ -16,7 +16,7 @@ public class CartItem {
      * Unique identifier for the cart item.
      */
     @Id
-    @Column(name = "CartItemId")
+    @Column(name = "CartItemID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartItemId;
 

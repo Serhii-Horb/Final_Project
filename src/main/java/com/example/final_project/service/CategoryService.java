@@ -38,18 +38,18 @@ public class CategoryService {
         categoryRepository.delete(category);
     }
 
-public CategoryResponseDto insertCategory(CategoryRequestDto categoryDto) {
-    if (categoryDto == null || categoryDto.getName() == null || categoryDto.getName().isEmpty()) {
-        throw new BadRequestException("Category name cannot be null or empty");
+    public CategoryResponseDto insertCategory(CategoryRequestDto categoryDto) {
+        if (categoryDto == null || categoryDto.getName() == null || categoryDto.getName().isEmpty()) {
+            throw new BadRequestException("Category name cannot be null or empty");
+        }
+        try {
+            Category newCategory = mappers.convertToCategory(categoryDto);
+            Category savedCategory = categoryRepository.save(newCategory);
+            return mappers.convertToCategoryResponseDto(savedCategory);
+        } catch (Exception e) {
+            throw new BadRequestException("Failed to insert category: " + e.getMessage());
+        }
     }
-    try {
-        Category newCategory = mappers.convertToCategory(categoryDto);
-        Category savedCategory = categoryRepository.save(newCategory);
-        return mappers.convertToCategoryResponseDto(savedCategory);
-    } catch (Exception e) {
-        throw new BadRequestException("Failed to insert category: " + e.getMessage());
-    }
-}
 
 
     public CategoryResponseDto updateCategory(CategoryResponseDto categoryDto) {

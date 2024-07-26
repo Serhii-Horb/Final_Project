@@ -19,7 +19,7 @@ public class Category {
      * Unique identifier for the category.
      */
     @Id
-    @Column(name = "CategoryId")
+    @Column(name = "CategoryID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoryId;
 

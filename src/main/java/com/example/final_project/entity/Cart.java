@@ -19,7 +19,7 @@ public class Cart {
      * Unique identifier for the cart.
      */
     @Id
-    @Column(name = "CartId")
+    @Column(name = "CartID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartId;
 

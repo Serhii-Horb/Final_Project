@@ -20,7 +20,7 @@ public class OrderItem {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "OrderItemId")
+    @Column(name = "OrderItemID")
     private Long orderItemId;
 
     /**
