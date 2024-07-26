@@ -14,39 +14,39 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/categories")
-@Tag(name = "Category controller", description = "\"All manipulations with catigories data are carried out here\"")
+@Tag(name = "Category controller.", description = "\"All manipulations with catigories data are carried out here\"")
 public class CategoryController {
     private final CategoryService categoryService;
 
-    @Operation(summary = "shows all categories")
+    @Operation(summary = "shows all categories.")
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<CategoryResponseDto> getCategory() {
         return categoryService.getCategory();
     }
 
-    @Operation(summary = "shows the category by Id")
+    @Operation(summary = "shows the category by Id.")
     @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     public CategoryResponseDto getCategoryById(@PathVariable Long id) {
         return categoryService.getCategoryById(id);
     }
 
-    @Operation(summary = "deletes a category by Id")
+    @Operation(summary = "deletes a category by Id.")
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteCategoryById(@PathVariable Long id) {
         categoryService.deleteCategoryById(id);
     }
 
-    @Operation(summary = "creates a category")
+    @Operation(summary = "creates a category.")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryResponseDto insertCategory(@RequestBody CategoryRequestDto categoryDto) {
         return categoryService.insertCategory(categoryDto);
     }
 
-    @Operation(summary = "updates a category by Id")
+    @Operation(summary = "updates a category by Id.")
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
     public CategoryResponseDto updateCategory(@RequestBody CategoryResponseDto categoryDto) {

@@ -1,10 +1,15 @@
 package com.example.final_project.mapper;
 
 import com.example.final_project.configuration.MapperUtil;
+import com.example.final_project.dto.ProductCountDto;
+import com.example.final_project.dto.ProductPendingDto;
+import com.example.final_project.dto.ProductProfitDto;
 import com.example.final_project.dto.requestDto.*;
 import com.example.final_project.dto.responsedDto.*;
 import com.example.final_project.entity.*;
-import com.example.final_project.entity.enums.Status;
+import com.example.final_project.entity.query.ProductCountInterface;
+import com.example.final_project.entity.query.ProductPendingInterface;
+import com.example.final_project.entity.query.ProductProfitInterface;
 import com.example.final_project.exceptions.BadRequestException;
 import com.example.final_project.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -201,5 +206,17 @@ public class Mappers {
      */
     public Category convertToCategory(CategoryRequestDto categoryRequestDto) {
         return modelMapper.map(categoryRequestDto, Category.class);
+    }
+
+    public ProductCountDto convertToProductCountDto(ProductCountInterface productCountInterface) {
+        return modelMapper.map(productCountInterface, ProductCountDto.class);
+    }
+
+    public ProductPendingDto convertToProductPendingDto(ProductPendingInterface productPendingInterface) {
+        return modelMapper.map(productPendingInterface, ProductPendingDto.class);
+    }
+
+    public ProductProfitDto convertToProductProfitDto(ProductProfitInterface productProfitInterface) {
+        return modelMapper.map(productProfitInterface, ProductProfitDto.class);
     }
 }

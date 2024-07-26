@@ -1,5 +1,4 @@
 package com.example.final_project.service;
-
 import com.example.final_project.dto.responsedDto.FavoriteResponseDto;
 import com.example.final_project.entity.Category;
 import com.example.final_project.entity.Favorite;
@@ -161,3 +160,4 @@ class FavoriteServiceTest {
         verify(favoriteRepositoryMock, times(0)).delete(any(Favorite.class));
     }
 }
+
