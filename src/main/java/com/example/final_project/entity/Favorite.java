@@ -16,7 +16,7 @@ public class Favorite {
      * Unique identifier for the favorite entry.
      */
     @Id
-    @Column(name = "FavoriteId")
+    @Column(name = "FavoriteID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long favoriteId;
 
