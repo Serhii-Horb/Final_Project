@@ -84,6 +84,11 @@ public class OrderService {
         order = orderRepository.save(order);
         logger.info("Saving the newly created order with the id of {}",order.getOrderId());
         orderItemRepository.saveAll(order.getItems());
+
+        order.getItems().forEach(item -> {
+                    item.setPriceAtPurchase(item.getProduct().getPrice());
+                    orderItemRepository.save(item);
+                });
         logger.info("Saving the items of the newly created order with the id of {}",order.getOrderId());
         return mappers.convertToOrderResponseDto(order);
     }

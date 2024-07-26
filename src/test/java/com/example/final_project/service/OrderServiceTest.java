@@ -8,6 +8,7 @@ import com.example.final_project.dto.responsedDto.StatusResponseDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
 import com.example.final_project.entity.Order;
 import com.example.final_project.entity.OrderItem;
+import com.example.final_project.entity.Product;
 import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Delivery;
 import com.example.final_project.entity.enums.Role;
@@ -73,6 +74,7 @@ class OrderServiceTest {
         order2.setItems(List.of(orderItem2));
 
         orderItem.setOrder(order);
+        orderItem.setProduct(new Product());
         orderItem2.setOrder(order2);
 
         user = new User();
@@ -142,7 +144,7 @@ class OrderServiceTest {
 
         when(mappersMock.convertToOrder(any(OrderRequestDto.class))).thenReturn(order);
         when(orderRepositoryMock.save(any(Order.class))).thenReturn(order);
-        when(orderItemRepositoryMock.saveAll(any())).thenReturn(List.of(orderItem));
+        when(orderItemRepositoryMock.save(any())).thenReturn(orderItem);
         when(mappersMock.convertToOrderResponseDto(any(Order.class))).thenReturn(new OrderResponseDto());
 
         OrderResponseDto result = orderServiceMock.insertOrder(orderRequestDto);
