@@ -94,6 +94,6 @@ public class Order {
      */
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserId", updatable = false)
+    @JoinColumn(name = "UserID", updatable = false)
     private User user;
 }
