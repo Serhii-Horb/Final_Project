@@ -4,6 +4,7 @@ import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.*;
 import com.example.final_project.dto.responsedDto.*;
 import com.example.final_project.entity.*;
+import com.example.final_project.entity.enums.Status;
 import com.example.final_project.exceptions.BadRequestException;
 import com.example.final_project.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;

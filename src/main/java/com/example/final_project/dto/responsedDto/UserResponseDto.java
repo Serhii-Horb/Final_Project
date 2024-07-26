@@ -1,12 +1,16 @@
 package com.example.final_project.dto.responsedDto;
 
 
+import com.example.final_project.entity.Order;
 import com.example.final_project.entity.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -51,4 +55,11 @@ public class UserResponseDto {
      * Role of the user.
      */
     private Role role;
+
+    /**
+     * The set of the user's orders.
+     * This field will be ignored in the JSON response.
+     */
+    @JsonIgnore
+    private Set<OrderResponseDto> orders = new HashSet<>();
 }

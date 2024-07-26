@@ -11,6 +11,15 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.io.IOException;
 
 public class DeliveryDeserializer extends JsonDeserializer<Delivery> {
+    /**
+     * Method to deserialize a JSON value into a Delivery enum.
+     *
+     * @param jsonParser             the parser used to parse the JSON content.
+     * @param deserializationContext the context for the process of deserialization.
+     * @return Delivery              the deserialized Delivery enum value.
+     * @throws IOException           if an I/O error occurs during parsing.
+     * @throws JacksonException      if a parsing exception occurs during deserialization.
+     */
     @Override
     public Delivery deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
         ObjectCodec oc = jsonParser.getCodec();

@@ -2,6 +2,7 @@ package com.example.final_project.controller;
 
 import com.example.final_project.dto.requestDto.OrderRequestDto;
 import com.example.final_project.dto.responsedDto.OrderResponseDto;
+import com.example.final_project.dto.responsedDto.StatusResponseDto;
 import com.example.final_project.entity.enums.Status;
 import com.example.final_project.security.jwt.JwtRequestRefresh;
 import com.example.final_project.service.OrderService;
@@ -22,14 +23,26 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
 
+    /**
+     * Endpoint to get an order status by id.
+     *
+     * @param orderId            the ID of the order which is being fetched.
+     * @return StatusResponseDto containing the value of the order's status.
+     */
     @Operation(
             summary = "shows the status of the specified order."
     )
     @GetMapping("/{id}")
-    public ResponseEntity<Status> getOrderStatusById(@PathVariable Long id) {
-        return new ResponseEntity<>(orderService.getOrderStatusById(id),HttpStatus.OK);
+    public ResponseEntity<StatusResponseDto> getOrderStatusById(@PathVariable Long orderId) {
+        return new ResponseEntity<>(orderService.getOrderStatusById(orderId),HttpStatus.OK);
     }
 
+    /**
+     * Endpoint to get create an order.
+     *
+     * @param orderRequestDto     the DTO data provided by user.
+     * @return The RequestEntity with the body containing the newly created order data.
+     */
     @Operation(
             summary = "creates the order."
     )
@@ -38,6 +51,11 @@ public class OrderController {
         return new ResponseEntity<>(orderService.insertOrder(orderRequestDto),HttpStatus.CREATED);
     }
 
+    /**
+     * Endpoint to get order history.
+     *
+     * @return The ResponseEntity with the body containing the list of orders
+     */
     @Operation(
             summary = "shows the orders history of a certain customer."
     )

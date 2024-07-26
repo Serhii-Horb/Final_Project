@@ -75,7 +75,6 @@ public class SecurityConfig {
                                          /*",/**"*/
                                 )
                                 .permitAll()
-                                .requestMatchers("orders/**").hasRole(USER_ROLE)
                                 .anyRequest().authenticated()
       //                          .anyRequest().permitAll()
                 ).addFilterAfter(jwtFilter, UsernamePasswordAuthenticationFilter.class).build();
