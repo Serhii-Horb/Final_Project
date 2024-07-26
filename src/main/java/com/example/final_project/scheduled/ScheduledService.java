@@ -15,7 +15,9 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.stream.Collectors;
-
+/**
+ * Service to manage scheduled tasks for order status changes.
+ */
 @Service
 @RequiredArgsConstructor
 public class ScheduledService {
@@ -23,7 +25,9 @@ public class ScheduledService {
     private Queue<Order> orders;
     private Random random = new Random();
     private static final Map<Status, Status[]> STATUS_TRANSITIONS = new EnumMap<>(Status.class);
-
+    /**
+     * Map defining the possible status transitions for each status.
+     */
     static {
         STATUS_TRANSITIONS.put(Status.CREATED, new Status[]{Status.AWAITING_PAYMENT, Status.CANCELED});
         STATUS_TRANSITIONS.put(Status.AWAITING_PAYMENT, new Status[]{Status.PAID, Status.CANCELED});
@@ -31,11 +35,19 @@ public class ScheduledService {
         STATUS_TRANSITIONS.put(Status.ON_THE_WAY, new Status[]{Status.DELIVERED});
     }
 
+    /**
+     * Initializes the queue with orders from the repository.
+     * This method is called after the bean's properties have been initialized.
+     */
     @PostConstruct
     public void initializeQueue() {
         orders = orderRepository.ordersForSchedulers().stream().collect(Collectors.toCollection(() -> new ConcurrentLinkedQueue<>()));
     }
 
+    /**
+     * Task to change the status of orders at a fixed rate.
+     * This method is executed asynchronously.
+     */
     @Async
     @Scheduled(fixedRate = 30000)
     public void changeStatusTask() {

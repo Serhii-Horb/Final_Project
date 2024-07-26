@@ -4,18 +4,19 @@ import com.example.final_project.configuration.MapperUtil;
 import com.example.final_project.dto.requestDto.OrderItemRequestDto;
 import com.example.final_project.dto.requestDto.OrderRequestDto;
 import com.example.final_project.dto.responsedDto.OrderResponseDto;
+import com.example.final_project.dto.responsedDto.StatusResponseDto;
 import com.example.final_project.dto.responsedDto.UserResponseDto;
 import com.example.final_project.entity.Order;
 import com.example.final_project.entity.OrderItem;
 import com.example.final_project.entity.User;
 import com.example.final_project.entity.enums.Delivery;
+import com.example.final_project.entity.enums.Role;
 import com.example.final_project.entity.enums.Status;
 import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.OrderItemRepository;
 import com.example.final_project.repository.OrderRepository;
 import com.example.final_project.security.jwt.JwtAuthentication;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,11 +28,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
+import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
 @ExtendWith(MockitoExtension.class)
 class OrderServiceTest {
     @Mock
@@ -42,29 +45,43 @@ class OrderServiceTest {
     private UserService userServiceMock;
     @Mock
     private Mappers mappersMock;
+    @Mock
+    private Logger logger;
     @InjectMocks
     private OrderService orderServiceMock;
-    private Order order;
-    private OrderItem orderItem;
+    private Order order, order2;
+    private OrderItem orderItem, orderItem2;
     private OrderRequestDto orderRequestDto;
     private OrderItemRequestDto orderItemRequestDto;
     private User user;
+    private UserResponseDto userResponseDto;
 
     @BeforeEach
     void setUp() {
         orderItem = new OrderItem();
-        order = Order.builder()
-                .orderId(1l)
-                .status(Status.CREATED)
-                .items(List.of(orderItem))
-                .build();
+        orderItem2 = new OrderItem();
+
+        order = new Order();
+        order.setOrderId(1l);
+        order.setStatus(Status.CREATED);
+        order.setItems(List.of(orderItem));
+        order.setUser(user);
+
+        order2 = new Order();
+        order2.setOrderId(2l);
+        order2.setStatus(Status.AWAITING_PAYMENT);
+        order2.setItems(List.of(orderItem2));
+
         orderItem.setOrder(order);
+        orderItem2.setOrder(order2);
 
         user = new User();
         user.setName("Tom");
         user.setPasswordHash("pass1");
         user.setEmail("tom@gmail.com");
         user.setPhoneNumber("+392010");
+        user.setRole(Role.USER);
+        user.setOrders(Set.of(order));
 
         orderItemRequestDto = new OrderItemRequestDto();
         orderItemRequestDto.setProductId(2l);
@@ -74,68 +91,91 @@ class OrderServiceTest {
         orderRequestDto.setOrderItemsList(List.of(orderItemRequestDto));
         orderRequestDto.setDeliveryAddress("street5");
         orderRequestDto.setDeliveryMethod(Delivery.COURIER_DELIVERY);
+
+        JwtAuthentication jwtAuthentication = Mockito.mock(JwtAuthentication.class);
+        when(jwtAuthentication.getPrincipal()).thenReturn(user.getEmail());
+        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
+        when(securityContext.getAuthentication()).thenReturn(jwtAuthentication);
+        SecurityContextHolder.setContext(securityContext);
+
+        when(mappersMock.convertResponceDTOToUser(userResponseDto)).thenReturn(user);
+        when(orderServiceMock.fetchUserViaAccessToken()).thenReturn(user);
     }
 
     @Test
-    void getOrderStatusById() {
+    void getOrderStatusById_ForUser() {
         Long orderId = 1l;
-        Mockito.when(orderRepositoryMock.findById(orderId))
-                .thenReturn(Optional.of(order))
-                .thenThrow(NotFoundInDbException.class);
-        Status status = orderServiceMock.getOrderStatusById(orderId);
-        assertEquals(status,order.getStatus());
 
-        assertThrows(NotFoundInDbException.class,() -> orderServiceMock.getOrderStatusById(orderId));
-        Mockito.verify(orderRepositoryMock,Mockito.times(2)).findById(orderId);
+        when(orderRepositoryMock.findById(any(Long.class))).thenReturn(Optional.of(order));
+        StatusResponseDto status = orderServiceMock.getOrderStatusById(orderId);
+
+        assertEquals(status.getStatus(), order.getStatus());
+        assertDoesNotThrow(() -> new NotFoundInDbException("Requested order was not found"));
+        verify(orderRepositoryMock).findById(any(Long.class));
+    }
+
+    @Test
+    void getOrderStatusById_ForUserFailure() {
+        Long orderId = 2l;
+
+        when(orderServiceMock.fetchUserViaAccessToken()).thenReturn(user);
+
+        assertThrows(NotFoundInDbException.class, () ->
+                orderServiceMock.getOrderStatusById(orderId));
+    }
+
+    @Test
+    void getOrderStatusById_ForAdmin() {
+        Long orderId = 1l;
+        user.setRole(Role.ADMINISTRATOR);
+
+        when(orderRepositoryMock.findById(any(Long.class))).thenReturn(Optional.of(order));
+        StatusResponseDto statusResponseDto = orderServiceMock.getOrderStatusById(orderId);
+
+        assertEquals(statusResponseDto.getStatus(), order.getStatus());
+        verify(orderRepositoryMock).findById(any(Long.class));
     }
 
     @Test
     void insertOrder() {
-        Mockito.when(mappersMock.convertToOrder(Mockito.any(OrderRequestDto.class))).thenReturn(order);
-        Mockito.when(mappersMock.convertResponceDTOToUser(Mockito.any(UserResponseDto.class))).thenReturn(user);
-        Mockito.when(mappersMock.convertToOrderResponseDto(Mockito.any(Order.class))).thenReturn(new OrderResponseDto());
+        user.setOrders(new HashSet<>());
 
-        Mockito.when(userServiceMock.getByEmail(Mockito.anyString())).thenReturn(new UserResponseDto());
-        Mockito.when(orderRepositoryMock.save(Mockito.any(Order.class))).thenReturn(order);
-        Mockito.when(orderItemRepositoryMock.save(Mockito.any(OrderItem.class))).thenReturn(orderItem);
-
-        JwtAuthentication tokenInfo = Mockito.mock(JwtAuthentication.class);
-        Mockito.when(tokenInfo.getPrincipal()).thenReturn(user.getEmail());
-        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
-        SecurityContextHolder.setContext(securityContext);
-        Mockito.when(securityContext.getAuthentication()).thenReturn(tokenInfo);
+        when(mappersMock.convertToOrder(any(OrderRequestDto.class))).thenReturn(order);
+        when(orderRepositoryMock.save(any(Order.class))).thenReturn(order);
+        when(orderItemRepositoryMock.saveAll(any())).thenReturn(List.of(orderItem));
+        when(mappersMock.convertToOrderResponseDto(any(Order.class))).thenReturn(new OrderResponseDto());
 
         OrderResponseDto result = orderServiceMock.insertOrder(orderRequestDto);
-        Assertions.assertNotNull(result);
-        Mockito.verify(mappersMock,Mockito.times(1)).convertToOrder(Mockito.any(OrderRequestDto.class));
-        Mockito.verify(securityContext,Mockito.times(1)).getAuthentication();
-        Mockito.verify(userServiceMock,Mockito.times(1)).getByEmail(Mockito.anyString());
-        Mockito.verify(mappersMock,Mockito.never()).convertToUserResponseDto(Mockito.any(User.class));
-        Mockito.verify(orderRepositoryMock,Mockito.times(1)).save(Mockito.any(Order.class));
-        Mockito.verify(orderItemRepositoryMock,Mockito.times(order.getItems().size())).save(Mockito.any(OrderItem.class));
-        Mockito.verify(mappersMock,Mockito.times(1)).convertToOrderResponseDto(Mockito.any(Order.class));
+        assertNotNull(result);
+        verify(mappersMock).convertToOrder(any(OrderRequestDto.class));
+        verify(orderRepositoryMock).save(any(Order.class));
+        verify(orderItemRepositoryMock).saveAll(any(List.class));
+        verify(mappersMock).convertToOrderResponseDto(any(Order.class));
     }
 
     @Test
-    void getAllOrders() {
-        Mockito.when(userServiceMock.getByEmail(Mockito.anyString())).thenReturn(new UserResponseDto());
-        Mockito.when(mappersMock.convertResponceDTOToUser(Mockito.any(UserResponseDto.class))).thenReturn(user);
-
-        JwtAuthentication jwtInfoToken = Mockito.mock(JwtAuthentication.class);
-        Mockito.when(jwtInfoToken.getPrincipal()).thenReturn(user.getEmail());
-        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
-        SecurityContextHolder.setContext(securityContext);
-        Mockito.when(securityContext.getAuthentication()).thenReturn(jwtInfoToken);
-
-        MockedStatic<MapperUtil> mockedStatic = Mockito.mockStatic(MapperUtil.class);
-        mockedStatic.when(() -> MapperUtil.convertList(Mockito.anyList(),Mockito.any(Function.class)))
-                .thenReturn(List.of(new OrderResponseDto()));
+    void getAllOrders_ForUser() {
+        MockedStatic<MapperUtil> mockedStatic = mockStatic(MapperUtil.class);
+        mockedStatic.when(() -> MapperUtil.convertList(anyList(), any(Function.class)))
+                .thenReturn(user.getOrders().stream().toList());
 
         List<OrderResponseDto> allOrders = orderServiceMock.getAllOrders();
-        Assertions.assertTrue(!allOrders.isEmpty());
-        Assertions.assertEquals(1,allOrders.size());
-        Mockito.verify(userServiceMock,Mockito.times(1)).getByEmail(Mockito.anyString());
-        Mockito.verify(mappersMock).convertResponceDTOToUser(Mockito.any(UserResponseDto.class));
-        mockedStatic.verify(() -> MapperUtil.convertList(Mockito.anyList(),Mockito.any(Function.class)),Mockito.times(1));
+
+        assertEquals(1, allOrders.size());
+        mockedStatic.verify(() -> MapperUtil.convertList(anyList(), any(Function.class)));
+        mockedStatic.closeOnDemand();
+    }
+
+    @Test
+    void getAllOrders_ForAdmin() {
+        user.setRole(Role.ADMINISTRATOR);
+        MockedStatic<MapperUtil> mockedStatic = mockStatic(MapperUtil.class);
+        mockedStatic.when(() -> MapperUtil.convertList(anyList(), any(Function.class)))
+                .thenReturn(List.of(order,order2));
+
+        List<OrderResponseDto> allOrders = orderServiceMock.getAllOrders();
+
+        assertEquals(2, allOrders.size());
+        mockedStatic.verify(() -> MapperUtil.convertList(anyList(), any(Function.class)));
     }
 }
