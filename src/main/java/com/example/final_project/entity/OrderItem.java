@@ -20,7 +20,7 @@ public class OrderItem {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "OrderItemId")
+    @Column(name = "OrderItemID")
     private Long orderItemId;
 
     /**
@@ -42,7 +42,7 @@ public class OrderItem {
      * The `nullable = false` constraint indicates that this field cannot be null.
      */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "OrderId", nullable = false)
+    @JoinColumn(name = "OrderID", nullable = false)
     private Order order;
 
     /**
@@ -52,6 +52,6 @@ public class OrderItem {
      * The `nullable = false` constraint indicates that this field cannot be null.
      */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProductId", nullable = false)
+    @JoinColumn(name = "ProductID", nullable = false)
     private Product product;
 }
