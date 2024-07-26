@@ -32,7 +32,7 @@ public class OrderController {
     @Operation(
             summary = "shows the status of the specified order."
     )
-    @GetMapping("/{id}")
+    @GetMapping("/{orderId}")
     public ResponseEntity<StatusResponseDto> getOrderStatusById(@PathVariable Long orderId) {
         return new ResponseEntity<>(orderService.getOrderStatusById(orderId),HttpStatus.OK);
     }
