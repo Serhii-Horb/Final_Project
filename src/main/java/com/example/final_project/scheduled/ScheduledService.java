@@ -9,6 +9,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.Queue;
@@ -41,7 +43,7 @@ public class ScheduledService {
      */
     @PostConstruct
     public void initializeQueue() {
-        orders = orderRepository.ordersForSchedulers().stream().collect(Collectors.toCollection(() -> new ConcurrentLinkedQueue<>()));
+        orders = new ConcurrentLinkedQueue<>(orderRepository.ordersForSchedulers());
     }
 
     /**
@@ -60,6 +62,7 @@ public class ScheduledService {
                 } else {
                     order.setStatus(possibleStatuses[0]);
                 }
+                order.setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
                 orderRepository.save(order);
         }
         initializeQueue();
