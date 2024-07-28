@@ -2,7 +2,6 @@ package com.example.final_project.service;
 
 
 import com.example.final_project.dto.requestDto.ProductRequestDto;
-import com.example.final_project.dto.responsedDto.ProductResponseDto;
 import com.example.final_project.entity.Category;
 import com.example.final_project.entity.Product;
 import com.example.final_project.exceptions.BadRequestException;
@@ -10,7 +9,6 @@ import com.example.final_project.exceptions.NotFoundInDbException;
 import com.example.final_project.mapper.Mappers;
 import com.example.final_project.repository.CategoryRepository;
 import com.example.final_project.repository.ProductRepository;
-import com.example.final_project.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

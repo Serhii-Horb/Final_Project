@@ -1,6 +1,7 @@
 package com.example.final_project.dto;
 
 
+import com.example.final_project.entity.query.ProductCountInterface;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductCountDto {
+public class ProductCountDto implements ProductCountInterface {
     /**
      * Unique identifier for the product.
      */
