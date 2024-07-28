@@ -2945,3 +2945,633 @@
 2024-07-27 14:53:26.099 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  No favorites found for userId: 1
 2024-07-27 14:53:26.102 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 1
 2024-07-27 14:53:26.103 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Favorite successfully added for userId: 1 and productId: 1
+2024-07-28 11:32:35.400 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:35.401 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:35.401 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:36.617 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:36.652 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 1.624 seconds (process running for 3.461)
+2024-07-28 11:32:36.915 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Starting FavoriteRepositoryTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:36.915 | main                      | DEBUG | com.example.final_project.repository.FavoriteRepositoryTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:36.915 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:39.876 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Started FavoriteRepositoryTest in 2.979 seconds (process running for 6.685)
+2024-07-28 11:32:40.068 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:40.069 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:40.069 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:40.320 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:40.326 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 0.271 seconds (process running for 7.136)
+2024-07-28 11:32:40.635 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.635 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.666 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 11:32:40.666 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.667 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.667 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found 1 orders placed by the user the id of null
+2024-07-28 11:32:40.672 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.672 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.672 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.672 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.673 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:32:40.673 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.674 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.674 | main                      | ERROR | com.example.final_project.service.OrderService                          -  Order with the id of 2 was not found for ordinary user tom@gmail.com
+2024-07-28 11:32:40.677 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.677 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.678 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to create the order
+2024-07-28 11:32:40.679 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.679 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.679 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the newly created order with the id of 1
+2024-07-28 11:32:40.680 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the items of the newly created order with the id of 1
+2024-07-28 11:32:40.684 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.684 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.685 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:32:40.685 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.685 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.689 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.689 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.690 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:32:40.690 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.690 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.690 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Order with the id of 1 is of CREATED status
+2024-07-28 11:32:40.694 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.694 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.695 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 11:32:40.695 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:32:40.696 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:32:40.696 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found {} placed orders in total
+2024-07-28 11:32:40.723 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:40.723 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:40.723 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:43.481 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Started FinalProjectApplicationTests in 2.772 seconds (process running for 10.291)
+2024-07-28 11:32:43.634 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Starting OrderRepositoryTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:43.634 | main                      | DEBUG | com.example.final_project.repository.OrderRepositoryTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:43.634 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:44.020 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Started OrderRepositoryTest in 0.395 seconds (process running for 10.83)
+2024-07-28 11:32:44.194 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:32:44.195 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:32:44.195 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 11:32:44.196 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem not found, creating new one.
+2024-07-28 11:32:44.196 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 11:32:44.199 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting deleteProductInCartByUserIdAndProductId for userId: 1 with productId: 1
+2024-07-28 11:32:44.200 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:32:44.200 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem deleted successfully: CartItem(cartItemId=1, quantity=10)
+2024-07-28 11:32:44.203 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:32:44.203 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:32:44.203 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Product not found for productId: 1
+2024-07-28 11:32:44.206 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:32:44.206 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Cart not found for userId: 1
+2024-07-28 11:32:44.209 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:32:44.210 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:32:44.210 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 11:32:44.210 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem found, updating quantity.
+2024-07-28 11:32:44.210 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: test@example.com
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: test@example.com
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 11:32:44.302 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: test@example.com
+2024-07-28 11:32:44.305 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 11:32:44.305 | main                      | WARN  | com.example.final_project.security.service.AuthService                  -  Invalid refresh token provided.
+2024-07-28 11:32:44.305 | main                      | ERROR | com.example.final_project.security.service.AuthService                  -  Authorization failed due to invalid refresh token.
+2024-07-28 11:32:44.307 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 11:32:44.308 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid.
+2024-07-28 11:32:44.308 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 11:32:44.308 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 11:32:44.308 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 11:32:44.308 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token for user with email: test@example.com
+2024-07-28 11:32:44.311 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to refresh tokens using the provided refresh token.
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid!.
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token and refresh token for user with email: test@example.com
+2024-07-28 11:32:44.312 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Updated the stored refresh token for user with email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 11:32:44.315 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: test@example.com
+2024-07-28 11:32:44.342 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:44.342 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:44.342 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:44.661 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:44.667 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 0.337 seconds (process running for 11.477)
+2024-07-28 11:32:44.711 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Starting OrderControllerTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:44.712 | main                      | DEBUG | com.example.final_project.controller.OrderControllerTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:44.712 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:44.928 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:44.932 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Started OrderControllerTest in 0.231 seconds (process running for 11.742)
+2024-07-28 11:32:45.112 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 100 and productId: 1
+2024-07-28 11:32:45.112 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  User with id 100 not found.
+2024-07-28 11:32:45.115 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to delete favorite for userId: 1 and productId: 100
+2024-07-28 11:32:45.115 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Favorite for userId: 1 and productId: 100 not found.
+2024-07-28 11:32:45.118 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 100
+2024-07-28 11:32:45.118 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Product with id 100 not found.
+2024-07-28 11:32:45.121 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Fetching all favorites for userId: 1
+2024-07-28 11:32:45.122 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  No favorites found for userId: 1
+2024-07-28 11:32:45.125 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 1
+2024-07-28 11:32:45.125 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Favorite successfully added for userId: 1 and productId: 1
+2024-07-28 11:32:45.181 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:32:45.182 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of product.
+2024-07-28 11:32:45.184 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:32:45.185 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of category.
+2024-07-28 11:32:45.187 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:32:45.189 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Inserting new product: Product 1
+2024-07-28 11:32:45.191 | main                      | WARN  | com.example.final_project.service.ProductService                        -  Validation errors while updating product with ID: 1
+2024-07-28 11:32:45.227 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:45.227 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:45.228 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:46.734 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:46.757 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 1.539 seconds (process running for 13.567)
+2024-07-28 11:32:46.855 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Starting ProductControllerTest using Java 22.0.1 with PID 12137 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:32:46.855 | main                      | DEBUG | com.example.final_project.controller.ProductControllerTest              -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:32:46.855 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:32:47.048 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:32:47.053 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Started ProductControllerTest in 0.208 seconds (process running for 13.863)
+2024-07-28 11:32:47.158 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 11:32:47.158 | main                      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: test@example.com
+2024-07-28 11:32:47.158 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully saved to the database.
+2024-07-28 11:32:47.160 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:32:47.161 | main                      | ERROR | com.example.final_project.service.UserService                           -  Incorrect password for user with email: test@example.com
+2024-07-28 11:32:47.163 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 11:32:47.165 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:32:47.165 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-28 11:32:47.167 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 11:32:47.168 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-28 11:32:47.170 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 11:32:47.170 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com already exists.
+2024-07-28 11:32:47.172 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:32:47.172 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully logged in.
+2024-07-28 11:33:31.481 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:31.481 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:31.482 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:33.479 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:33.535 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 2.666 seconds (process running for 5.438)
+2024-07-28 11:33:33.958 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Starting FavoriteRepositoryTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:33.958 | main                      | DEBUG | com.example.final_project.repository.FavoriteRepositoryTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:33.959 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:38.705 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Started FavoriteRepositoryTest in 4.766 seconds (process running for 10.608)
+2024-07-28 11:33:39.008 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:39.009 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:39.009 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:39.315 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:39.322 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 0.329 seconds (process running for 11.226)
+2024-07-28 11:33:39.691 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.692 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.730 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 11:33:39.730 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.731 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.732 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found 1 orders placed by the user the id of null
+2024-07-28 11:33:39.737 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.738 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.738 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.739 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.741 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:33:39.742 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.742 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.743 | main                      | ERROR | com.example.final_project.service.OrderService                          -  Order with the id of 2 was not found for ordinary user tom@gmail.com
+2024-07-28 11:33:39.749 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.749 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.752 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to create the order
+2024-07-28 11:33:39.753 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.753 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.753 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the newly created order with the id of 1
+2024-07-28 11:33:39.754 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the items of the newly created order with the id of 1
+2024-07-28 11:33:39.767 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.768 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.768 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:33:39.769 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.769 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.776 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.777 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.777 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 11:33:39.778 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.778 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.779 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Order with the id of 1 is of CREATED status
+2024-07-28 11:33:39.783 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.784 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.785 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 11:33:39.785 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 11:33:39.785 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 11:33:39.785 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found {} placed orders in total
+2024-07-28 11:33:39.810 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:39.811 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:39.811 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:43.395 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Started FinalProjectApplicationTests in 3.597 seconds (process running for 15.298)
+2024-07-28 11:33:43.475 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Starting OrderRepositoryTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:43.475 | main                      | DEBUG | com.example.final_project.repository.OrderRepositoryTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:43.475 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:43.955 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Started OrderRepositoryTest in 0.489 seconds (process running for 15.858)
+2024-07-28 11:33:44.175 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:33:44.176 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:33:44.176 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 11:33:44.178 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem not found, creating new one.
+2024-07-28 11:33:44.178 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 11:33:44.181 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting deleteProductInCartByUserIdAndProductId for userId: 1 with productId: 1
+2024-07-28 11:33:44.181 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:33:44.182 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem deleted successfully: CartItem(cartItemId=1, quantity=10)
+2024-07-28 11:33:44.184 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:33:44.185 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:33:44.185 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Product not found for productId: 1
+2024-07-28 11:33:44.188 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:33:44.188 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Cart not found for userId: 1
+2024-07-28 11:33:44.191 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 11:33:44.192 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 11:33:44.192 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 11:33:44.192 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem found, updating quantity.
+2024-07-28 11:33:44.192 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 11:33:44.297 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: test@example.com
+2024-07-28 11:33:44.297 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: test@example.com
+2024-07-28 11:33:44.297 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 11:33:44.297 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 11:33:44.298 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 11:33:44.298 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: test@example.com
+2024-07-28 11:33:44.301 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 11:33:44.301 | main                      | WARN  | com.example.final_project.security.service.AuthService                  -  Invalid refresh token provided.
+2024-07-28 11:33:44.301 | main                      | ERROR | com.example.final_project.security.service.AuthService                  -  Authorization failed due to invalid refresh token.
+2024-07-28 11:33:44.304 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 11:33:44.304 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid.
+2024-07-28 11:33:44.305 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 11:33:44.305 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 11:33:44.305 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 11:33:44.305 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token for user with email: test@example.com
+2024-07-28 11:33:44.309 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to refresh tokens using the provided refresh token.
+2024-07-28 11:33:44.309 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid!.
+2024-07-28 11:33:44.309 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 11:33:44.309 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 11:33:44.309 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 11:33:44.310 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token and refresh token for user with email: test@example.com
+2024-07-28 11:33:44.310 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Updated the stored refresh token for user with email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 11:33:44.313 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: test@example.com
+2024-07-28 11:33:44.330 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:44.330 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:44.331 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:44.557 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:44.562 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 0.241 seconds (process running for 16.466)
+2024-07-28 11:33:44.607 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Starting OrderControllerTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:44.607 | main                      | DEBUG | com.example.final_project.controller.OrderControllerTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:44.607 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:44.841 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:44.846 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Started OrderControllerTest in 0.25 seconds (process running for 16.75)
+2024-07-28 11:33:45.073 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 100 and productId: 1
+2024-07-28 11:33:45.073 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  User with id 100 not found.
+2024-07-28 11:33:45.076 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to delete favorite for userId: 1 and productId: 100
+2024-07-28 11:33:45.077 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Favorite for userId: 1 and productId: 100 not found.
+2024-07-28 11:33:45.080 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 100
+2024-07-28 11:33:45.080 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Product with id 100 not found.
+2024-07-28 11:33:45.083 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Fetching all favorites for userId: 1
+2024-07-28 11:33:45.083 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  No favorites found for userId: 1
+2024-07-28 11:33:45.086 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 1
+2024-07-28 11:33:45.086 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Favorite successfully added for userId: 1 and productId: 1
+2024-07-28 11:33:45.208 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:33:45.209 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of product.
+2024-07-28 11:33:45.211 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:33:45.212 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of category.
+2024-07-28 11:33:45.214 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 11:33:45.217 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Inserting new product: Product 1
+2024-07-28 11:33:45.219 | main                      | WARN  | com.example.final_project.service.ProductService                        -  Validation errors while updating product with ID: 1
+2024-07-28 11:33:45.258 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:45.258 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:45.258 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:46.894 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:46.913 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 1.664 seconds (process running for 18.816)
+2024-07-28 11:33:47.003 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Starting ProductControllerTest using Java 22.0.1 with PID 12153 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:33:47.003 | main                      | DEBUG | com.example.final_project.controller.ProductControllerTest              -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:33:47.003 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:33:47.219 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:33:47.223 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Started ProductControllerTest in 0.229 seconds (process running for 19.127)
+2024-07-28 11:33:47.354 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 11:33:47.354 | main                      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: test@example.com
+2024-07-28 11:33:47.355 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully saved to the database.
+2024-07-28 11:33:47.357 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:33:47.358 | main                      | ERROR | com.example.final_project.service.UserService                           -  Incorrect password for user with email: test@example.com
+2024-07-28 11:33:47.360 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 11:33:47.364 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:33:47.364 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-28 11:33:47.367 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 11:33:47.367 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-28 11:33:47.370 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 11:33:47.370 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com already exists.
+2024-07-28 11:33:47.372 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 11:33:47.373 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully logged in.
+2024-07-28 11:34:44.633 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Starting FinalProjectApplication using Java 22.0.1 with PID 12163 (/Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project/target/classes started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 11:34:44.634 | main                      | DEBUG | com.example.final_project.FinalProjectApplication                       -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 11:34:44.634 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 11:34:46.210 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 11:34:50.251 | main                      | INFO  | com.example.final_project.FinalProjectApplication                       -  Started FinalProjectApplication in 5.945 seconds (process running for 6.389)
+2024-07-28 12:52:27.913 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Starting FavoriteRepositoryTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:27.914 | main                      | DEBUG | com.example.final_project.repository.FavoriteRepositoryTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:27.914 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:34.272 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Started FavoriteRepositoryTest in 7.057 seconds (process running for 8.647)
+2024-07-28 12:52:35.180 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Starting OrderRepositoryTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:35.180 | main                      | DEBUG | com.example.final_project.repository.OrderRepositoryTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:35.181 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:35.930 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Started OrderRepositoryTest in 0.774 seconds (process running for 10.305)
+2024-07-28 12:52:36.878 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: test@example.com
+2024-07-28 12:52:36.885 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: test@example.com
+2024-07-28 12:52:36.886 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 12:52:36.886 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 12:52:36.887 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 12:52:36.887 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: test@example.com
+2024-07-28 12:52:36.911 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 12:52:36.912 | main                      | WARN  | com.example.final_project.security.service.AuthService                  -  Invalid refresh token provided.
+2024-07-28 12:52:36.912 | main                      | ERROR | com.example.final_project.security.service.AuthService                  -  Authorization failed due to invalid refresh token.
+2024-07-28 12:52:36.920 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 12:52:36.920 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid.
+2024-07-28 12:52:36.921 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 12:52:36.921 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 12:52:36.921 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 12:52:36.922 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token for user with email: test@example.com
+2024-07-28 12:52:36.930 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to refresh tokens using the provided refresh token.
+2024-07-28 12:52:36.930 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid!.
+2024-07-28 12:52:36.931 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 12:52:36.931 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 12:52:36.931 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 12:52:36.932 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token and refresh token for user with email: test@example.com
+2024-07-28 12:52:36.932 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Updated the stored refresh token for user with email: test@example.com
+2024-07-28 12:52:36.939 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: test@example.com
+2024-07-28 12:52:36.940 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: test@example.com
+2024-07-28 12:52:36.940 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 12:52:36.941 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 12:52:36.941 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 12:52:36.941 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: test@example.com
+2024-07-28 12:52:37.071 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:37.072 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:37.072 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:42.107 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:42.107 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:42.107 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:43.107 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:52:43.134 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 1.067 seconds (process running for 17.509)
+2024-07-28 12:52:43.598 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:43.598 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:43.599 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:43.944 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:52:43.951 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 0.367 seconds (process running for 18.326)
+2024-07-28 12:52:44.026 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Starting OrderControllerTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:44.027 | main                      | DEBUG | com.example.final_project.controller.OrderControllerTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:44.027 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:44.393 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:52:44.403 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Started OrderControllerTest in 0.393 seconds (process running for 18.778)
+2024-07-28 12:52:44.531 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:44.532 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:44.532 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:44.871 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:52:44.878 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 0.363 seconds (process running for 19.253)
+2024-07-28 12:52:44.954 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Starting ProductControllerTest using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:44.954 | main                      | DEBUG | com.example.final_project.controller.ProductControllerTest              -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:44.955 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:45.319 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:52:45.328 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Started ProductControllerTest in 0.387 seconds (process running for 19.703)
+2024-07-28 12:52:45.435 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 12553 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:52:45.435 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:52:45.435 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:52:47.358 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:52:47.359 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:52:47.360 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 12:52:47.361 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem not found, creating new one.
+2024-07-28 12:52:47.361 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 12:52:47.366 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting deleteProductInCartByUserIdAndProductId for userId: 1 with productId: 1
+2024-07-28 12:52:47.367 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:52:47.367 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem deleted successfully: CartItem(cartItemId=1, quantity=10)
+2024-07-28 12:52:47.370 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:52:47.370 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:52:47.370 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Product not found for productId: 1
+2024-07-28 12:52:47.373 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:52:47.373 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Cart not found for userId: 1
+2024-07-28 12:52:47.377 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:52:47.377 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:52:47.377 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 12:52:47.378 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem found, updating quantity.
+2024-07-28 12:52:47.378 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 12:52:47.551 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 12:52:47.551 | main                      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: test@example.com
+2024-07-28 12:52:47.551 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully saved to the database.
+2024-07-28 12:52:47.554 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:52:47.555 | main                      | ERROR | com.example.final_project.service.UserService                           -  Incorrect password for user with email: test@example.com
+2024-07-28 12:52:47.557 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 12:52:47.560 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:52:47.560 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-28 12:52:47.562 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 12:52:47.563 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-28 12:52:47.565 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 12:52:47.565 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com already exists.
+2024-07-28 12:52:47.569 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:52:47.569 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully logged in.
+2024-07-28 12:52:47.766 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:52:47.766 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of product.
+2024-07-28 12:52:47.769 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:52:47.770 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of category.
+2024-07-28 12:52:47.772 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:52:47.775 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Inserting new product: Product 1
+2024-07-28 12:52:47.778 | main                      | WARN  | com.example.final_project.service.ProductService                        -  Validation errors while updating product with ID: 1
+2024-07-28 12:52:48.160 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.161 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.218 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 12:52:48.218 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.219 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.219 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found 1 orders placed by the user the id of null
+2024-07-28 12:52:48.222 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.222 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.223 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.223 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.223 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:52:48.223 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.224 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.224 | main                      | ERROR | com.example.final_project.service.OrderService                          -  Order with the id of 2 was not found for ordinary user tom@gmail.com
+2024-07-28 12:52:48.226 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.226 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.227 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to create the order
+2024-07-28 12:52:48.227 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.227 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.227 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the newly created order with the id of 1
+2024-07-28 12:52:48.228 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the items of the newly created order with the id of 1
+2024-07-28 12:52:48.231 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.232 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.232 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:52:48.232 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.233 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.237 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.238 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.238 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:52:48.238 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.238 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.239 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Order with the id of 1 is of CREATED status
+2024-07-28 12:52:48.241 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.241 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.242 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 12:52:48.242 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:52:48.242 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:52:48.243 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found {} placed orders in total
+2024-07-28 12:52:48.328 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 100 and productId: 1
+2024-07-28 12:52:48.328 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  User with id 100 not found.
+2024-07-28 12:52:48.331 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to delete favorite for userId: 1 and productId: 100
+2024-07-28 12:52:48.331 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Favorite for userId: 1 and productId: 100 not found.
+2024-07-28 12:52:48.335 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 100
+2024-07-28 12:52:48.336 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Product with id 100 not found.
+2024-07-28 12:52:48.339 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Fetching all favorites for userId: 1
+2024-07-28 12:52:48.339 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  No favorites found for userId: 1
+2024-07-28 12:52:48.342 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 1
+2024-07-28 12:52:48.343 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Favorite successfully added for userId: 1 and productId: 1
+2024-07-28 12:55:29.457 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Starting FavoriteRepositoryTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:29.458 | main                      | DEBUG | com.example.final_project.repository.FavoriteRepositoryTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:29.459 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:35.605 | main                      | INFO  | com.example.final_project.repository.FavoriteRepositoryTest             -  Started FavoriteRepositoryTest in 6.959 seconds (process running for 8.329)
+2024-07-28 12:55:36.408 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Starting OrderRepositoryTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:36.408 | main                      | DEBUG | com.example.final_project.repository.OrderRepositoryTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:36.408 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:37.126 | main                      | INFO  | com.example.final_project.repository.OrderRepositoryTest                -  Started OrderRepositoryTest in 0.739 seconds (process running for 9.85)
+2024-07-28 12:55:37.992 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting login process for user with email: test@example.com
+2024-07-28 12:55:37.997 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User authenticated successfully with email: test@example.com
+2024-07-28 12:55:37.998 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 12:55:37.999 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 12:55:38.000 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 12:55:38.000 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User login and token generation process completed successfully for email: test@example.com
+2024-07-28 12:55:38.016 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 12:55:38.017 | main                      | WARN  | com.example.final_project.security.service.AuthService                  -  Invalid refresh token provided.
+2024-07-28 12:55:38.017 | main                      | ERROR | com.example.final_project.security.service.AuthService                  -  Authorization failed due to invalid refresh token.
+2024-07-28 12:55:38.024 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to get access token using refresh token.
+2024-07-28 12:55:38.024 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid.
+2024-07-28 12:55:38.025 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 12:55:38.025 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 12:55:38.025 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 12:55:38.026 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token for user with email: test@example.com
+2024-07-28 12:55:38.034 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Attempting to refresh tokens using the provided refresh token.
+2024-07-28 12:55:38.034 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Refresh token is valid!.
+2024-07-28 12:55:38.035 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Extracted user email from refresh token: test@example.com
+2024-07-28 12:55:38.035 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Retrieved stored refresh token for user with email: test@example.com
+2024-07-28 12:55:38.035 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Provided refresh token matches the stored refresh token.
+2024-07-28 12:55:38.035 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated new access token and refresh token for user with email: test@example.com
+2024-07-28 12:55:38.036 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Updated the stored refresh token for user with email: test@example.com
+2024-07-28 12:55:38.041 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Starting user registration process for email: test@example.com
+2024-07-28 12:55:38.042 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registered successfully with email: test@example.com
+2024-07-28 12:55:38.042 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated access token for user with email: test@example.com
+2024-07-28 12:55:38.042 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Generated refresh token for user with email: test@example.com
+2024-07-28 12:55:38.043 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  Set refresh token for user with email: test@example.com
+2024-07-28 12:55:38.043 | main                      | INFO  | com.example.final_project.security.service.AuthService                  -  User registration and token generation process completed successfully for email: test@example.com
+2024-07-28 12:55:38.143 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Starting AuthIntegrationTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:38.144 | main                      | DEBUG | com.example.final_project.integration.AuthIntegrationTest               -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:38.144 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:44.551 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:44.619 | main                      | INFO  | com.example.final_project.integration.AuthIntegrationTest               -  Started AuthIntegrationTest in 6.517 seconds (process running for 17.343)
+2024-07-28 12:55:45.057 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Starting UserControllerTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:45.057 | main                      | DEBUG | com.example.final_project.controller.UserControllerTest                 -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:45.057 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:45.328 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:45.336 | main                      | INFO  | com.example.final_project.controller.UserControllerTest                 -  Started UserControllerTest in 0.296 seconds (process running for 18.06)
+2024-07-28 12:55:45.493 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Starting CartItemControllerTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:45.494 | main                      | DEBUG | com.example.final_project.controller.CartItemControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:45.494 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:45.815 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:45.823 | main                      | INFO  | com.example.final_project.controller.CartItemControllerTest             -  Started CartItemControllerTest in 0.349 seconds (process running for 18.547)
+2024-07-28 12:55:45.875 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Starting OrderControllerTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:45.875 | main                      | DEBUG | com.example.final_project.controller.OrderControllerTest                -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:45.875 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:46.186 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:46.194 | main                      | INFO  | com.example.final_project.controller.OrderControllerTest                -  Started OrderControllerTest in 0.331 seconds (process running for 18.918)
+2024-07-28 12:55:46.332 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Starting FavoriteControllerTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:46.332 | main                      | DEBUG | com.example.final_project.controller.FavoriteControllerTest             -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:46.332 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:46.636 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:46.644 | main                      | INFO  | com.example.final_project.controller.FavoriteControllerTest             -  Started FavoriteControllerTest in 0.327 seconds (process running for 19.368)
+2024-07-28 12:55:46.716 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Starting ProductControllerTest using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:46.717 | main                      | DEBUG | com.example.final_project.controller.ProductControllerTest              -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:46.717 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:47.078 | main                      | DEBUG | com.example.final_project.security.jwt.JwtFilter                        -  Filter 'jwtFilter' configured for use
+2024-07-28 12:55:47.086 | main                      | INFO  | com.example.final_project.controller.ProductControllerTest              -  Started ProductControllerTest in 0.382 seconds (process running for 19.81)
+2024-07-28 12:55:47.188 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Starting FinalProjectApplicationTests using Java 22.0.1 with PID 12607 (started by serhiihorb in /Users/serhiihorb/Desktop/Tel_Ran_Pro/Final_Project)
+2024-07-28 12:55:47.188 | main                      | DEBUG | com.example.final_project.FinalProjectApplicationTests                  -  Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-28 12:55:47.188 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  No active profile set, falling back to 1 default profile: "default"
+2024-07-28 12:55:49.769 | main                      | INFO  | com.example.final_project.FinalProjectApplicationTests                  -  Started FinalProjectApplicationTests in 2.593 seconds (process running for 22.493)
+2024-07-28 12:55:50.060 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:55:50.061 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:55:50.062 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 12:55:50.064 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem not found, creating new one.
+2024-07-28 12:55:50.064 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 12:55:50.069 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting deleteProductInCartByUserIdAndProductId for userId: 1 with productId: 1
+2024-07-28 12:55:50.070 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:55:50.070 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem deleted successfully: CartItem(cartItemId=1, quantity=10)
+2024-07-28 12:55:50.073 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:55:50.074 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:55:50.074 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Product not found for productId: 1
+2024-07-28 12:55:50.077 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:55:50.077 | main                      | ERROR | com.example.final_project.service.CartItemService                       -  Cart not found for userId: 1
+2024-07-28 12:55:50.081 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  Starting addOrUpdateProductInCart for userId: 1 with productId: 1
+2024-07-28 12:55:50.081 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found cart: Cart(cartId=1)
+2024-07-28 12:55:50.081 | main                      | DEBUG | com.example.final_project.service.CartItemService                       -  Found product: Product(productId=1, name=Product, description=Description, price=10.0, imageURL=imageUrl, discountPrice=9.0, createdAt=null, updatedAt=null)
+2024-07-28 12:55:50.081 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem found, updating quantity.
+2024-07-28 12:55:50.081 | main                      | INFO  | com.example.final_project.service.CartItemService                       -  CartItem saved successfully: CartItem(cartItemId=1, quantity=2)
+2024-07-28 12:55:50.197 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 12:55:50.197 | main                      | INFO  | com.example.final_project.service.UserService                           -  User object created for email: test@example.com
+2024-07-28 12:55:50.197 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully saved to the database.
+2024-07-28 12:55:50.200 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:55:50.200 | main                      | ERROR | com.example.final_project.service.UserService                           -  Incorrect password for user with email: test@example.com
+2024-07-28 12:55:50.203 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 12:55:50.205 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:55:50.205 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist.
+2024-07-28 12:55:50.207 | main                      | INFO  | com.example.final_project.service.UserService                           -  Get user with email: test@example.com
+2024-07-28 12:55:50.208 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com does not exist in DB.
+2024-07-28 12:55:50.210 | main                      | INFO  | com.example.final_project.service.UserService                           -  Starting registration for user with email: test@example.com
+2024-07-28 12:55:50.210 | main                      | ERROR | com.example.final_project.service.UserService                           -  User with email test@example.com already exists.
+2024-07-28 12:55:50.212 | main                      | INFO  | com.example.final_project.service.UserService                           -  Attempting login for user with email: test@example.com
+2024-07-28 12:55:50.213 | main                      | INFO  | com.example.final_project.service.UserService                           -  User with email: test@example.com successfully logged in.
+2024-07-28 12:55:50.358 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:55:50.358 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of product.
+2024-07-28 12:55:50.361 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:55:50.362 | main                      | ERROR | com.example.final_project.service.ProductService                        -  Error updating product: Incorrect id of category.
+2024-07-28 12:55:50.365 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Updating product with ID: 1
+2024-07-28 12:55:50.368 | main                      | INFO  | com.example.final_project.service.ProductService                        -  Inserting new product: Product 1
+2024-07-28 12:55:50.371 | main                      | WARN  | com.example.final_project.service.ProductService                        -  Validation errors while updating product with ID: 1
+2024-07-28 12:55:50.653 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.653 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.703 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 12:55:50.703 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.703 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.703 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found 1 orders placed by the user the id of null
+2024-07-28 12:55:50.707 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.707 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.707 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.708 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.708 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:55:50.708 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.708 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.708 | main                      | ERROR | com.example.final_project.service.OrderService                          -  Order with the id of 2 was not found for ordinary user tom@gmail.com
+2024-07-28 12:55:50.711 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.711 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.712 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to create the order
+2024-07-28 12:55:50.712 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.712 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.713 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the newly created order with the id of 1
+2024-07-28 12:55:50.713 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Saving the items of the newly created order with the id of 1
+2024-07-28 12:55:50.716 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.717 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.717 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:55:50.717 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.718 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.721 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.721 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.721 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the status of the given id
+2024-07-28 12:55:50.721 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.722 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.722 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Order with the id of 1 is of CREATED status
+2024-07-28 12:55:50.724 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.725 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.725 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get the history of the orders
+2024-07-28 12:55:50.725 | main                      | INFO  | com.example.final_project.service.OrderService                          -  Attempting to get a user by the provided access token
+2024-07-28 12:55:50.725 | main                      | INFO  | com.example.final_project.service.OrderService                          -  The user with the id of null has been tracked
+2024-07-28 12:55:50.726 | main                      | INFO  | com.example.final_project.service.OrderService                          -  found {} placed orders in total
+2024-07-28 12:55:50.791 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 100 and productId: 1
+2024-07-28 12:55:50.791 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  User with id 100 not found.
+2024-07-28 12:55:50.793 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to delete favorite for userId: 1 and productId: 100
+2024-07-28 12:55:50.794 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Favorite for userId: 1 and productId: 100 not found.
+2024-07-28 12:55:50.796 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 100
+2024-07-28 12:55:50.797 | main                      | ERROR | com.example.final_project.service.FavoriteService                       -  Product with id 100 not found.
+2024-07-28 12:55:50.799 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Fetching all favorites for userId: 1
+2024-07-28 12:55:50.800 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  No favorites found for userId: 1
+2024-07-28 12:55:50.803 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Attempting to add favorite for userId: 1 and productId: 1
+2024-07-28 12:55:50.804 | main                      | INFO  | com.example.final_project.service.FavoriteService                       -  Favorite successfully added for userId: 1 and productId: 1
