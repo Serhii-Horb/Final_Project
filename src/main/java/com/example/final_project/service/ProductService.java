@@ -60,6 +60,8 @@ public class ProductService {
         logger.info("Inserting new product: {}", productRequestDto.getName());
         try {
             Product newProduct = mappers.convertToProduct(productRequestDto);
+            newProduct.setCreatedAt(Timestamp.valueOf(LocalDateTime.now()));
+            newProduct.setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
             productRepository.save(newProduct);
         } catch (Exception e) {
             logger.error("Error inserting product: {}", e.getMessage());

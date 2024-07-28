@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = FinalProjectApplication.class)
 @AutoConfigureMockMvc
-public class CategoryControllerTest {
+class CategoryControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -52,7 +52,7 @@ public class CategoryControllerTest {
     }
 
     @Test
-    @WithMockUser(username = "user", roles = {"USER"})
+    @WithMockUser(roles = {"USER", "ADMINISTRATOR"})
     void testGetCategory() throws Exception {
         List<CategoryResponseDto> categories = Arrays.asList(categoryResponseDto);
         when(categoryService.getCategory()).thenReturn(categories);
@@ -66,7 +66,7 @@ public class CategoryControllerTest {
     }
 
     @Test
-    @WithMockUser(username = "user", roles = {"USER"})
+    @WithMockUser(username = "user", roles = {"USER", "ADMINISTRATOR"})
     void testGetCategoryById() throws Exception {
         when(categoryService.getCategoryById(anyLong())).thenReturn(categoryResponseDto);
 

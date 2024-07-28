@@ -25,7 +25,6 @@ public class ProductCountDto implements ProductCountInterface {
 
     private String status;
 
-
     /**
      * Number of items of the product.
      */

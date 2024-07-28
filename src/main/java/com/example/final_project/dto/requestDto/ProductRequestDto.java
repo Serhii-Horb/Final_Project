@@ -29,9 +29,7 @@ public class ProductRequestDto {
 
     @NotBlank(message = "Invalid image: Empty imageURL")
     @Pattern(regexp = "^(https?|ftp)://.*$", message = "Invalid URL")
-    //@Pattern(regexp = "^https?://([-a-z0-9]{2,256}\\.){1,20}[a-z]{2,4}/[-a-zA-Z0-9_.#?&=%/]*$", message = "Invalid URL")
     private String imageURL;
 
-   // @NotBlank(message = "Invalid Category: Empty category")
     private Long categoryId;
 }
