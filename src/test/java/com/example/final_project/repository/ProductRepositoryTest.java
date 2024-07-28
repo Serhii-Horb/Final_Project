@@ -24,7 +24,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-
 @ExtendWith(SpringExtension.class)
 @DataJpaTest(includeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = ProductRepository.class))
 public class ProductRepositoryTest {
@@ -37,7 +36,6 @@ public class ProductRepositoryTest {
     private OrderItemRepository orderItemRepository;
     private Product product1, product2;
     private Order order1;
-
 
     @BeforeEach
     void setUp() {
@@ -63,7 +61,6 @@ public class ProductRepositoryTest {
         order1.setCreatedAt(Timestamp.valueOf(LocalDateTime.now()));
         orderRepository.save(order1);
         orderItemRepository.save(orderItem);
-
     }
 
     @Test
