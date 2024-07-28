@@ -11,7 +11,6 @@ import com.example.final_project.entity.query.ProductProfitInterface;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -57,40 +56,70 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
 
 
-
     @Query (value =
-            "SELECT  p.ProductID as productId, p.Name as name, SUM(oi.Quantity) as count, o.Status "+
-                    "FROM Products p JOIN OrderItems oi ON p.ProductID = oi.ProductID " +
-                    "JOIN Orders o ON oi.OrderId = o.OrderID " +
-                    "where o.Status = 'PENDING_PAYMENT' and o.CreatedAt < Now() - INTERVAL :day DAY  " +
-                    "GROUP BY  p.ProductID "+
-                    "Order by p.ProductID ", nativeQuery = true)
+            "SELECT \n" +
+                    "    p.ProductID AS productId,\n" +
+                    "    p.Name AS name,\n" +
+                    "    oi.Quantity AS count,\n" +
+                    "    o.Status AS status\n" +
+                    "FROM \n" +
+                    "    Orders o\n" +
+                    "JOIN \n" +
+                    "    OrderItems oi ON o.OrderID = oi.OrderID\n" +
+                    "JOIN \n" +
+                    "    Products p ON oi.ProductID = p.ProductID\n" +
+                    "WHERE \n" +
+                    "    o.Status = 'AWAITING_PAYMENT'\n" +
+                    "    AND o.CreatedAt >= DATE_SUB(CURRENT_DATE, INTERVAL :day DAY);\n ", nativeQuery = true)
     List<ProductPendingInterface> findProductPending(Integer day);
+
+// тест проходит, но не работает приложение из-за h2
+//    @Query(value =
+//            "SELECT \n" +
+//                    "    p.ProductID AS productId,\n" +
+//                    "    p.Name AS name,\n" +
+//                    "    oi.Quantity AS count,\n" +
+//                    "    o.Status AS status\n" +
+//                    "FROM \n" +
+//                    "    Orders o\n" +
+//                    "JOIN \n" +
+//                    "    OrderItems oi ON o.OrderID = oi.OrderID\n" +
+//                    "JOIN \n" +
+//                    "    Products p ON oi.ProductID = p.ProductID\n" +
+//                    "WHERE \n" +
+//                    "    o.Status = 'AWAITING_PAYMENT'\n" +
+//                    "    AND o.CreatedAt >= DATEADD('DAY', -:day, CURRENT_DATE);\n", nativeQuery = true)
+//    List<ProductPendingInterface> findProductPending(Integer day);
+
+
 
 
 
     @Query(value =
-            "SELECT CASE " +
-                    "WHEN :period = 'MONTH' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m') " +
-                    "WHEN :period = 'WEEK' THEN DATE_FORMAT(o.CreatedAt, '%Y-%u') " +
-                    "ELSE DATE_FORMAT(o.CreatedAt, '%Y-%m-%d') " +
-                    "END as period, SUM(oi.Quantity * p.Price) as sum " +
-                    "FROM Products p " +
-                    "JOIN OrderItems oi ON p.ProductID = oi.ProductID " +
-                    "JOIN Orders o ON oi.OrderId = o.OrderID " +
-                    "WHERE o.Status = 'PAID' AND o.CreatedAt >= " +
+            "SELECT " +
                     "CASE " +
-                    "WHEN :period = 'MONTH' THEN NOW() - INTERVAL :value MONTH " +
-                    "WHEN :period = 'WEEK' THEN NOW() - INTERVAL :value WEEK " +
-                    "ELSE NOW() - INTERVAL :value DAY " +
+                   // "    WHEN :period = 'HOUR' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m-%d %H:00:00') " +
+                    "    WHEN :period = 'DAY' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m-%d') " +
+                    "    WHEN :period = 'WEEK' THEN DATE_FORMAT(o.CreatedAt, '%x-%v') " + // %x-%v для года и недели
+                    "    WHEN :period = 'MONTH' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m') " +
+                    "END AS period, " +
+                    "SUM(oi.Quantity * oi.PriceAtPurchase) AS sum " +
+                    "FROM Orders o " +
+                    "JOIN OrderItems oi ON o.OrderID = oi.OrderID " +
+                    "WHERE o.Status = 'DELIVERED' AND o.CreatedAt >= " +
+                    "CASE " +
+                   // "    WHEN :period = 'HOUR' THEN DATE_SUB(CURRENT_TIMESTAMP, INTERVAL :value HOUR) " +
+                    "    WHEN :period = 'DAY' THEN DATE_SUB(CURRENT_DATE, INTERVAL :value DAY) " +
+                    "    WHEN :period = 'WEEK' THEN DATE_SUB(CURRENT_DATE, INTERVAL :value WEEK) " +
+                    "    WHEN :period = 'MONTH' THEN DATE_SUB(CURRENT_DATE, INTERVAL :value MONTH) " +
                     "END " +
-                    "GROUP BY CASE " +
-                    "WHEN :period = 'MONTH' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m') " +
-                    "WHEN :period = 'WEEK' THEN DATE_FORMAT(o.CreatedAt, '%Y-%u') " +
-                    "ELSE DATE_FORMAT(o.CreatedAt, '%Y-%m-%d') " +
-                    "END ",
-            nativeQuery = true
-    )
+                    "GROUP BY " +
+                    "CASE " +
+                  //  "    WHEN :period = 'HOUR' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m-%d %H:00:00') " +
+                    "    WHEN :period = 'DAY' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m-%d') " +
+                    "    WHEN :period = 'WEEK' THEN DATE_FORMAT(o.CreatedAt, '%x-%v') " + // %x-%v для года и недели
+                    "    WHEN :period = 'MONTH' THEN DATE_FORMAT(o.CreatedAt, '%Y-%m') " +
+                    "END",
+            nativeQuery = true)
     List<ProductProfitInterface> findProfitByPeriod(String period, Integer value);
-
 }

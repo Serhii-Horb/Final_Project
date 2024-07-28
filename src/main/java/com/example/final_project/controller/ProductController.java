@@ -9,19 +9,15 @@ import com.example.final_project.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.naming.Binding;
 import java.util.List;
 
 @RestController
@@ -79,7 +75,7 @@ public class ProductController {
     @GetMapping(value = "/pending")
     public List<ProductPendingDto> getProductPending(@RequestParam("day")
                                                      @Positive(message = "Number of days must be a positive number")
-                                                     @Parameter(description = "Number of days for <code>PENDING_PAYMENT</code> status") Integer day) {
+                                                     @Parameter(description = "Number of days for <code>AWAITING_PAYMENT</code> status") Integer day) {
         return productsService.findProductPending(day);
     }
 
