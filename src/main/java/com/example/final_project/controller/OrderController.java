@@ -12,6 +12,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping(value = "/orders")
 @Tag(name="Order controller.",description="All manipulations with order data are carried out here.")
+@Validated
 public class OrderController {
     private final OrderService orderService;
 
@@ -47,7 +49,7 @@ public class OrderController {
             summary = "creates the order."
     )
     @PostMapping
-    public ResponseEntity<OrderResponseDto> insertOrder(@RequestBody @Valid OrderRequestDto orderRequestDto) {
+    public ResponseEntity<OrderResponseDto> insertOrder(@Valid @RequestBody OrderRequestDto orderRequestDto) {
         return new ResponseEntity<>(orderService.insertOrder(orderRequestDto),HttpStatus.CREATED);
     }
 
